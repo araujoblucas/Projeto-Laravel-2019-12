@@ -28,10 +28,17 @@ Route::get('login', 'AdminController@login')->name('login');
 Route::post('login', 'AdminController@postLogin')->name('post_login');
 Route::get('logout', 'AdminController@logout')->name('logout');
 
-Route::prefix('admin')->middleware('auth')->group(function () {
-    Route::get('/', 'AdminController@admin')->name('admin.home');
-    Route::get('/about-us', 'AdminController@aboutUs')->name('admin.about_us');
-
+Route::prefix('admin')->group(function () {
+    Route::get('/admin-config', 'AdminController@adminConfig')->name('admin_config');
+    Route::get('/{id}/Editor', 'AdminController@Editor')->name('Editor');
+    Route::get('/{id}/postDelete', 'AdminController@postDelete')->name('postDelete');
+    Route::post('/{id}/postDelete', 'AdminController@postDelete')->name('postDelete');
+    Route::put('/{id}/PostUpdater', 'AdminController@PostUpdater')->name('PostUpdater');
+    Route::post('/{id}/PostUpdater', 'AdminController@PostUpdater')->name('PostUpdater');
+    Route::get('/PostCreator', 'AdminController@PostCreator')->name('PostCreator');
+    Route::post('/PostCreator', 'AdminController@postStore')->name('PostCreator');
+    Route::get('/PostList', 'AdminController@PostList')->name('PostList');
+    Route::get('/about_team', 'AdminController@aboutTeam')->name('about_team');
     Route::prefix('partners')->group(function(){
         Route::get('/', 'PartnerController@index')->name('admin.partner.index');
         Route::get('/create', 'PartnerController@create')->name('admin.partner.create');
