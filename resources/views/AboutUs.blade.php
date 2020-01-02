@@ -353,101 +353,7 @@
                     </div>
                 </div>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 78px 0px 55px 0px;background-color: #f2f2f2 ;">
-                    <div class=gdlr-core-pbf-background-wrap style="bottom: 303px ;">
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/bg-white.jpg) ;background-repeat: repeat ;background-position: center ;" data-parallax-speed=0></div>
-                    </div>
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 0px ;">
-                                    <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 30px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">Partners at Attorna<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                </div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;"><a class="gdlr-core-button  gdlr-core-button-transparent gdlr-core-button-no-border" href=# style="font-size: 13px ;font-weight: 600 ;letter-spacing: 2px ;color: #b1976b ;padding: 10px 33px 15px 33px;"><span class=gdlr-core-content >View All People</span><i class="gdlr-core-pos-right fa fa-long-arrow-right" style="color: #b1976b ;"  ></i></a></div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align gdlr-core-style-vertical" style="margin-bottom: 50px ;">
-                                    <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #b1976b ;border-bottom-width: 10px ;"></div>
-                                </div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-personnel-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-personnel-item-style-grid-with-background gdlr-core-personnel-style-grid gdlr-core-with-background gdlr-core-item-pdlr">
-                                    <div class="gdlr-core-flexslider flexslider gdlr-core-js-2  gdlr-core-bottom-nav-1" data-type=carousel data-column=3 data-move=1 data-nav=navigation-bottom data-nav-parent=gdlr-core-personnel-item data-disable-autoslide=1>
-                                        <ul class=slides>
-                                            <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-personnel-list gdlr-core-outer-frame-element clearfix" style="box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;">
-                                                    <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover gdlr-core-grayscale-effect">
-                                                        <a href=#><img src=upload/James-599x500.jpg alt width=599 height=500 title=James></a>
-                                                    </div>
-                                                    <div class=gdlr-core-personnel-list-content-wrap>
-                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 16px ;font-weight: 600 ;letter-spacing: 2px ;margin-bottom: 5px ;"><a href=# >James Milner</a></h3>
-                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 13px ;font-weight: 500 ;font-style: normal ;letter-spacing: 2px ;text-transform: uppercase ;">Partner</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-personnel-list gdlr-core-outer-frame-element clearfix" style="box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;">
-                                                    <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover gdlr-core-grayscale-effect">
-                                                        <a href=#><img src=upload/Emma2-599x500.jpg alt width=599 height=500 title=Emma2></a>
-                                                    </div>
-                                                    <div class=gdlr-core-personnel-list-content-wrap>
-                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 16px ;font-weight: 600 ;letter-spacing: 2px ;margin-bottom: 5px ;"><a href=# >Emma Bunton</a></h3>
-                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 13px ;font-weight: 500 ;font-style: normal ;letter-spacing: 2px ;text-transform: uppercase ;">Partner</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-personnel-list gdlr-core-outer-frame-element clearfix" style="box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;">
-                                                    <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover gdlr-core-grayscale-effect">
-                                                        <a href=#><img src=upload/Melanie-599x500.jpg alt width=599 height=500 title=Melanie></a>
-                                                    </div>
-                                                    <div class=gdlr-core-personnel-list-content-wrap>
-                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 16px ;font-weight: 600 ;letter-spacing: 2px ;margin-bottom: 5px ;"><a href=# >Melanie Brown</a></h3>
-                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 13px ;font-weight: 500 ;font-style: normal ;letter-spacing: 2px ;text-transform: uppercase ;">Partner</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-personnel-list gdlr-core-outer-frame-element clearfix" style="box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;">
-                                                    <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover gdlr-core-grayscale-effect">
-                                                        <a href=#><img src=upload/Nathaniel1-599x500.jpg alt width=599 height=500 title=Nathaniel1></a>
-                                                    </div>
-                                                    <div class=gdlr-core-personnel-list-content-wrap>
-                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 16px ;font-weight: 600 ;letter-spacing: 2px ;margin-bottom: 5px ;"><a href=# >Nathaniel Phillips</a></h3>
-                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 13px ;font-weight: 500 ;font-style: normal ;letter-spacing: 2px ;text-transform: uppercase ;">Partner</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-personnel-list gdlr-core-outer-frame-element clearfix" style="box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;">
-                                                    <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover gdlr-core-grayscale-effect">
-                                                        <a href=#><img src=upload/Jodan1-599x500.jpg alt width=599 height=500 title=Jodan1></a>
-                                                    </div>
-                                                    <div class=gdlr-core-personnel-list-content-wrap>
-                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 16px ;font-weight: 600 ;letter-spacing: 2px ;margin-bottom: 5px ;"><a href=# >Jodan Henderson</a></h3>
-                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 13px ;font-weight: 500 ;font-style: normal ;letter-spacing: 2px ;text-transform: uppercase ;">Partner</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class=gdlr-core-item-mglr>
-                                                <div class="gdlr-core-personnel-list gdlr-core-outer-frame-element clearfix" style="box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -moz-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); -webkit-box-shadow: 0 0 35px rgba(10, 10, 10,0.08); border-radius: 4px;-moz-border-radius: 4px;-webkit-border-radius: 4px;">
-                                                    <div class="gdlr-core-personnel-list-image gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover gdlr-core-grayscale-effect">
-                                                        <a href=#><img src=upload/joel1-599x500.jpg alt width=599 height=500 title=joel1></a>
-                                                    </div>
-                                                    <div class=gdlr-core-personnel-list-content-wrap>
-                                                        <h3 class="gdlr-core-personnel-list-title" style="font-size: 16px ;font-weight: 600 ;letter-spacing: 2px ;margin-bottom: 5px ;"><a href=# >Joel Matip</a></h3>
-                                                        <div class="gdlr-core-personnel-list-position gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 13px ;font-weight: 500 ;font-style: normal ;letter-spacing: 2px ;text-transform: uppercase ;">Partner</div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 160px 0px 110px 0px;" data-skin=Newsletter id=gdlr-core-wrapper-3>
                     <div class=gdlr-core-pbf-background-wrap>
@@ -505,7 +411,7 @@
 
         @component('layouts.footer')
         @endcomponent
-        
+
     </div>
 </div>
 

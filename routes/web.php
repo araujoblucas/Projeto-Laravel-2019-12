@@ -30,7 +30,7 @@ Route::get('logout', 'AdminController@logout')->name('logout');
 
 Route::prefix('admin')->group(function () {
     Route::get('/admin-config', 'AdminController@adminConfig')->name('admin_config');
-    Route::get('/{id}/Editor', 'AdminController@Editor')->name('Editor');
+    Route::get('/{id}/Editor', 'AdminController@Editor')->name('PostEditor');
     Route::get('/{id}/postDelete', 'AdminController@postDelete')->name('postDelete');
     Route::post('/{id}/postDelete', 'AdminController@postDelete')->name('postDelete');
     Route::put('/{id}/PostUpdater', 'AdminController@PostUpdater')->name('PostUpdater');
@@ -38,7 +38,18 @@ Route::prefix('admin')->group(function () {
     Route::get('/PostCreator', 'AdminController@PostCreator')->name('PostCreator');
     Route::post('/PostCreator', 'AdminController@postStore')->name('PostCreator');
     Route::get('/PostList', 'AdminController@PostList')->name('PostList');
-    Route::get('/about_team', 'AdminController@aboutTeam')->name('about_team');
+    Route::get('/about_team', 'AdminController@aboutTeam')->name('admin_about_team');
+    Route::post('/about_team', 'AdminController@aboutTeamStore')->name('admin_about_team');
+    Route::get('/partnerCreate', 'PartnerController@create')->name('partner_create');
+    Route::post('/partnerCreate', 'PartnerController@store')->name('partner_create');
+    Route::get('/{id}/partnerEditor', 'PartnerController@Edit')->name('PartnerEditor');
+    Route::put('/{id}/PartnerUpdater', 'PartnerController@update')->name('PartnerUpdater');
+    Route::get('/partnershow', 'PartnerController@show')->name('partner_show');
+    Route::get('/{id}/PartnerDelete', 'PartnerController@destroy')->name('PartnerDelete');
+    Route::post('/{id}/PartnerDelete', 'PartnerController@destroy')->name('PartnerDelete');
+    Route::get('/contact', 'AdminController@contact')->name('admin_contact');
+    Route::post('/contact', 'AdminController@contactUpdate')->name('admin_contact');
+
     Route::prefix('partners')->group(function(){
         Route::get('/', 'PartnerController@index')->name('admin.partner.index');
         Route::get('/create', 'PartnerController@create')->name('admin.partner.create');

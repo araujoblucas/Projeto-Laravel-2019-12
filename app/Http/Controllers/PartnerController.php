@@ -24,7 +24,7 @@ class PartnerController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.PartnerCreator');
     }
 
     /**
@@ -33,9 +33,18 @@ class PartnerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request)  {
+        $dados = new Partner();
+        $dados->name = $request->name;
+        $dados->ocupation = $request->ocupation;
+        $dados->image = $request->image;
+        $dados->facebook = $request->facebook;
+        $dados->linkedin = $request->linkedin;
+        $dados->pinterest = $request->pinterest;
+        $dados->twitter = $request->twitter;
+        $dados->save();
+
+        return redirect()->route('partner_show');
     }
 
     /**
@@ -46,7 +55,7 @@ class PartnerController extends Controller
      */
     public function show(Partner $partner)
     {
-        //
+        return view('admin.PartnerList');
     }
 
     /**
@@ -55,9 +64,10 @@ class PartnerController extends Controller
      * @param  \App\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function edit(Partner $partner)
+    public function edit($id)
     {
-        //
+        $partner = Partner::find($id);
+        return view('admin.PartnerEditor')->withPartner($partner);
     }
 
     /**
@@ -67,9 +77,19 @@ class PartnerController extends Controller
      * @param  \App\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Partner $partner)
+    public function update(Request $request, $id)
     {
-        //
+        $dados = Partner::findorfail($id);
+        $dados->name = $request->name;
+        $dados->ocupation = $request->ocupation;
+        $dados->image = $request->image;
+        $dados->facebook = $request->facebook;
+        $dados->linkedin = $request->linkedin;
+        $dados->pinterest = $request->pinterest;
+        $dados->twitter = $request->twitter;
+        $dados->save();
+
+        return redirect()->route('partner_show');
     }
 
     /**
@@ -78,8 +98,10 @@ class PartnerController extends Controller
      * @param  \App\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Partner $partner)
+    public function destroy($id)
     {
-        //
+        $partner = Partner::find($id);
+        $partner->delete();
+        return redirect()->route('partner_show');
     }
 }

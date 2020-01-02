@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang=en-US class=no-js>
+<?php
+    use App\Contact;
+    $dados = Contact::find(1);
 
+?>
 
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content="width=device-width, initial-scale=1">
 
-    <title>Attorna &#8211; Lawyer &amp; Attorney HTML Template</title>
+    <title>{{$dados->titulo}}</title>
 
 
     <link rel=stylesheet href='plugins/goodlayers-core/plugins/combine/style.css' type=text/css media=all>
@@ -33,14 +37,14 @@
             <div class=gdlr-core-page-builder-body>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 280px 0px 160px 0px;" id=gdlr-core-wrapper-1>
                     <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/slider-2.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.3></div>
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{$dados->imagem}}) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.3></div>
                     </div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js " data-gdlr-animation=fadeInUp data-gdlr-animation-duration=600ms data-gdlr-animation-offset=0.8>
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
                                     <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 75px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">Contact Us<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 25px ;font-style: normal ;color: #f2f2f2 ;margin-top: 25px ;">Get Intouch</span></div>
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 75px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #ffffff ;">{{$dados->titulo}}<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 25px ;font-style: normal ;color: #f2f2f2 ;margin-top: 25px ;">{{$dados->subtitulo}}</span></div>
                             </div>
                         </div>
                     </div>
@@ -58,20 +62,20 @@
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px ;">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 26px ;letter-spacing: 0px ;text-transform: none ;">Phone<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 26px ;letter-spacing: 0px ;text-transform: none ;">Telefone<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;">
-                                                    <p>A wonderful serenity has taken possession of my entire soul, like these.</p>
+                                                    <p>{{$dados->desctelefone}}</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;text-transform: none ;">
-                                                    <p><a href=#>+1-2345-2345</a></p>
+                                                    <p><a href=#>{{$dados->telefone}}</a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -93,14 +97,14 @@
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;">
-                                                    <p>A wonderful serenity has taken possession of my entire soul, like these.</p>
+                                                    <p>{{$dados->descemail}}</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;">
-                                                    <p><a href=#>Contact@goodlayers.com</a></p>
+                                                    <p><a href="mailto:{{$dados->email}}">{{$dados->email}}</a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -116,21 +120,20 @@
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 25px ;">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 26px ;letter-spacing: 0px ;text-transform: none ;">Location<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 26px ;letter-spacing: 0px ;text-transform: none ;">Localização<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;">
-                                                    <p>4 apt. Flawing Street. The Grand Avenue.
-                                                        <br>Liverpool, UK 33342</p>
+                                                    <p>{{$dados->localizacao}}</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;">
-                                                    <p><a href=#>View On Google Map</a></p>
+                                                    <p><a href="{{$dados->linklocalizacao}}">Localização no Google Maps</a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -150,7 +153,7 @@
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 60px ;">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 39px ;letter-spacing: 0px ;text-transform: none ;">Leave us your info <span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 19px ;font-style: normal ;">and we will get back to you.</span></div>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 39px ;letter-spacing: 0px ;text-transform: none ;">{{$dados->messagetitulo}}<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 19px ;font-style: normal ;">{{$dados->messagedesc}}</span></div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-contact-form-7-item gdlr-core-item-pdlr gdlr-core-item-pdb ">
@@ -160,38 +163,38 @@
 
                                                             <div class="quform-elements">
                                                                 <div class="quform-element">
-                                                                    
+
                                                                         <br>
                                                                         <span class="wpcf7-form-control-wrap your-name">
-                                                                            <input id="name" type="text" name="name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Name*">
-                                                                        </span> 
-                                                                    
+                                                                            <input id="name" type="text" name="name" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Nome*">
+                                                                        </span>
+
                                                                 </div>
                                                                 <div class="quform-element">
-                                                                    
+
                                                                         <br>
                                                                         <span class="wpcf7-form-control-wrap your-email">
                                                                             <input id="email" type="text" name="email" size="40" class="input1" aria-required="true" aria-invalid="false" placeholder="Email*">
-                                                                        </span> 
-                                                                    
+                                                                        </span>
+
                                                                 </div>
                                                                 <div class="quform-element">
-                                                                    
+
                                                                         <br>
                                                                         <span class="wpcf7-form-control-wrap your-message">
-                                                                            <textarea  id="message" name="message" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Message*"></textarea>
+                                                                            <textarea  id="message" name="message" cols="40" rows="10" class="input1" aria-invalid="false" placeholder="Mensagem*"></textarea>
                                                                         </span>
-                                                                    
+
                                                                 </div>
-                                                                
+
                                                                 <!-- Begin Submit button -->
                                                                 <div class="quform-submit">
                                                                     <div class="quform-submit-inner">
-                                                                        <button type="submit" class="submit-button"><span>Send</span></button>
+                                                                        <button type="submit" class="submit-button"><span>Enviar</span></button>
                                                                     </div>
                                                                     <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </form>
                                                 </div>
@@ -203,27 +206,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="gdlr-core-pbf-wrapper " style="padding: 0px 0px 0px 0px;">
-                    <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
-                        <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space">
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-wp-google-map-plugin-item gdlr-core-item-pdlr gdlr-core-item-pdb " style="padding-bottom: 0px ;">
-                                    <div class="wpgmp_map_container wpgmp-map-1" rel=map1>
-                                        <iframe style="width:100%; height:480px; border:0" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19905.696399556287!2d-0.3007084089960577!3d51.417531259591925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s2334+Peterson+Street+Kingston+UK+London+H14D!5e0!3m2!1sen!2s!4v1546697086219" width="600" height="450" ></iframe>
-                                        <div style="position: absolute;width: 80%;bottom: 20px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;">
-                                    </div>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 80px 0px 50px 0px;">
                     <div class=gdlr-core-pbf-background-wrap style="background-color: #ffffff ;"></div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                             <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr"><a href=mailto:# target=_blank class=gdlr-core-social-network-icon title=email style="font-size: 20px ;color: #1e1e1e ;"><i class="fa fa-envelope" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=facebook style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-facebook" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=google-plus style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-google-plus" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=skype style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-skype" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=twitter style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-twitter" ></i></a></div>
+                                <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
+
+                                    <a href=mailto:{{$dados->email}} target=_blank class=gdlr-core-social-network-icon title=email style="font-size: 20px ;color: #1e1e1e ;"><i class="fa fa-envelope" ></i></a>
+                                    <?php if($dados->facebook){ ?> <a href="{{$dados->facebook}}" target=_blank class=gdlr-core-social-network-icon title=facebook style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-facebook" ></i></a> <?php } ?>
+                                    <?php if($dados->google){ ?> <a href="{{$dados->google}}" target=_blank class=gdlr-core-social-network-icon title=google-plus style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-google-plus" ></i></a> <?php } ?>
+                                    <?php if($dados->skype){ ?> <a href="{{$dados->skype}}" target=_blank class=gdlr-core-social-network-icon title=skype style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-skype" ></i></a> <?php } ?>
+                                    <?php if($dados->twitter){ ?> <a href="{{$dados->twitter}}" target=_blank class=gdlr-core-social-network-icon title=twitter style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-twitter" ></i></a> <?php } ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -257,7 +253,7 @@
 <script src='js/jquery.superfish.js'></script>
 <script src='js/script-core.js'></script>
 <script type="text/javascript" src="plugins/quform/js/plugins.js"></script>
-<script type="text/javascript" src="plugins/quform/js/scripts.js"></script>  
+<script type="text/javascript" src="plugins/quform/js/scripts.js"></script>
 
 
 </body>
