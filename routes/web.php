@@ -49,6 +49,8 @@ Route::prefix('admin')->group(function () {
     Route::post('/{id}/PartnerDelete', 'PartnerController@destroy')->name('PartnerDelete');
     Route::get('/contact', 'AdminController@contact')->name('admin_contact');
     Route::post('/contact', 'AdminController@contactUpdate')->name('admin_contact');
+    Route::get('/about-us', 'AdminController@aboutUs')->name('admin_about_us');
+    Route::post('/about-us', 'AdminController@aboutusUpdate')->name('admin_about_us');
 
     Route::prefix('partners')->group(function(){
         Route::get('/', 'PartnerController@index')->name('admin.partner.index');

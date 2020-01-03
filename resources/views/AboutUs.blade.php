@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang=en-US class=no-js>
-
+<?php
+use App\AboutUs;
+$dados = AboutUs::find(1);
+?>
 
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content="width=device-width, initial-scale=1">
 
-    <title>Attorna &#8211; Lawyer &amp; Attorney HTML Template</title>
+    <title>{{$dados->titulo}}</title>
 
 
     <link rel=stylesheet href='plugins/goodlayers-core/plugins/combine/style.css' type=text/css media=all>
@@ -35,8 +38,8 @@
             <div class=attorna-page-title-overlay></div>
             <div class="attorna-page-title-container attorna-container">
                 <div class="attorna-page-title-content attorna-item-pdlr" style="padding-top: 150px ;padding-bottom: 150px ;">
-                    <h1 class="attorna-page-title" style="font-size: 57px ;text-transform: none ;">About Us</h1>
-                    <div class=attorna-page-caption>Story About Our Firm</div>
+                    <h1 class="attorna-page-title" style="font-size: 57px ;text-transform: none ;">{{$dados->titulo}}</h1>
+                    <div class=attorna-page-caption>{{$dados->subtitulo}}</div>
                 </div>
             </div>
         </div>
@@ -105,7 +108,7 @@
                 </div>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 140px 80px 65px 80px;" data-skin="Our Philosophy" id=gdlr-core-wrapper-2>
                     <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/sign1.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{$dados->imagemdesc}}) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
                     </div>
                     <div class=gdlr-core-pbf-background-frame style="margin: 45px 45px 45px 45px;border-width: 1px 1px 1px 1px;border-style: solid ;border-color: #575757 ;"></div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
@@ -379,27 +382,6 @@
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align gdlr-core-style-vertical" style="margin-bottom: 50px ;">
                                     <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #b1976b ;height: 30px ;"></div>
-                                </div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 38px ;">
-                                    <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 28px ;font-weight: 700 ;text-transform: none ;color: #ffffff ;">Subscribe To Newsletter<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
-                                </div>
-                            </div>
-                            <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-newsletter-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-style-rectangle">
-
-                                    <div class="newsletter newsletter-subscription">
-                                        <form class="gdlr-core-newsletter-form clearfix" method=post action="https://demo.goodlayers.com/attorna/?na=s" onsubmit="return newsletter_check(this)">
-                                            <div class=gdlr-core-newsletter-email>
-                                                <input class="newsletter-email gdlr-core-skin-e-background gdlr-core-skin-e-content" placeholder="Your Email Address" type=email name=ne size=30 required>
-                                            </div>
-                                            <div class=gdlr-core-newsletter-submit>
-                                                <input class=newsletter-submit type=submit value=Subscribe>
-                                            </div>
-                                        </form>
-                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -75,9 +75,8 @@ class AdminController extends Controller
     }
 
     public function aboutUs(){
-        return view('admin.about_us');
+        return view('admin.aboutUs');
     }
-
     public function aboutTeam(){
         return view('admin.AboutTeam');
     }
@@ -158,6 +157,9 @@ class AdminController extends Controller
         $dados->save();
         return redirect()->route('admin_contact');
     }
+
+
+
 
     public function logout(){
     	Auth::logout();
