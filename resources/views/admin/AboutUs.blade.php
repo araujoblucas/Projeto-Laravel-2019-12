@@ -149,6 +149,11 @@ $dados = AboutUs::Find(1);
             </div>
 
             <div class="form-group">
+                <label for="exampleFormControlInput1"><h4>Imagem para o fundo das Perguntas</h4></label>
+                <input type="text" name="imagemfaq" class="form-control" value="{{$dados->imagemfaq}}" placeholder="1800x1043">
+            </div>
+
+            <div class="form-group">
                 <label for="exampleFormControlInput1"><h4>Pergunta 1</h4></label>
                 <input type="text" name="ask1" class="form-control" value="{{$dados->ask1}}">
             </div>
@@ -189,8 +194,33 @@ $dados = AboutUs::Find(1);
             </div>
 
             <div class="form-group">
+                <label for="exampleFormControlInput1"><h4>Pergunta 5</h4></label>
+                <input type="text" name="ask5" class="form-control" value="{{$dados->ask5}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h4>Resposta 5</h4></label>
+                <input type="text" name="answer5" class="form-control" value="{{$dados->answer5}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h4>Pergunta 6</h4></label>
+                <input type="text" name="ask6" class="form-control" value="{{$dados->ask6}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h4>Resposta 6</h4></label>
+                <input type="text" name="answer6" class="form-control" value="{{$dados->answer6}}">
+            </div>
+
+            <div class="form-group">
                 <label for="exampleFormControlInput1"><h4>Imagem da sessão Entre em contato </h4></label>
                 <input type="text" name="imagemcontato" class="form-control" placeholder="1800x826" value="{{$dados->imagemcontato}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h4>Titulo da sessão de Contatos</h4></label>
+                <input type="text" name="titulocontato" class="form-control" value="{{$dados->titulocontato}}">
             </div>
 
             <div class="form-group">

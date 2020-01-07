@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\AboutTeam;
+use App\AboutUs;
 use App\Post;
 use App\Contact;
+use App\Gallery;
 use Auth;
 use app\User;
 use Illuminate\Http\Request;
@@ -159,7 +161,87 @@ class AdminController extends Controller
     }
 
 
+    public function aboutusUpdate(Request $request){
+        $dados = AboutUs::findorfail(1);
+        $dados->titulo = $request->titulo;
+        $dados->subtitulo = $request->subtitulo;
+        $dados->titulo2 = $request->titulo2;
+        $dados->subtitulo2 = $request->subtitulo2;
+        $dados->sobre = $request->sobre;
+        $dados->video = $request->video;
+        $dados->dado1 = $request->dado1;
+        $dados->descdado1 = $request->descdado1;
+        $dados->dado2 = $request->dado2;
+        $dados->descdado2 = $request->descdado2;
+        $dados->dado3 = $request->dado3;
+        $dados->descdado3 = $request->descdado3;
+        $dados->imagemdesc = $request->imagemdesc;
+        $dados->titulo3 = $request->titulo3;
+        $dados->subtitulo3 = $request->subtitulo3;
+        $dados->descesq = $request->descesq;
+        $dados->descdir = $request->descdir;
+        $dados->estatistica1 = $request->estatistica1;
+        $dados->descestatistica1 = $request->descestatistica1;
+        $dados->estatistica2 = $request->estatistica2;
+        $dados->descestatistica2 = $request->descestatistica2;
+        $dados->estatistica3 = $request->estatistica3;
+        $dados->descestatistica3 = $request->descestatistica3;
+        $dados->estatistica4 = $request->estatistica4;
+        $dados->descestatistica4 = $request->descestatistica4;
+        $dados->imagemfaq = $request->imagemfaq;
+        $dados->ask1 = $request->ask1;
+        $dados->answer1 = $request->answer1;
+        $dados->ask2 = $request->ask2;
+        $dados->answer2 = $request->answer2;
+        $dados->ask3 = $request->ask3;
+        $dados->answer3 = $request->answer3;
+        $dados->ask4 = $request->ask4;
+        $dados->answer4 = $request->answer4;
+        $dados->ask5 = $request->ask5;
+        $dados->answer5 = $request->answer5;
+        $dados->ask6 = $request->ask6;
+        $dados->answer6 = $request->answer6;
+        $dados->imagemcontato = $request->imagemcontato;
+        $dados->titulocontato = $request->titulocontato;
+        $dados->telefone = $request->telefone;
+        $dados->email = $request->email;
+        $dados->atendimento = $request->atendimento;
+        $dados->save();
 
+        return redirect()->route('admin_about_us');
+
+    }
+
+    public function gallery(){
+        return view('admin.Gallery');
+    }
+    public function galleryupdate(Request $request){
+        $dados = Gallery::findorfail(1);
+        $dados->titulo = $request->titulo;
+
+        $dados->booleangrid = $request->booleangrid;
+        $dados->titulogrid = $request->titulogrid;
+        $dados->subtitulogrid = $request->subtitulogrid;
+        $dados->imagemgrid1 = $request->imagemgrid1;
+        $dados->imagemgrid2 = $request->imagemgrid2;
+        $dados->imagemgrid3 = $request->imagemgrid3;
+        $dados->imagemgrid4 = $request->imagemgrid4;
+        $dados->booleanhorizontal = $request->booleanhorizontal;
+        $dados->titulohorizontal = $request->titulohorizontal;
+        $dados->subtitulohorizontal = $request->subtitulohorizontal;
+        $dados->imagemhorizontal1 = $request->imagemhorizontal1;
+        $dados->legendahorizontal1 = $request->legendahorizontal1;
+        $dados->imagemhorizontal2 = $request->imagemhorizontal2;
+        $dados->legendahorizontal2 = $request->legendahorizontal2;
+        $dados->imagemhorizontal3 = $request->imagemhorizontal3;
+        $dados->legendahorizontal3 = $request->legendahorizontal3;
+        $dados->imagemhorizontal4 = $request->imagemhorizontal4;
+        $dados->legendahorizontal4 = $request->legendahorizontal4;
+        $dados->imagemhorizontal5 = $request->imagemhorizontal5;
+        $dados->legendahorizontal5 = $request->legendahorizontal5;
+        $dados->save();
+        return redirect()->route('admin_gallery');
+    }
 
     public function logout(){
     	Auth::logout();

@@ -58,7 +58,7 @@ $dados = AboutUs::find(1);
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-center-align" style="padding-bottom: 0px ;">
                                                 <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;">
-                                                    <a class="gdlr-core-lightgallery gdlr-core-js " href="https://www.youtube.com/watch?v=j5zzEaCs57I"><img src=upload/player.png alt width=82 height=82 title=player></a>
+                                                    <a class="gdlr-core-lightgallery gdlr-core-js " href="{{$dados->video}}"><img src=upload/player.png alt width=82 height=82 title=player></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -76,28 +76,16 @@ $dados = AboutUs::find(1);
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 14px ;font-weight: 700 ;font-style: normal ;letter-spacing: 3px ;text-transform: uppercase ;color: #a3a3a3 ;">About Attorna</span>
+                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 14px ;font-weight: 700 ;font-style: normal ;letter-spacing: 3px ;text-transform: uppercase ;color: #a3a3a3 ;">{{$dados->titulo2}}</span>
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 36px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #202020 ;">Our Gorgeous History<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 36px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #202020 ;">{{$dados->subtitulo2}}<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 20px ;">
                                                 <div class=gdlr-core-text-box-item-content style="text-transform: none ;color: #6d6d6d ;">
-                                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows.</p>
-                                                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it.</p>
+                                                    <p>{{$dados->sobre}}</p>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-image-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-left-align" style="padding-bottom: 15px ;">
-                                                <div class="gdlr-core-image-item-wrap gdlr-core-media-image  gdlr-core-image-item-style-rectangle" style="border-width: 0px;"><img src=upload/paul.png alt width=254 height=47 title=paul></div>
-                                            </div>
-                                        </div>
-                                        <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 0px ;">
-                                                <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 11px ;font-weight: 500 ;letter-spacing: 3px ;color: #6d6d6d ;"> CEO & Founder of Attorna<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
                                         </div>
                                     </div>
@@ -121,9 +109,9 @@ $dados = AboutUs::find(1);
                                                 <div class="gdlr-core-column-service-media gdlr-core-media-image"><img src=upload/law-icon-1.png alt width=35 height=50 title=law-icon-1></div>
                                                 <div class=gdlr-core-column-service-content-wrapper>
                                                     <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 15px ;font-weight: 600 ;letter-spacing: 3px ;">Our Philosophy</h3></div>
+                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 15px ;font-weight: 600 ;letter-spacing: 3px ;">{{$dados->dado1}}</h3></div>
                                                     <div class=gdlr-core-column-service-content style="text-transform: none ;">
-                                                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                                        <p>{{$dados->descdado1}}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -139,9 +127,9 @@ $dados = AboutUs::find(1);
                                                 <div class="gdlr-core-column-service-media gdlr-core-media-image" style="margin-top: 4px;margin-bottom: 28px;"><img src=upload/law-icon2.png alt width=34 height=46 title=law-icon2></div>
                                                 <div class=gdlr-core-column-service-content-wrapper>
                                                     <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 15px ;font-weight: 600 ;letter-spacing: 3px ;">Our Principle</h3></div>
+                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 15px ;font-weight: 600 ;letter-spacing: 3px ;">{{$dados->dado2}}</h3></div>
                                                     <div class=gdlr-core-column-service-content style="text-transform: none ;">
-                                                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                                        <p>{{$dados->descdado2}}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -157,9 +145,9 @@ $dados = AboutUs::find(1);
                                                 <div class="gdlr-core-column-service-media gdlr-core-media-image" style="margin-top: 5px;margin-bottom: 28px;"><img src=upload/law-icon3.png alt width=45 height=45 title=law-icon3></div>
                                                 <div class=gdlr-core-column-service-content-wrapper>
                                                     <div class=gdlr-core-column-service-title-wrap>
-                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 15px ;font-weight: 600 ;letter-spacing: 3px ;">Key Of Success</h3></div>
+                                                        <h3 class="gdlr-core-column-service-title gdlr-core-skin-title" style="font-size: 15px ;font-weight: 600 ;letter-spacing: 3px ;">{{$dados->dado3}}</h3></div>
                                                     <div class=gdlr-core-column-service-content style="text-transform: none ;">
-                                                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                                                        <p>{{$dados->descdado3}}</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -177,9 +165,9 @@ $dados = AboutUs::find(1);
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                             <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 20px ;"><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 14px ;font-weight: 700 ;font-style: normal ;letter-spacing: 3px ;text-transform: uppercase ;color: #b1976b ;">what we are expert at</span>
+                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 20px ;"><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 14px ;font-weight: 700 ;font-style: normal ;letter-spacing: 3px ;text-transform: uppercase ;color: #b1976b ;">{{$dados->titulo3}}</span>
                                     <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 33px ;font-weight: 700 ;text-transform: none ;color: #202020 ;">Why Clients Choose Us?<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 33px ;font-weight: 700 ;text-transform: none ;color: #202020 ;">{{$dados->subtitulo3}}<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                 </div>
                             </div>
                             <div class=gdlr-core-pbf-element>
@@ -193,7 +181,7 @@ $dados = AboutUs::find(1);
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 25px ;">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #555555 ;">
-                                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookm arksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place.</p>
+                                                    <p>{{$dados->descesq}}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -206,7 +194,7 @@ $dados = AboutUs::find(1);
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 25px ;">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;font-weight: 400 ;text-transform: none ;color: #555555 ;">
-                                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine.</p>
+                                                    <p>{{$dados->descdir}}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -221,8 +209,8 @@ $dados = AboutUs::find(1);
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-counter-item gdlr-core-item-pdlr gdlr-core-item-pdb ">
-                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 47px ;font-weight: 500 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start=0 data-counter-end=1000>0</span><span class=gdlr-core-counter-item-suffix>+</span></div>
-                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">Client Consultations</div>
+                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 47px ;font-weight: 500 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start=0 data-counter-end={{$dados->estatistica1}}>0</span><span class=gdlr-core-counter-item-suffix>+</span></div>
+                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">{{$dados->descestatistica1}}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -236,8 +224,8 @@ $dados = AboutUs::find(1);
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-counter-item gdlr-core-item-pdlr gdlr-core-item-pdb ">
-                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 47px ;font-weight: 500 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start=0 data-counter-end=95>0</span><span class=gdlr-core-counter-item-suffix>%</span></div>
-                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">Successful Cases</div>
+                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 47px ;font-weight: 500 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start=0 data-counter-end={{$dados->estatistica2}}>0</span><span class=gdlr-core-counter-item-suffix>%</span></div>
+                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">{{$dados->descestatistica2}}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -251,8 +239,8 @@ $dados = AboutUs::find(1);
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-counter-item gdlr-core-item-pdlr gdlr-core-item-pdb ">
-                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 47px ;font-weight: 500 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start=0 data-counter-end=10>0</span><span class=gdlr-core-counter-item-suffix>mIns</span></div>
-                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">Recovered cost for clients</div>
+                                                <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 47px ;font-weight: 500 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start=0 data-counter-end={{$dados->estatistica3}}>0</span><span class=gdlr-core-counter-item-suffix></span></div>
+                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">{{$dados->estatistica3}}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -261,13 +249,13 @@ $dados = AboutUs::find(1);
                             <div class="gdlr-core-pbf-column gdlr-core-column-15">
                                 <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 10px 0px 0px 0px;">
                                     <div class=gdlr-core-pbf-background-wrap>
-                                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/counter-bg-1.png) ;opacity: 0.5 ;background-repeat: no-repeat ;background-position: top center ;" data-parallax-speed=0></div>
+                                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/counter-bg-1.png) ;opacity: 0.5 ;background-repeat: no-repeat ;background-position: top center ;" data-parallax-speed={{$dados->estatistica4}}></div>
                                     </div>
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-counter-item gdlr-core-item-pdlr gdlr-core-item-pdb ">
                                                 <div class="gdlr-core-counter-item-number gdlr-core-skin-title gdlr-core-title-font" style="font-size: 47px ;font-weight: 500 ;"><span class="gdlr-core-counter-item-count gdlr-core-js" data-duration data-counter-start=0 data-counter-end=30>0</span><span class=gdlr-core-counter-item-suffix>+</span></div>
-                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">Professional Attorneys</div>
+                                                <div class="gdlr-core-counter-item-bottom-text gdlr-core-skin-content" style="font-size: 17px ;font-weight: 400 ;text-transform: none ;">{{$dados->descestatistica4}}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -278,14 +266,14 @@ $dados = AboutUs::find(1);
                 </div>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 100px 50px 50px 50px;" data-skin="frequently asked">
                     <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/libery.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{$dados->imagemfaq}}) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
                     </div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 45px ;">
                                     <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 28px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #b1976b ;">Frequently Asked Questions<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 28px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #b1976b ;">Perguntas Frequentes<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                 </div>
                             </div>
                             <div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first" data-skin=Accordion>
@@ -296,57 +284,62 @@ $dados = AboutUs::find(1);
                                                 <div class="gdlr-core-accordion-item-tab clearfix  gdlr-core-active">
                                                     <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                                     <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What do you get for your attorney’s fee?</h4>
+                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask1}}</h4>
                                                         <div class=gdlr-core-accordion-item-content>
-                                                            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
+                                                            <p>{{$dados->answer1}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="gdlr-core-accordion-item-tab clearfix ">
                                                     <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                                     <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">How long is the statute of limitations to file suit for a New York personal injury case?</h4>
+                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask2}}</h4>
                                                         <div class=gdlr-core-accordion-item-content>
-                                                            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
+                                                            <p>{{$dados->answer2}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="gdlr-core-accordion-item-tab clearfix ">
                                                     <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                                     <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What information do you need from me in order to get started?</h4>
+                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask3}}</h4>
                                                         <div class=gdlr-core-accordion-item-content>
-                                                            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
+                                                            <p>{{$dados->answer3}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="gdlr-core-accordion-item-tab clearfix ">
                                                     <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                                     <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What types of injury cases does your firm work on?</h4>
+                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask4}}</h4>
                                                         <div class=gdlr-core-accordion-item-content>
-                                                            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
+                                                            <p>{{$dados->answer4}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <?php if($dados->ask5) { ?>
                                                 <div class="gdlr-core-accordion-item-tab clearfix ">
                                                     <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                                     <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">What is my personal injury or insurance claim worth?</h4>
+                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask5}}</h4>
                                                         <div class=gdlr-core-accordion-item-content>
-                                                            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
+                                                            <p>{{$dados->answer5}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <?php } ?>
+                                                <?php if($dados->ask6) { ?>
                                                 <div class="gdlr-core-accordion-item-tab clearfix ">
                                                     <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                                     <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">On average, how long does it take before a settlement/trial is reached?</h4>
+                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask6}}</h4>
                                                         <div class=gdlr-core-accordion-item-content>
-                                                            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. &#8220;What&#8217;s happened to me?&#8221; he thought. It wasn&#8217;t a dream. His room, a proper human.</p>
+                                                            <p>{{$dados->answer6}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <?php } ?>
                                             </div>
                                         </div>
                                     </div>
@@ -360,22 +353,22 @@ $dados = AboutUs::find(1);
                 </div>
                 <div class="gdlr-core-pbf-wrapper " style="padding: 160px 0px 110px 0px;" data-skin=Newsletter id=gdlr-core-wrapper-3>
                     <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/sing-name.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
+                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{$dados->imagemcontato}}) ;background-size: cover ;background-position: center ;" data-parallax-speed=0.2></div>
                     </div>
                     <div class=gdlr-core-pbf-background-frame style="margin: 55px 55px 55px 55px;border-width: 1px 1px 1px 1px;border-style: solid ;border-color: #686868 ;"></div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
                             <div class=gdlr-core-pbf-element>
-                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 18px ;font-weight: 700 ;font-style: normal ;letter-spacing: 4px ;text-transform: uppercase ;color: #ffffff ;">Are you looking for someone to help?</span>
+                                <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 18px ;font-weight: 700 ;font-style: normal ;letter-spacing: 4px ;text-transform: uppercase ;color: #ffffff ;">{{$dados->titulocontato}}</span>
                                     <div class="gdlr-core-title-item-title-wrap ">
-                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 26px ;font-weight: 400 ;letter-spacing: 0px ;text-transform: none ;color: #b1976b ;">Let us help you! Call Now : (1)2345-2345-54<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                        <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 26px ;font-weight: 400 ;letter-spacing: 0px ;text-transform: none ;color: #b1976b ;">Deixe-nos te ajudar! Ligue : {{$dados->telefone}}<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                 </div>
                             </div>
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align">
                                     <div class=gdlr-core-text-box-item-content style="text-transform: none ;color: #ffffff ;">
-                                        <div style="margin-left: 12px; margin-right: 0px; display: inline;"><i class="fa fa-envelope-open-o" style="font-size: 14px ;color: #b1976b ;margin-right: 10px ;"></i>Contact@Attornasite.co</div>
-                                        <div style="margin-left: 9px; margin-right: 13px; display: inline;">· <i class=icon_clock_alt style="font-size: 15px ;color: #b1976b ;margin-right: 10px ;"></i>Mon &#8211; Fri 09:00-17:00</div>
+                                        <div style="margin-left: 12px; margin-right: 0px; display: inline;"><i class="fa fa-envelope-open-o" style="font-size: 14px ;color: #b1976b ;margin-right: 10px ;"></i>{{$dados->email}}</div>
+                                        <div style="margin-left: 9px; margin-right: 13px; display: inline;">· <i class=icon_clock_alt style="font-size: 15px ;color: #b1976b ;margin-right: 10px ;"></i>{{$dados->atendimento}}</div>
                                     </div>
                                 </div>
                             </div>

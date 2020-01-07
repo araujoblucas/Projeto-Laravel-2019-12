@@ -14,7 +14,13 @@
                 <a class="nav-link" href="{{route('admin_about_team')}}">Equipe</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{route('admin_about_us')}}">Sobre Nós</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{{route('admin_contact')}}">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin_gallery')}}">Galeria</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -51,6 +51,8 @@ Route::prefix('admin')->group(function () {
     Route::post('/contact', 'AdminController@contactUpdate')->name('admin_contact');
     Route::get('/about-us', 'AdminController@aboutUs')->name('admin_about_us');
     Route::post('/about-us', 'AdminController@aboutusUpdate')->name('admin_about_us');
+    Route::get('/galeria', 'AdminController@gallery')->name('admin_gallery');
+    Route::post('/galeria', 'AdminController@galleryupdate')->name('admin_gallery');
 
     Route::prefix('partners')->group(function(){
         Route::get('/', 'PartnerController@index')->name('admin.partner.index');
