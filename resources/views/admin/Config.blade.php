@@ -38,7 +38,7 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Telefone</h2></label>
+                <label for="exampleFormControlInput1"><h2>Email</h2></label>
                 <input type="text" name="email" class="form-control" value="{{$dados->email}}">
             </div>
 

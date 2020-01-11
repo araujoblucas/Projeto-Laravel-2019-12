@@ -38,7 +38,7 @@
                     <td scope="row">{{ $post->titulo }}</td>
                     {{csrf_field()}}
                     <td scope="row">{{ $post->created_at }}</td>
-                    <td scope="row" style="text-align: center"><a href="{{route('AdminPostShow', $post->id)}}"><i class="fa fa-eye" style="font-size:24px; color:#000;"></i></a></td>
+                    <td scope="row" style="text-align: center"><a href="{{route('PostShow', $post->id)}}"><i class="fa fa-eye" style="font-size:24px; color:#000;"></i></a></td>
                     <td scope="row" style="text-align: center"><a href="{{route('PostEditor', $post->id)}}"><i class="fas fa-edit" style="font-size:24px;color:black; "></i></a></td>
                     <td scope="row" style="text-align: center"><a href="{{route('postDelete', $post->id)}}"><i class='fas fa-minus' style="font-size:24px;color:black;"></i></a></td>
                 </tr>
