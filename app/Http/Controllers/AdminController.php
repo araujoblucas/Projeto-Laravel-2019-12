@@ -7,6 +7,7 @@ use App\AboutUs;
 use App\Post;
 use App\Contact;
 use App\Gallery;
+use App\Price_table;
 use Auth;
 use app\User;
 use Illuminate\Http\Request;
@@ -43,13 +44,10 @@ class AdminController extends Controller
         $dados = new Post;
         $dados->titulo = $request->titulo;
         $dados->img = $request->img;
+        $dados->autor = $request->autor;
         $dados->descricao = $request->descricao;
 
         $insert = $dados->save();
-        if($insert)
-            echo "<script>alert('Inserido com sucesso!');</script>";
-        else
-            echo "<script>alert('Erro ao Inserir');</script>";
 
         return redirect()->route('PostList');
 
@@ -218,7 +216,6 @@ class AdminController extends Controller
     public function galleryupdate(Request $request){
         $dados = Gallery::findorfail(1);
         $dados->titulo = $request->titulo;
-
         $dados->booleangrid = $request->booleangrid;
         $dados->titulogrid = $request->titulogrid;
         $dados->subtitulogrid = $request->subtitulogrid;
@@ -247,6 +244,49 @@ class AdminController extends Controller
     	Auth::logout();
     }
 
+    public function price_table(){
+        return  view('admin.PriceTable');
+    }
+    public function price_tableUpdate(Request $request){
+        $dados = Price_table::findorfail(1);
+        $dados->titulo = $request->titulo;
+        $dados->subtitulo = $request->subtitulo;
+        $dados->titulo2 = $request->titulo2;
+        $dados->subtitulo2 = $request->subtitulo2;
+        $dados->descricao = $request->descricao;
+        $dados->planoesquerdatitulo = $request->planoesquerdatitulo;
+        $dados->planoesquerdasubtitulo = $request->planoesquerdasubtitulo;
+        $dados->precoesquerda = $request->precoesquerda;
+        $dados->esquerdalista1 = $request->esquerdalista1;
+        $dados->esquerdalista2 = $request->esquerdalista2;
+        $dados->esquerdalista3 = $request->esquerdalista3;
+        $dados->esquerdalista4 = $request->esquerdalista4;
+        $dados->esquerdalista5 = $request->esquerdalista5;
+        $dados->esquerdalink = $request->esquerdalink;
+        $dados->planocentrotitulo = $request->planocentrotitulo;
+        $dados->planocentrosubtitulo = $request->planocentrosubtitulo;
+        $dados->precocentro = $request->precocentro;
+        $dados->centrolista1 = $request->centrolista1;
+        $dados->centrolista2 = $request->centrolista2;
+        $dados->centrolista3 = $request->centrolista3;
+        $dados->centrolista4 = $request->centrolista4;
+        $dados->centrolista5 = $request->centrolista5;
+        $dados->centrolink = $request->centrolink;
+        $dados->planodireitatitulo = $request->planodireitatitulo;
+        $dados->planodireitasubtitulo = $request->planodireitasubtitulo;
+        $dados->precodireita = $request->precodireita;
+        $dados->direitalista1 = $request->direitalista1;
+        $dados->direitalista2 = $request->direitalista2;
+        $dados->direitalista3 = $request->direitalista3;
+        $dados->direitalista4 = $request->direitalista4;
+        $dados->direitalista5 = $request->direitalista5;
+        $dados->direitalink = $request->direitalink;
+        $dados->save();
+        return redirect()->route('admin_price_table');
+    }
 
-
+    public function AdminPostShow($id){
+        $post = Post::findorfail($id);
+        return view('admin.PostShow')->withPost($post);
+    }
 }

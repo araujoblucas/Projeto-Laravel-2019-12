@@ -18,12 +18,12 @@ Route::get('/admin', 'AdminController@admin')->name('admin');
 Route::get('/gallery', 'GalleryController@gallery')->name('gallery');
 Route::get('/maintenance', 'MaintenanceController@maintenance')->name('maintenance');
 Route::get('/blog', 'BlogController@blog')->name('blog');
-Route::get('/price-table', 'PriceTableController@priceTable')->name('price_table');
+Route::get('/{id}/', 'BlogController@post_show')->name('post_show');
+Route::get('/planos', 'PriceTableController@priceTable')->name('price_table');
 Route::get('/about-team', 'AboutTeamController@aboutTeam')->name('about_team');
 Route::get('/contact', 'ContactController@contact')->name('contact');
 Route::get('/team', 'TeamPlainStyleController@teamPlainstyle')->name('team_plain_style');
 Route::get('/about-us', 'AboutUsController@aboutUs')->name('about_us');
-
 Route::get('login', 'AdminController@login')->name('login');
 Route::post('login', 'AdminController@postLogin')->name('post_login');
 Route::get('logout', 'AdminController@logout')->name('logout');
@@ -35,6 +35,7 @@ Route::prefix('admin')->group(function () {
     Route::post('/{id}/postDelete', 'AdminController@postDelete')->name('postDelete');
     Route::put('/{id}/PostUpdater', 'AdminController@PostUpdater')->name('PostUpdater');
     Route::post('/{id}/PostUpdater', 'AdminController@PostUpdater')->name('PostUpdater');
+    Route::get('/{id}/', 'AdminController@AdminPostShow')->name('PostShow');
     Route::get('/PostCreator', 'AdminController@PostCreator')->name('PostCreator');
     Route::post('/PostCreator', 'AdminController@postStore')->name('PostCreator');
     Route::get('/PostList', 'AdminController@PostList')->name('PostList');
@@ -53,6 +54,8 @@ Route::prefix('admin')->group(function () {
     Route::post('/about-us', 'AdminController@aboutusUpdate')->name('admin_about_us');
     Route::get('/galeria', 'AdminController@gallery')->name('admin_gallery');
     Route::post('/galeria', 'AdminController@galleryupdate')->name('admin_gallery');
+    Route::get('/planos', 'AdminController@price_table')->name('admin_price_table');
+    Route::post('/planos', 'AdminController@price_tableUpdate')->name('admin_price_table');
 
     Route::prefix('partners')->group(function(){
         Route::get('/', 'PartnerController@index')->name('admin.partner.index');

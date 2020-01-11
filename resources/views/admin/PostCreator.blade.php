@@ -28,6 +28,10 @@
                 <label for="exampleFormControlInput1"><h5>Insira o link da Imagem</h5></label>
                 <input type="text" name="img" class="form-control">
             </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h5>Insira o Autor do Post</h5></label>
+                <input type="text" name="autor" class="form-control">
+            </div>
     <textarea name="descricao" id="editor1">
 
                     </textarea>

@@ -30,6 +30,10 @@
                 <label for="exampleFormControlInput1"><h5>Insira o link da Imagem</h5></label>
                 <input type="text" name="img" class="form-control" value="{{ $post->img }}">
             </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h5>Insira o autor do Post</h5></label>
+                <input type="text" name="autor" class="form-control" value="{{ $post->autor }}">
+            </div>
             <textarea name="descricao" id="editor1">
                 {{ $post->descricao }}
                     </textarea>

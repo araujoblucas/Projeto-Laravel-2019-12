@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<?php
+ use App\ConfigDefault;
+ $dados = ConfigDefault::find(1);
+
+?>
 <head>
 
     <script src="https://cdn.ckeditor.com/4.13.1/standard-all/ckeditor.js"></script>
@@ -16,6 +21,71 @@
 <body>
 @component('admin.adminHead')
 @endcomponent
+
+<div class="container" style="margin-top: 20px;">
+    <div id="form-container" class="container">
+        <form method="post" action="{{ route('admin_config') }}">
+
+            <h1>Configurações do Head</h1>
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h2>Icone</h2></label>
+                <input type="text" name="icone" class="form-control" value="{{$dados->icone}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h2>Telefone</h2></label>
+                <input type="text" name="telefone" class="form-control" value="{{$dados->telefone}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h2>Telefone</h2></label>
+                <input type="text" name="email" class="form-control" value="{{$dados->email}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h2>Atendimento</h2></label>
+                <input type="text" name="atendimento" class="form-control" value="{{$dados->atendimento}}">
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="exampleFormControlInput1"><h5>Facebook</h5></label>
+                    <input type="text" name="facebook" class="form-control" value="{{$dados->facebook}}">
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput1"><h5>Linkedin</h5></label>
+                    <input type="text" name="linkedin" class="form-control" value="{{$dados->linkedin}}">
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput1"><h5>Pinterest</h5></label>
+                    <input type="text" name="pinterest" class="form-control" value="{{$dados->pinterest}}">
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput1"><h5>Twitter</h5></label>
+                    <input type="text" name="twitter" class="form-control" value="{{$dados->twitter}}">
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput1"><h5>Instagram</h5></label>
+                    <input type="text" name="instagram" class="form-control" value="{{$dados->instagram}}">
+                </div>
+            </div>
+
+            <h1>Configurações do Footer</h1>
+            <h2>Primeira Coluna</h2>
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h4>Primeira Coluna</h4></label>
+                <input type="text" name="atendimento" class="form-control" value="{{$dados->atendimento}}">
+            </div>
+
+
+
+            <br>
+
+            <button class="btn btn-primary black" type="submit">Postar</button>
+
+
+        </form>
+    </div>
 
 
 
