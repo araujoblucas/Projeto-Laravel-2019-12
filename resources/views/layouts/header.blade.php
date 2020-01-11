@@ -1,10 +1,3 @@
-<?php
-    use App\ConfigDefault;
-    $dados = ConfigDefault::find(1);
-
-?>
-
-
 <div class="attorna-body-wrapper clearfix  attorna-with-frame">
             <div class=attorna-top-bar>
                 <div class=attorna-top-bar-background></div>
@@ -15,21 +8,22 @@
                             <div style="margin-left: 10px; margin-right: 13px; display: inline;">&#183;</div><i class=icon_clock_alt style="font-size: 15px ;color: #b1976b ;margin-right: 10px ;"></i>{{$dados->atendimento}}</div><a class=attorna-top-bar-right-button href={{route('contact')}} target=_self><i class="fa fa-comment-o" ></i>Entre em Contato</a>
                         <div class="attorna-top-bar-right attorna-item-pdlr">
                             <div class=attorna-top-bar-right-social>
-                                <?php if($dados->facebook) { ?>
+                                @if($dados->facebook)
                                     <a href="{{$dados->facebook}}" target=_blank class=attorna-top-bar-social-icon title=facebook><i class="fa fa-facebook" ></i></a>
-                                <?php } ?>
-                                <?php if($dados->linkedin) { ?>
+                                @endif
+
+                                @if($dados->linkedin)
                                     <a href="{{$dados->linkedin}}" target=_blank class=attorna-top-bar-social-icon title=linkedin><i class="fa fa-linkedin" ></i></a>
-                                <?php } ?>
-                                <?php if($dados->pinterest) { ?>
+                                @endif
+                                @if($dados->pinterest)
                                     <a href="{{$dados->pinterest}}" target=_blank class=attorna-top-bar-social-icon title=pinterest><i class="fa fa-pinterest-p" ></i></a>
-                                <?php } ?>
-                                <?php if($dados->twitter) { ?>
+                                @endif
+                                @if($dados->twitter)
                                     <a href="{{$dados->twitter}}" target=_blank class=attorna-top-bar-social-icon title=twitter><i class="fa fa-twitter" ></i></a>
-                                <?php } ?>
-                                <?php if($dados->instagram) { ?>
+                                @endif
+                                @if($dados->instagram)
                                     <a href="{{$dados->instagram}}" target=_blank class=attorna-top-bar-social-icon title=instagram><i class="fa fa-instagram" ></i></a>
-                                <?php } ?>
+                                @endif
                             </div>
                         </div>
                     </div>

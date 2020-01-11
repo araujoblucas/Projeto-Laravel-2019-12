@@ -9,12 +9,12 @@
     <title>{{$post->titulo}}</title>
 
 
-    <link rel=stylesheet href='..\plugins/goodlayers-core/plugins/combine/style.css' type=text/css media=all>
-    <link rel=stylesheet href='..\plugins/goodlayers-core/include/css/page-builder.css' type=text/css media=all>
-    <link rel=stylesheet href='..\plugins/revslider/public/assets/css/settings.css' type=text/css media=all>
-    <link rel=stylesheet href='..\css/style-core.css' type=text/css media=all>
-    <link rel=stylesheet href='..\css/attorna-style-custom.css' type=text/css media=all>
-    <link rel=stylesheet href='..\plugins/revslider/public/assets/fonts/font-awesome/css/font-awesome.css' type=text/css media=all>
+    <link rel=stylesheet href='/plugins/goodlayers-core/plugins/combine/style.css' type=text/css media=all>
+    <link rel=stylesheet href='/plugins/goodlayers-core/include/css/page-builder.css' type=text/css media=all>
+    <link rel=stylesheet href='/plugins/revslider/public/assets/css/settings.css' type=text/css media=all>
+    <link rel=stylesheet href='/css/style-core.css' type=text/css media=all>
+    <link rel=stylesheet href='/css/attorna-style-custom.css' type=text/css media=all>
+    <link rel=stylesheet href='/plugins/revslider/public/assets/fonts/font-awesome/css/font-awesome.css' type=text/css media=all>
 
     <link rel=stylesheet href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CMerriweather%3A300%2C300italic%2Cregular%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;subset=latin%2Clatin-ext%2Cdevanagari%2Ccyrillic-ext%2Cvietnamese%2Ccyrillic&amp;' type=text/css media=all>
 
@@ -22,7 +22,7 @@
 </head>
 <body class="home page-template-default page page-id-2039 gdlr-core-body woocommerce-no-js attorna-body attorna-body-front attorna-full  attorna-with-sticky-navigation  attorna-blockquote-style-1 gdlr-core-link-to-lightbox" data-home-url=index.html>
 
-@component('..\layouts.header')
+@component('layouts.header')
 @endcomponent
 
         <div class=attorna-page-wrapper id=attorna-page-wrapper>
@@ -165,7 +165,8 @@
                             <div id=gdlr-core-recent-post-widget-2 class="widget widget_gdlr-core-recent-post-widget attorna-widget">
                                 <h3 class="attorna-widget-title">Recent Articles</h3><span class=clear></span>
                                 <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
-                                    <div class="gdlr-core-recent-post-widget clearfix">
+                                    @forelse($recent_articles as $article)
+                                        <div class="gdlr-core-recent-post-widget clearfix">
                                         <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src=upload/drew-beamer-679505-unsplash-150x150.jpg alt width=150 height=150 title=drew-beamer-679505-unsplash></div>
                                         <div class=gdlr-core-recent-post-widget-content>
                                             <div class=gdlr-core-recent-post-widget-title><a href=#>Domestic Violence in California &#8211; How a Lawyer Can Help</a></div>
@@ -173,22 +174,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gdlr-core-recent-post-widget clearfix">
-                                        <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src=upload/rawpixel-804738-unsplash-150x150.jpg alt width=150 height=150 title=rawpixel-804738-unsplash></div>
-                                        <div class=gdlr-core-recent-post-widget-content>
-                                            <div class=gdlr-core-recent-post-widget-title><a href=#>Filing a Claim against a Cruise Ship Contractual Limitations</a></div>
-                                            <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gdlr-core-recent-post-widget clearfix">
-                                        <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src=upload/rawpixel-1135753-unsplash-150x150.jpg alt width=150 height=150 title=rawpixel-1135753-unsplash></div>
-                                        <div class=gdlr-core-recent-post-widget-content>
-                                            <div class=gdlr-core-recent-post-widget-title><a href=#>Day Care Responsibility to Protect Children</a></div>
-                                            <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @empty
+                                        <span> Nao tem nenhum recente </span>
+                                    @endforelse
                                 </div>
                             </div>
 

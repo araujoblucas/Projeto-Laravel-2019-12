@@ -26,7 +26,6 @@ class PriceTableTableSeeder extends Seeder
         'esquerdalista2' => 'List item here',
         'esquerdalista3' => 'List item here',
         'esquerdalista4' => 'List item here',
-        'esquerdalista5' => 'List item here',
         'esquerdalink' => '#',
         'planocentrotitulo' => 'ADVANCED PLAN',
         'planocentrosubtitulo' => 'Suitable for profession',
@@ -35,7 +34,6 @@ class PriceTableTableSeeder extends Seeder
         'centrolista2' => 'List item here',
         'centrolista3' => 'List item here',
         'centrolista4' => 'List item here',
-        'centrolista5' => 'List item here',
         'centrolink' => '#',
         'planodireitatitulo' => 'ENTERPRISE PLAN',
         'planodireitasubtitulo' => 'Suitable for corporate',
@@ -44,7 +42,6 @@ class PriceTableTableSeeder extends Seeder
         'direitalista2' => 'List item here',
         'direitalista3' => 'List item here',
         'direitalista4' => 'List item here',
-        'direitalista5' => 'List item here',
         'direitalink' => '#',
 
 

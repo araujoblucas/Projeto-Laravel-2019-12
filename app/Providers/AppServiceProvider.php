@@ -2,7 +2,12 @@
 
 namespace App\Providers;
 
+use App\ConfigDefault;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
+use View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +28,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
+        View::composer('layouts/header', function ($view){
+
+            $dados = ConfigDefault::first();
+            $view->with('dados', $dados);
+        });
+
     }
 }

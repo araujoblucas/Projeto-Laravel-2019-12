@@ -33,7 +33,12 @@ class AdminController extends Controller
     }
 
     protected function PostList() {
-        return view('admin.PostList');
+        $posts = Post::all();
+        return view('admin.PostList',
+            [
+                'posts' => $posts
+            ]
+        );
     }
 
     public function PostCreator() {
@@ -88,9 +93,9 @@ class AdminController extends Controller
     public function postLogin(PostLoginRequest $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            return "true";
+            return redirect()->route('admin_config');
         } else {
-            return "false";
+            return redirect()->route('login');
         }
     }
 
@@ -287,6 +292,12 @@ class AdminController extends Controller
 
     public function AdminPostShow($id){
         $post = Post::findorfail($id);
-        return view('admin.PostShow')->withPost($post);
+
+        $recent_articles = Post::where('id', '<>', $post->id)->orderBy('id', 'desc')->take(5)->get();
+
+        return view('admin.PostShow', [
+            'recent_articles' => $recent_articles,
+            'post' => $post
+        ]);
     }
 }
