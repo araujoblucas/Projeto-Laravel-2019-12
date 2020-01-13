@@ -19,58 +19,28 @@
 
 <div class="container bg-light" style="margin-top: 20px;border-radius: 10px">
     <div id="form-container" class="container">
-        <form method="post" action="{{ route('admin_gallery') }}">
-
-
+        <form method="post" action="{{ route('ImagemCreate') }}">
             <br>
-            <div class="form-group">
-                <label ><h2>Título da Página</h2></label>
-                <input type="text" name="titulo" class="form-control" value="{{$dados->titulo}}">
-            </div>
-
-            <br>
-
             <div class="form-group">
                 <label ><h5>Titulo</h5></label>
-                <input type="text" name="titulo2" class="form-control" value="{{$dados->titulo2}}">
+                <input type="text" name="nome" class="form-control">
             </div>
 
             <div class="form-group">
-                <label ><h5>Subtitulo</h5></label>
-                <input type="text" name="subtitulo" class="form-control" value="{{$dados->subtitulo}}">
+                <label ><h5>Link</h5></label>
+                <input type="text" name="link" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label ><h5>Descrição</h5></label>
+                <input type="text" name="descricao" class="form-control">
             </div>
             <br>
-            <button class="btn btn-primary bg-dark" type="submit" style="margin-right:135px;">Atualizar</button>
+            <button class="btn btn-primary bg-dark" type="submit" style="margin-right:135px;">Adicionar</button>
             <br><br>
         </form>
-        <table class="table" style="width:100%;margin-top: 20px;">
 
-            <thead class="thead-dark">
-            <th scope="col">#</th>
-            <th>Titulo</th>
-            <th>Criado em</th>
-            <th style="text-align: center">Ver</th>
-            <th style="text-align: center">Editar</th>
-            <th style="text-align: center">Remover</th>
-            </thead>
 
-            @foreach( $imagens as $imagem)
-
-                <tr style="text-transform:capitalize;">
-                    <td scope="row"></td>
-                    <td scope="row">{{ $imagem->nome }}</td>
-                    {{csrf_field()}}
-                    <td scope="row">{{ $imagem->created_at }}</td>
-                    <td scope="row" style="text-align: center"><a target='_blank' href="{{$imagem->link}}"><i
-                                class="fa fa-eye" style="font-size:24px; color:#000;"></i></a></td>
-                    <td scope="row" style="text-align: center"><a href="{{route('ImagemEditor', $imagem->id)}}"><i
-                                class="fas fa-edit" style="font-size:24px;color:black; "></i></a></td>
-                    <td scope="row" style="text-align: center"><a href="{{route('postDelete', $imagem->id)}}"><i
-                                class='fas fa-minus' style="font-size:24px;color:black;"></i></a></td>
-                </tr>
-            @endforeach
-        </table>
-        <a href="{{route('ImagemCreate')}}" target="_blank"><button class="btn btn-secondary bg-dark" type="submit" style="float:right;">Nova Imagem</button></a>
         <br><br><br>
 
     </div>

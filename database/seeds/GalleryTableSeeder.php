@@ -14,21 +14,8 @@ class GalleryTableSeeder extends Seeder
         Gallery::create([
             'id' =>'1',
             'titulo' =>'Galeria',
-            'booleangrid' => '0',
-            'titulogrid' => '',
-            'subtitulogrid' => '',
-            'imagemgrid1' => '',
-            'imagemgrid2' => '',
-            'imagemgrid3' => '',
-            'imagemgrid4' => '',
-            'booleanhorizontal' => '0',
-            'titulohorizontal' => '',
-            'subtitulohorizontal' => '',
-            'imagemhorizontal1' => '',
-            'imagemhorizontal2' => '',
-            'imagemhorizontal3' => '',
-            'imagemhorizontal4' => '',
-            'imagemhorizontal5' => '',
+            'titulo2' => 'Galeria Total',
+            'subtitulo' => 'Lá VAI',
         ]);
     }
 }

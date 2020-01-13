@@ -8,8 +8,10 @@ use App\Post;
 use App\Contact;
 use App\Gallery;
 use App\Price_table;
+use App\Imagem;
 use Auth;
 use app\User;
+use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostLoginRequest;
 
@@ -216,31 +218,18 @@ class AdminController extends Controller
     }
 
     public function gallery(){
-        return view('admin.Gallery');
+        $dados = Gallery::findorfail('1');
+        $imagens = Imagem::all()->sortByDesc('created_at');
+        return view('admin.Gallery', [
+            'imagens' => $imagens,
+            'dados' => $dados
+        ]);
     }
     public function galleryupdate(Request $request){
         $dados = Gallery::findorfail(1);
         $dados->titulo = $request->titulo;
-        $dados->booleangrid = $request->booleangrid;
-        $dados->titulogrid = $request->titulogrid;
-        $dados->subtitulogrid = $request->subtitulogrid;
-        $dados->imagemgrid1 = $request->imagemgrid1;
-        $dados->imagemgrid2 = $request->imagemgrid2;
-        $dados->imagemgrid3 = $request->imagemgrid3;
-        $dados->imagemgrid4 = $request->imagemgrid4;
-        $dados->booleanhorizontal = $request->booleanhorizontal;
-        $dados->titulohorizontal = $request->titulohorizontal;
-        $dados->subtitulohorizontal = $request->subtitulohorizontal;
-        $dados->imagemhorizontal1 = $request->imagemhorizontal1;
-        $dados->legendahorizontal1 = $request->legendahorizontal1;
-        $dados->imagemhorizontal2 = $request->imagemhorizontal2;
-        $dados->legendahorizontal2 = $request->legendahorizontal2;
-        $dados->imagemhorizontal3 = $request->imagemhorizontal3;
-        $dados->legendahorizontal3 = $request->legendahorizontal3;
-        $dados->imagemhorizontal4 = $request->imagemhorizontal4;
-        $dados->legendahorizontal4 = $request->legendahorizontal4;
-        $dados->imagemhorizontal5 = $request->imagemhorizontal5;
-        $dados->legendahorizontal5 = $request->legendahorizontal5;
+        $dados->titulo2 = $request->titulo2;
+        $dados->subtitulo = $request->subtitulo;
         $dados->save();
         return redirect()->route('admin_gallery');
     }
@@ -300,4 +289,34 @@ class AdminController extends Controller
             'post' => $post
         ]);
     }
+    public function ImagemCreate(){
+        return view('admin.ImagemCreator');
+    }
+
+    public function ImagemStore(Request $request) {
+        $dados = new Imagem;
+        $dados->nome = $request->nome;
+        $dados->descricao = $request->descricao;
+        $dados->link = $request->link;
+        $dados->save();
+        return redirect()->route('admin_gallery');
+    }
+
+    public function ImagemEditor($id) {
+        $dados = Imagem::findorfail($id);
+        return view('admin.ImagemEditor', [
+            'dados' => $dados
+        ]);
+    }
+    public function ImagemUpdate(Request $request, $id) {
+        $dados = Imagem::find($id);
+        $dados->id = $request->id;
+        $dados->nome = $request->nome;
+        $dados->descricao = $request->descricao;
+        $dados->link = $request->link;
+        $dados->save();
+        return redirect()->route('admin_gallery');
+    }
+
 }
+

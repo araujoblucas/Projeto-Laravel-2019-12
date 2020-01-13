@@ -56,7 +56,13 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('/galeria', 'AdminController@galleryupdate')->name('admin_gallery');
     Route::get('/planos', 'AdminController@price_table')->name('admin_price_table');
     Route::post('/planos', 'AdminController@price_tableUpdate')->name('admin_price_table');
+    Route::get('/ImagemCreate', 'AdminController@ImagemCreate')->name('ImagemCreate');
+    Route::post('/ImagemCreate', 'AdminController@ImagemStore')->name('ImagemCreate');
+    Route::get('/ImagemEditor/{id}/', 'AdminController@ImagemEditor')->name('ImagemEditor');
+    Route::post('/ImagemEditor/{id}/', 'AdminController@ImagemUpdate')->name('ImagemUpdate');
+
     Route::get('/{id}/', 'AdminController@AdminPostShow')->name('PostShow');
+
     Route::prefix('partners')->group(function(){
         Route::get('/', 'PartnerController@index')->name('admin.partner.index');
         Route::get('/create', 'PartnerController@create')->name('admin.partner.create');
