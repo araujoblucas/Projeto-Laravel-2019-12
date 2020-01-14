@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         //$this->call('ConfigTableSeed');
         //$this->call('BlogTableSeeder');
         //$this->call('UserTableSeeder');
-        $this->call('ImagemTableSeeder');
+        //$this->call('ImagemTableSeeder');
+        //$this->call('FaqTableSeeder');
     }
 }

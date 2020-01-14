@@ -13,17 +13,16 @@
 
 
 </head>
-<?php
-use App\AboutUs;
-$dados = AboutUs::Find(1);
-?>
 <body>
 @component('admin.adminHead')
 @endcomponent
 
-<div class="container" style="margin-top: 20px;">
+<div class="container bg-light" style="margin-top: 20px; border-radius: 10px;">
     <div id="form-container" class="container">
         <form method="post" action="{{ route('admin_about_us') }}">
+
+            <br>
+
             <div class="form-group">
                 <label for="exampleFormControlInput1"><h2>Titulo</h2></label>
                 <input type="text" name="titulo" class="form-control" value="{{$dados->titulo}}">
@@ -153,65 +152,6 @@ $dados = AboutUs::Find(1);
                 <input type="text" name="imagemfaq" class="form-control" value="{{$dados->imagemfaq}}" placeholder="1800x1043">
             </div>
 
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Pergunta 1</h4></label>
-                <input type="text" name="ask1" class="form-control" value="{{$dados->ask1}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Resposta 1</h4></label>
-                <input type="text" name="answer1" class="form-control" value="{{$dados->answer1}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Pergunta 2</h4></label>
-                <input type="text" name="ask2" class="form-control" value="{{$dados->ask2}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Resposta 2</h4></label>
-                <input type="text" name="answer2" class="form-control" value="{{$dados->answer2}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Pergunta 3</h4></label>
-                <input type="text" name="ask3" class="form-control" value="{{$dados->ask3}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Resposta 3</h4></label>
-                <input type="text" name="answer3" class="form-control" value="{{$dados->answer3}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Pergunta 4</h4></label>
-                <input type="text" name="ask4" class="form-control" value="{{$dados->ask4}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Resposta 4</h4></label>
-                <input type="text" name="answer4" class="form-control" value="{{$dados->answer4}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Pergunta 5</h4></label>
-                <input type="text" name="ask5" class="form-control" value="{{$dados->ask5}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Resposta 5</h4></label>
-                <input type="text" name="answer5" class="form-control" value="{{$dados->answer5}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Pergunta 6</h4></label>
-                <input type="text" name="ask6" class="form-control" value="{{$dados->ask6}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Resposta 6</h4></label>
-                <input type="text" name="answer6" class="form-control" value="{{$dados->answer6}}">
-            </div>
 
             <div class="form-group">
                 <label for="exampleFormControlInput1"><h4>Imagem da sessão Entre em contato </h4></label>
@@ -238,12 +178,38 @@ $dados = AboutUs::Find(1);
                 <input type="text" name="atendimento" placeholder="Seg – Sex 09:00-17:00" class="form-control" value="{{$dados->atendimento}}">
             </div>
 
-
             <br>
             <button class="btn btn-primary black" type="submit">Atualizar</button>
 
-
         </form>
+
+        <table class="table" style="width:100%;margin-top: 20px;">
+
+            <thead class="thead-dark">
+            <th scope="col">#</th>
+            <th>Pergunta</th>
+            <th>Resposta</th>
+            <th style="text-align: center">Editar</th>
+            <th style="text-align: center">Remover</th>
+            </thead>
+
+            @foreach( $faqs as $faq)
+
+                <tr style="text-transform:capitalize;">
+                    <td scope="row"></td>
+                    <td scope="row">{{ $faq->pergunta }}</td>
+                    <td scope="row">{{ $faq->resposta }}</td>
+                    {{csrf_field()}}
+                    <td scope="row" style="text-align: center"><a href="{{route('faqEditor', $faq->id)}}"><i
+                                class="fas fa-edit" style="font-size:24px;color:black; "></i></a></td>
+                    <td scope="row" style="text-align: center"><a href="{{route('faqDelete', $faq->id)}}"><i
+                                class='fas fa-minus' style="font-size:24px;color:black;"></i></a></td>
+                </tr>
+            @endforeach
+        </table>
+        <a href="{{route('faqCreate')}}"><button class="btn btn-secondary bg-dark" type="submit" style="float:right;">Nova Imagem</button></a>
+        <br><br><br>
+
     </div>
 
 </div>

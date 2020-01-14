@@ -41,18 +41,6 @@ class CreateAboutUsTable extends Migration
             $table->string('estatistica4');
             $table->string('descestatistica4');
             $table->string('imagemfaq');
-            $table->string('ask1');
-            $table->string('answer1', 800);
-            $table->string('ask2');
-            $table->string('answer2', 800);
-            $table->string('ask3');
-            $table->string('answer3', 800);
-            $table->string('ask4');
-            $table->string('answer4', 800);
-            $table->string('ask5');
-            $table->string('answer5', 800)->nullable();
-            $table->string('ask6');
-            $table->string('answer6', 800)->nullable();
             $table->string('imagemcontato');
             $table->string('titulocontato');
             $table->string('telefone');

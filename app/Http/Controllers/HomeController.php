@@ -6,7 +6,8 @@
 namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
-
+use App\Partner;
+use App\AboutUs;
 
 
 class HomeController extends Controller
@@ -28,22 +29,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-
-
-        $query = User::select('id', 'name', 'email');
-
-        if(request()->has('order') && request()->input('order') == 'desc'){
-            $query = $query->orderBy('id', 'desc');
-        }
-
-        $users = $query->paginate(3);
-
-        return view('home', compact('users'));
-    }
-
-    public function teta(){
-
-        return view('newhome');
+        $sobrenos = AboutUs::find(1);
+        $partners = Partner::inRandomOrder()->get()->take(6);
+        return view('index', [
+            'partners' => $partners,
+            'sobrenos' => $sobrenos,
+        ]);
     }
 }

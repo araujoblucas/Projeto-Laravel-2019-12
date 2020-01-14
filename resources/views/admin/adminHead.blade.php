@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Admin</a>
+    <a class="navbar-brand" href="{{route('admin_config')}}">Admin</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -9,6 +9,9 @@
         <ul class="navbar-nav mr-left">
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin_config') }}">Default</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin_home')}}">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin_about_team')}}">Equipe</a>

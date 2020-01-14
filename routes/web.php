@@ -19,8 +19,8 @@ Route::get('/maintenance', 'MaintenanceController@maintenance')->name('maintenan
 Route::get('/blog', 'BlogController@blog')->name('blog');
 Route::get('/post/{id}/', 'BlogController@post_show')->name('post_show');
 Route::get('/planos', 'PriceTableController@priceTable')->name('price_table');
-Route::get('/about-team', 'AboutTeamController@aboutTeam')->name('about_team');
-Route::get('/contact', 'ContactController@contact')->name('contact');
+Route::get('/equipe', 'AboutTeamController@aboutTeam')->name('about_team');
+Route::get('/contato', 'ContactController@contact')->name('contact');
 Route::get('/team', 'TeamPlainStyleController@teamPlainstyle')->name('team_plain_style');
 Route::get('/about-us', 'AboutUsController@aboutUs')->name('about_us');
 Route::get('login', 'AdminController@login')->name('login');
@@ -30,6 +30,7 @@ Route::get('logout', 'AdminController@logout')->name('logout');
 Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::get('/', 'AdminController@adminConfig')->name('admin_config');
+    Route::get('/home', 'AdminController@Home')->name('admin_home');
     Route::get('/post/{id}/Editor', 'AdminController@Editor')->name('PostEditor');
     Route::get('/post/{id}/postDelete', 'AdminController@postDelete')->name('postDelete');
     Route::post('/post/{id}/postDelete', 'AdminController@postDelete')->name('postDelete');
@@ -60,16 +61,15 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('/ImagemCreate', 'AdminController@ImagemStore')->name('ImagemCreate');
     Route::get('/ImagemEditor/{id}/', 'AdminController@ImagemEditor')->name('ImagemEditor');
     Route::post('/ImagemEditor/{id}/', 'AdminController@ImagemUpdate')->name('ImagemUpdate');
+    Route::get('/ImagemDelete/{id}/', 'AdminController@ImagemDelete')->name('ImagemDelete');
+    Route::get('/faqCreate', 'AdminController@faqCreate')->name('faqCreate');
+    Route::post('/faqCreate', 'AdminController@faqStore')->name('faqCreate');
+    Route::get('/faqEditor/{id}/', 'AdminController@faqEditor')->name('faqEditor');
+    Route::post('/faqEditor/{id}/', 'AdminController@faqUpdate')->name('faqUpdate');
+    Route::get('/faqDelete/{id}/', 'AdminController@faqDelete')->name('faqDelete');
+
+
 
     Route::get('/{id}/', 'AdminController@AdminPostShow')->name('PostShow');
 
-    Route::prefix('partners')->group(function(){
-        Route::get('/', 'PartnerController@index')->name('admin.partner.index');
-        Route::get('/create', 'PartnerController@create')->name('admin.partner.create');
-        Route::post('/create', 'PartnerController@store')->name('admin.partner.store');
-        Route::get('/{id}', 'PartnerController@show')->name('admin.partner.show');
-        Route::get('/edit/{id}', 'PartnerController@edit')->name('admin.partner.edit');
-        Route::put('/edit/{id}', 'PartnerController@update')->name('admin.partner.update');
-        Route::delete('/{id}', 'PartnerController@destroy')->name('admin.partner.destroy');
-    });
 });

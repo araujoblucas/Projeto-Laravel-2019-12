@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AboutTeam;
 use App\AboutUs;
+use App\faq;
 use App\Post;
 use App\Contact;
 use App\Gallery;
@@ -82,7 +83,12 @@ class AdminController extends Controller
     }
 
     public function aboutUs(){
-        return view('admin.aboutUs');
+        $faqs = faq::all();
+        $dados = AboutUs::find(1);
+        return view('admin.aboutUs', [
+            'faqs' => $faqs,
+            'dados' => $dados,
+        ]);
     }
     public function aboutTeam(){
         return view('admin.AboutTeam');
@@ -194,18 +200,6 @@ class AdminController extends Controller
         $dados->estatistica4 = $request->estatistica4;
         $dados->descestatistica4 = $request->descestatistica4;
         $dados->imagemfaq = $request->imagemfaq;
-        $dados->ask1 = $request->ask1;
-        $dados->answer1 = $request->answer1;
-        $dados->ask2 = $request->ask2;
-        $dados->answer2 = $request->answer2;
-        $dados->ask3 = $request->ask3;
-        $dados->answer3 = $request->answer3;
-        $dados->ask4 = $request->ask4;
-        $dados->answer4 = $request->answer4;
-        $dados->ask5 = $request->ask5;
-        $dados->answer5 = $request->answer5;
-        $dados->ask6 = $request->ask6;
-        $dados->answer6 = $request->answer6;
         $dados->imagemcontato = $request->imagemcontato;
         $dados->titulocontato = $request->titulocontato;
         $dados->telefone = $request->telefone;
@@ -316,6 +310,47 @@ class AdminController extends Controller
         $dados->link = $request->link;
         $dados->save();
         return redirect()->route('admin_gallery');
+    }
+    public function ImagemDelete($id){
+        $imagem = Imagem::find($id);
+        $imagem->delete();
+        return redirect()->route('admin_gallery');
+    }
+
+    public function Home(){
+        return view('admin.home');
+    }
+
+    public function faqCreate(){
+        return view('admin.faqCreator');
+    }
+
+    public function faqStore(Request $request) {
+        $dados = new faq;
+        $dados->pergunta = $request->pergunta;
+        $dados->resposta = $request->resposta;
+        $dados->save();
+        return redirect()->route('admin_about_us');
+    }
+
+    public function faqEditor($id) {
+        $dados = faq::findorfail($id);
+        return view('admin.faqEditor', [
+            'dados' => $dados
+        ]);
+    }
+    public function faqUpdate(Request $request, $id) {
+        $dados = faq::find($id);
+        $dados->pergunta = $request->pergunta;
+        $dados->resposta = $request->resposta;
+
+        $dados->save();
+        return redirect()->route('admin_about_us');
+    }
+    public function faqDelete($id) {
+        $faq = faq::find($id);
+        $faq->delete();
+        return redirect()->route('admin_about_us');
     }
 
 }
