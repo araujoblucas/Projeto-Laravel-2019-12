@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang=en-US class=no-js>
-<?php
-use App\AboutUs;
-$dados = AboutUs::find(1);
-?>
 
 <head>
     <meta charset=UTF-8>
@@ -52,7 +48,7 @@ $dados = AboutUs::find(1);
                             <div class="gdlr-core-pbf-column gdlr-core-column-30 gdlr-core-column-first" id=gdlr-core-column-1>
                                 <div class="gdlr-core-pbf-column-content-margin gdlr-core-js " data-sync-height=height1 data-sync-height-center>
                                     <div class=gdlr-core-pbf-background-wrap style="border-radius: 4px 4px 4px 4px;-moz-border-radius: 4px 4px 4px 4px;-webkit-border-radius: 4px 4px 4px 4px;">
-                                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/lawyer.jpg) ;background-size: cover ;background-position: center ;" data-parallax-speed=0></div>
+                                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url({{$dados->imagem}}) ;background-size: cover ;background-position: center ;" data-parallax-speed=0></div>
                                     </div>
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js  gdlr-core-sync-height-content">
                                         <div class=gdlr-core-pbf-element>
@@ -281,65 +277,19 @@ $dados = AboutUs::find(1);
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-accordion-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-accordion-style-icon gdlr-core-allow-close-all">
-                                                <div class="gdlr-core-accordion-item-tab clearfix  gdlr-core-active">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask1}}</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>{{$dados->answer1}}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-accordion-item-tab clearfix ">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask2}}</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>{{$dados->answer2}}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-accordion-item-tab clearfix ">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask3}}</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>{{$dados->answer3}}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="gdlr-core-accordion-item-tab clearfix ">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask4}}</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>{{$dados->answer4}}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
-                                                <?php if($dados->ask5) { ?>
-                                                <div class="gdlr-core-accordion-item-tab clearfix ">
+                                                @foreach($faqs as $faq)
+                                                <div class="gdlr-core-accordion-item-tab clearfix  gdlr-core">
                                                     <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
                                                     <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask5}}</h4>
+                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$faq->pergunta}}</h4>
                                                         <div class=gdlr-core-accordion-item-content>
-                                                            <p>{{$dados->answer5}}</p>
+                                                            <p>{{$faq->resposta}}</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <?php } ?>
-                                                <?php if($dados->ask6) { ?>
-                                                <div class="gdlr-core-accordion-item-tab clearfix ">
-                                                    <div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon "></div>
-                                                    <div class=gdlr-core-accordion-item-content-wrapper>
-                                                        <h4 class="gdlr-core-accordion-item-title gdlr-core-js " style="font-size: 18px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;">{{$dados->ask6}}</h4>
-                                                        <div class=gdlr-core-accordion-item-content>
-                                                            <p>{{$dados->answer6}}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <?php } ?>
+                                                @endforeach
+
                                             </div>
                                         </div>
                                     </div>
@@ -389,7 +339,7 @@ $dados = AboutUs::find(1);
 
     </div>
 </div>
-
+</body>
 <script src='js/jquery/jquery.js'></script>
 <script src='js/jquery/jquery-migrate.min.js'></script>
 <script src='plugins/goodlayers-core/plugins/combine/script.js'></script>
@@ -411,5 +361,4 @@ $dados = AboutUs::find(1);
 <script src='js/jquery.superfish.js'></script>
 <script src='js/script-core.js'></script>
 
-</body>
 </html>

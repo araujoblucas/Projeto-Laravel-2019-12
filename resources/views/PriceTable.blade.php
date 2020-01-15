@@ -85,7 +85,7 @@
 
                                                         </ul>
                                                     </div>
-                                                </div><a class="gdlr-core-price-table-button gdlr-core-button" href=# target=_self>Mais Informações</a></div>
+                                                </div><a class="gdlr-core-price-table-button gdlr-core-button" href="{{route('contact')}}" target=_self>Mais Informações</a></div>
                                         </div>
                                     </div>
                                     <div class="gdlr-core-price-table-column gdlr-core-column-20">
@@ -107,7 +107,7 @@
                                                             <li><i class="fa fa-check"></i>{{$dados->centrolista5}}</li>
                                                         </ul>
                                                     </div>
-                                                </div><a class="gdlr-core-price-table-button gdlr-core-button" href=# target=_self>Mais Informações</a></div>
+                                                </div><a class="gdlr-core-price-table-button gdlr-core-button" href="{{route('contact')}}" target=_self>Mais Informações</a></div>
                                         </div>
                                     </div>
                                     <div class="gdlr-core-price-table-column gdlr-core-column-20">
@@ -129,7 +129,7 @@
                                                             <li><i class="fa fa-check"></i>{{$dados->direitalista5}}</li>
                                                         </ul>
                                                     </div>
-                                                </div><a class="gdlr-core-price-table-button gdlr-core-button" href=# target=_self>Mais Informações</a></div>
+                                                </div><a class="gdlr-core-price-table-button gdlr-core-button" href="{{route('contact')}}" target=_self>Mais Informações</a></div>
                                         </div>
                                     </div>
                                 </div>

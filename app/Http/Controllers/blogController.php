@@ -8,10 +8,17 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
     public function blog(){
-        return view('Blog');
+        $posts = Post::all();
+        return view('Blog', [
+            'posts' => $posts,
+            ]);
     }
     public function post_show($id){
         $post = Post::findorfail($id);
-        return view('PostShow')->withPost($post);
+        $recents = Post::where('id', '<>', $post->id)->orderBy('id', 'desc')->take(3)->get();
+        return view('PostShow', [
+            'post' => $post,
+            'recents' => $recents
+        ]);
     }
 }

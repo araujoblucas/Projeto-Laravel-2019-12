@@ -53,23 +53,19 @@
                                 <div class="gdlr-core-blog-item gdlr-core-item-pdb clearfix  gdlr-core-style-blog-column-with-frame" style="padding-bottom: 40px ;">
                                     <div class="gdlr-core-blog-item-holder gdlr-core-js-2 clearfix" data-layout=fitrows>
 
-                                <?php
-                                    use App\Post;
-                                    $posts = Post::all();
 
-                                 ?>
                                 @foreach($posts as $post)
                                         <div class="gdlr-core-item-list  gdlr-core-item-pdlr gdlr-core-column-20">
                                             <div class="gdlr-core-blog-grid gdlr-core-style-3 gdlr-core-js  gdlr-core-blog-grid-with-frame gdlr-core-item-mgb gdlr-core-skin-e-background  gdlr-core-with-thumbnail" data-sync-height=blog-item-1>
                                                 <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                    <a href=#><img src={{$post->img}} alt width=700 height=660 title=drew-beamer-679505-unsplash></a>
+                                                    <a href={{route('post_show', $post->id)}}><img src={{$post->img}} alt width=700 height=660 title=drew-beamer-679505-unsplash></a>
                                                 </div>
                                                 <div class="gdlr-core-blog-grid-frame gdlr-core-sync-height-space-position">
                                                     <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;font-weight: 700 ;letter-spacing: 0px ;"><a href="{{route('post_show', $post->id)}}" >{{$post->titulo}}</a></h3>
                                                     <div class=gdlr-core-blog-content>{{$post->desctitulo}}
                                                         <div class=clear></div>
                                                     </div>
-                                                        <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >•</span><span class=gdlr-core-head><i class=icon_clock_alt ></i></span><a href=#><?php  echo $post->created_at->format('M d, y'); ?></a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >•</span><span class=gdlr-core-head><i class=icon_documents_alt ></i></span><a href=# title="Postado por {{$post->autor}}" rel=author>{{$post->autor}}</a></span>
+                                                        <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >•</span><span class=gdlr-core-head><i class=icon_clock_alt ></i></span><a href=#><?php  echo $post->created_at->format('M d, y'); ?></a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >•</span><span class=gdlr-core-head><i class=icon_documents_alt ></i></span>{{$post->autor}}</span>
                                                     </div>
                                                 </div>
                                             </div>

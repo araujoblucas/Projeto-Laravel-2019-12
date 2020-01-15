@@ -44,6 +44,11 @@
             </div>
 
             <div class="form-group">
+                <label for="exampleFormControlInput1"><h4>Imagem do Sobre</h4></label>
+                <input type="text" name="imagem" class="form-control" value="{{$dados->imagem}}">
+            </div>
+
+            <div class="form-group">
                 <label for="exampleFormControlInput1"><h4>Sobre</h4></label>
                 <textarea name="sobre" class="form-control" rows="8">{{$dados->sobre}}</textarea>
             </div>

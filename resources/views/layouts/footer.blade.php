@@ -48,18 +48,15 @@
             </div>
             <div class="attorna-footer-column attorna-item-pdlr attorna-column-30">
                 <div id=gdlr-core-custom-menu-widget-4 class="widget widget_gdlr-core-custom-menu-widget attorna-widget">
-                    <h3 class="attorna-widget-title">Practice Areas</h3><span class=clear></span>
+                    <h3 class="attorna-widget-title">Navegue pelo Site</h3><span class=clear></span>
                     <div class=menu-practice-areas-container>
                         <ul id=menu-practice-areas class="gdlr-core-custom-menu-widget gdlr-core-menu-style-half">
-                            <li class="menu-item"><a href=#>Coporate &#038; Securities</a></li>
-                            <li class="menu-item"><a href=#>Real Estate Law</a></li>
-                            <li class="menu-item"><a href=#>Health Care Law</a></li>
-                            <li class="menu-item"><a href=#>Insurance Law</a></li>
-                            <li class="menu-item"><a href=#>Construction &#038; Engineering</a></li>
-                            <li class="menu-item"><a href=#>Ecommerce Law</a></li>
-                            <li class="menu-item"><a href=#>Private Fund</a></li>
-                            <li class="menu-item"><a href=#>Power &#038; Energy</a></li>
-                            <li class="menu-item"><a href=#>Lending Law</a></li>
+                            <li class="menu-item"><a href="{{route('home')}}">Home</a></li>
+                            <li class="menu-item"><a href="{{route('gallery')}}">Galeria</a></li>
+                            <li class="menu-item"><a href="{{route('about_team')}}">Nossa Equipe</a></li>
+                            <li class="menu-item"><a href="{{route('about_us')}}">Sobre Nós</a></li>
+                            <li class="menu-item"><a href="{{route('blog')}}">Blog</a></li>
+                            <li class="menu-item"><a href="{{route('contact')}}">Contato</a></li>
                         </ul>
                     </div>
                 </div>

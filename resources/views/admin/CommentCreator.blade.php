@@ -17,44 +17,41 @@
 @component('admin.adminHead')
 @endcomponent
 
-<div class="container" style="margin-top: 20px;">
+<div class="container bg-light" style="margin-top: 20px;border-radius: 10px">
     <div id="form-container" class="container">
-        <form method="post" action="{{ route('PostCreator') }}">
-                <div class="form-group">
-                    <label for="exampleFormControlInput1"><h2>Titulo do Post</h2></label>
-                    <input type="text" name="titulo" class="form-control">
-                </div>
+        <form method="post" action="{{ route('commentCreate') }}">
+            <br>
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h5>Insira o link da Imagem</h5></label>
-                <input type="text" name="img" class="form-control">
+                <label ><h5>Nome</h5></label>
+                <input type="text" name="nome" class="form-control">
             </div>
+
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h5>Insira o Autor do Post</h5></label>
-                <input type="text" name="autor" class="form-control">
+                <label ><h5>Frase</h5></label>
+                <input type="text" name="frase" class="form-control">
             </div>
-    <textarea name="descricao" id="editor1">
 
-                    </textarea>
+            <div class="form-group">
+                <label ><h5>Ocupação</h5></label>
+                <input type="text" name="ocupacao" class="form-control">
+            </div>
 
+            <div class="form-group">
+                <label ><h5>Ícone</h5></label>
+                <input type="text" name="icone" placeholder="71x71" class="form-control">
+            </div>
 
             <br>
-    <button class="btn btn-primary black" type="submit">Postar</button>
+            <button class="btn btn-primary bg-dark" type="submit" style="margin-right:135px;">Adicionar</button>
+            <br><br>
+        </form>
 
 
-    </form>
+        <br><br><br>
+
+    </div>
+
 </div>
-
-</div>
-
-<script>
-    CKEDITOR.replace( 'editor1', {
-
-        }
-    );
-</script>
-
-
-
 
 <!-- Popper.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

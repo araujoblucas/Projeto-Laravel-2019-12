@@ -10,8 +10,10 @@ use App\Contact;
 use App\Gallery;
 use App\Price_table;
 use App\Imagem;
+use App\Comment;
 use Auth;
 use app\User;
+use App\Home;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostLoginRequest;
@@ -318,7 +320,70 @@ class AdminController extends Controller
     }
 
     public function Home(){
-        return view('admin.home');
+        $dados = Home::find(1);
+        $comments = Comment::all()->sortByDesc('created_at');
+        return view('admin.home', [
+            'dados' => $dados,
+            'comments' => $comments,
+        ]);
+    }
+
+
+    public function HomeUpdate(Request $request){
+        $dados = Home::find(1);
+        $dados->id = 1;
+        $dados->container1titulo = $request->container1titulo;
+        $dados->container1subtitulo = $request->container1subtitulo;
+        $dados->container1descricao =$request->container1descricao;
+        $dados->container1imagem = $request->container1imagem;
+        $dados->container1titulo2 = $request->container1titulo2;
+        $dados->container1subtitulo2 = $request->container1subtitulo2;
+        $dados->container1descricao2 = $request->container1descricao2;
+        $dados->container1imagem2 = $request->container1imagem2;
+        $dados->container2titulo = $request->container2titulo;
+        $dados->container2descricao =$request->container2descricao;
+        $dados->container2imagem = $request->container2imagem;
+        $dados->container3titulo = $request->container3titulo;
+        $dados->container3subtitulo = $request->container3subtitulo;
+        $dados->container3icone1 = $request->container3icone1;
+        $dados->container3titulo1 = $request->container3titulo1;
+        $dados->container3descricao1 = $request->container3descricao1;
+        $dados->container3icone2 = $request->container3icone2;
+        $dados->container3titulo2 = $request->container3titulo2;
+        $dados->container3descricao2 = $request->container3descricao2;
+        $dados->container3icone3 = $request->container3icone3;
+        $dados->container3titulo3 = $request->container3titulo3;
+        $dados->container3descricao3 = $request->container3descricao3;
+        $dados->container3icone4 = $request->container3icone4;
+        $dados->container3titulo4 = $request->container3titulo4;
+        $dados->container3descricao4 = $request->container3descricao4;
+        $dados->container3icone5 = $request->container3icone5;
+        $dados->container3titulo5 = $request->container3titulo5;
+        $dados->container3descricao5 = $request->container3descricao5;
+        $dados->container3icone6 = $request->container3icone6;
+        $dados->container3titulo6 = $request->container3titulo6;
+        $dados->container3descricao6 = $request->container3descrcao6;
+        $dados->container4titulo = $request->container4titulo;
+        $dados->container4link = $request->container4link;
+        $dados->container4imagem = $request->container4imagem;
+        $dados->container5titulo = $request->container5titulo;
+        $dados->container5descricao = $request->container5descricao;
+        $dados->container5icone1 = $request->container5icone1;
+        $dados->container5titulo1 = $request->container5titulo1;
+        $dados->container5descricao1 = $request->container5descricao1;
+        $dados->container5background1 = $request->container5background1;
+        $dados->container5icone2 = $request->container5icone2;
+        $dados->container5titulo2 = $request->container5titulo2;
+        $dados->container5descricao2 = $request->container5descricao2;
+        $dados->container5background2 = $request->container5background2;
+        $dados->container5icone3 = $request->container5icone3;
+        $dados->container5titulo3 = $request->container5titulo3;
+        $dados->container5descricao3 = $request->container5descricao3;
+        $dados->container5background3 = $request->container5background3;
+        $dados->container6imagem = $request->container6imagem;
+        $dados->save();
+
+        return redirect()->route('admin_home');
     }
 
     public function faqCreate(){
@@ -341,6 +406,7 @@ class AdminController extends Controller
     }
     public function faqUpdate(Request $request, $id) {
         $dados = faq::find($id);
+        $dados->id = $id;
         $dados->pergunta = $request->pergunta;
         $dados->resposta = $request->resposta;
 
@@ -352,6 +418,54 @@ class AdminController extends Controller
         $faq->delete();
         return redirect()->route('admin_about_us');
     }
+
+
+
+
+    public function commentCreate(){
+        return view('admin.CommentCreator');
+    }
+
+    public function commentStore(Request $request) {
+        $dados = new Comment;
+        $dados->nome = $request->nome;
+        $dados->ocupacao = $request->ocupacao;
+        $dados->icone = $request->icone;
+        $dados->frase = $request->frase;
+        $dados->save();
+        return redirect()->route('admin_home');
+    }
+
+    public function commentEditor($id) {
+        $dados = comment::findorfail($id);
+        return view('admin.commentEditor', [
+            'dados' => $dados
+        ]);
+    }
+    public function commentUpdate(Request $request, $id) {
+        $dados = comment::find($id);
+        $dados->id = $id;
+        $dados->nome = $request->nome;
+        $dados->ocupacao = $request->ocupacao;
+        $dados->icone = $request->icone;
+        $dados->frase = $request->frase;
+        $dados->save();
+        return redirect()->route('admin_home');
+    }
+    public function commentDelete($id) {
+        $comment = comment::find($id);
+        $comment->delete();
+        return redirect()->route('admin_home');
+    }
+
+
+
+
+
+
+
+
+
 
 }
 

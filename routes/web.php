@@ -31,6 +31,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::get('/', 'AdminController@adminConfig')->name('admin_config');
     Route::get('/home', 'AdminController@Home')->name('admin_home');
+    Route::post('/home', 'AdminController@HomeUpdate')->name('admin_home');
     Route::get('/post/{id}/Editor', 'AdminController@Editor')->name('PostEditor');
     Route::get('/post/{id}/postDelete', 'AdminController@postDelete')->name('postDelete');
     Route::post('/post/{id}/postDelete', 'AdminController@postDelete')->name('postDelete');
@@ -67,7 +68,11 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/faqEditor/{id}/', 'AdminController@faqEditor')->name('faqEditor');
     Route::post('/faqEditor/{id}/', 'AdminController@faqUpdate')->name('faqUpdate');
     Route::get('/faqDelete/{id}/', 'AdminController@faqDelete')->name('faqDelete');
-
+    Route::get('/commentCreate', 'AdminController@commentCreate')->name('commentCreate');
+    Route::post('/commentCreate', 'AdminController@commentStore')->name('commentCreate');
+    Route::get('/commentEditor/{id}/', 'AdminController@commentEditor')->name('commentEditor');
+    Route::post('/commentEditor/{id}/', 'AdminController@commentUpdate')->name('commentUpdate');
+    Route::get('/commentDelete/{id}/', 'AdminController@commentDelete')->name('commentDelete');
 
 
     Route::get('/{id}/', 'AdminController@AdminPostShow')->name('PostShow');

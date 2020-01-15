@@ -22,13 +22,14 @@
 @component('admin.adminHead')
 @endcomponent
 
-<div class="container" style="margin-top: 20px;">
+<div class="container bg-light" style="margin-top: 20px;border-radius: 10px">
     <div id="form-container" class="container">
         <form method="post" action="{{ route('admin_config') }}">
 
-            <h1>Configurações do Head</h1>
+            <br>
+            <h1 class="display-4">Configurações do Head<hr class="mb-4"></h1>
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Icone</h2></label>
+                <label for="exampleFormControlInput1"><h2>Ícone</h2></label>
                 <input type="text" name="icone" class="form-control" value="{{$dados->icone}}">
             </div>
 
@@ -70,24 +71,21 @@
                 </div>
             </div>
 
-            <h1>Configurações do Footer</h1>
-            <h2>Primeira Coluna</h2>
+            <br>
+
+            <h1 class="display-4">Configurações de Footer<hr class="mb-4"></h1>
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Primeira Coluna</h4></label>
+                <label for="exampleFormControlInput1"><h4>Atendimento</h4></label>
                 <input type="text" name="atendimento" class="form-control" value="{{$dados->atendimento}}">
             </div>
 
-
-
             <br>
 
-            <button class="btn btn-primary black" type="submit">Postar</button>
-
-
+            <button class="btn btn-primary black" type="submit">Atualizar</button>
         </form>
     </div>
 
-
+</div>
 
     <!-- Popper.JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
