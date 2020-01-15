@@ -34,6 +34,11 @@ class AppServiceProvider extends ServiceProvider
             $dados = ConfigDefault::first();
             $view->with('dados', $dados);
         });
+        View::composer('layouts/mobile/header', function ($view){
+
+            $dados = ConfigDefault::first();
+            $view->with('dados', $dados);
+        });
 
     }
 }
