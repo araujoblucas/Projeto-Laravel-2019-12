@@ -87,133 +87,27 @@
                                 <div class=gdlr-core-page-builder-body></div>
                             </div>
 
-                            <div class="attorna-single-nav-area clearfix">
-                                <span class="attorna-single-nav attorna-single-nav-left">
-                                    <span class="attorna-text attorna-title-font" >Post Anterior</span>
-                                    <a href=# rel=prev>
-                                        <span class="attorna-single-nav-title attorna-title-font" >Video Post Format</span>
-                                    </a>
-                                </span>
-                                <span class="attorna-single-nav attorna-single-nav-right">
-                                    <span class="attorna-text attorna-title-font" >Next Post</span>
-                                    <a href=# rel=next>
-                                        <span class="attorna-single-nav-title attorna-title-font" >Audio Post Format</span>
-                                    </a>
-                                </span>
-                            </div>
 
-                            <div class="attorna-single-social-share clearfix">
-                                <div class="gdlr-core-social-share-item gdlr-core-item-pdb  gdlr-core-left-align gdlr-core-social-share-left-text gdlr-core-style-plain" style="padding-bottom: 0px ;">
-                                    <span class="gdlr-core-social-share-count gdlr-core-skin-title">
-                                        <span class=gdlr-core-count >0</span>
-                                        <span class=gdlr-core-suffix>Shares</span>
-                                        <span class="gdlr-core-divider gdlr-core-skin-divider"></span>
-                                    </span>
-                                    <span class=gdlr-core-social-share-wrap>
-                                        <a class=gdlr-core-social-share-facebook href="#" target=_blank >
-                                            <i class="fa fa-facebook" ></i>
-                                        </a>
-                                        <a class=gdlr-core-social-share-google-plus href="#" target=_blank >
-                                            <i class="fa fa-google-plus" ></i>
-                                        </a>
-                                        <a class=gdlr-core-social-share-pinterest href="#" target=_blank >
-                                            <i class="fa fa-pinterest-p" ></i>
-                                        </a>
-                                        <a class=gdlr-core-social-share-twitter href="#" target=_blank  >
-                                            <i class="fa fa-twitter" ></i>
-                                        </a>
-                                    </span>
-                                </div>
-                                <div class="attorna-single-magazine-author-tags clearfix"></div>
-                            </div>
                             <div class=clear></div>
 
-                            <div class="attorna-single-related-post-wrap attorna-item-rvpdlr">
-                                <h3 class="attorna-single-related-post-title attorna-item-mglr">Related Posts</h3>
-                                <div class="gdlr-core-blog-item-holder clearfix">
-                                    <div class="gdlr-core-item-list  gdlr-core-item-pdlr gdlr-core-column-30 gdlr-core-column-first">
-                                        <div class="gdlr-core-blog-grid gdlr-core-style-3  gdlr-core-with-thumbnail">
-                                            <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                <a href=#><img src=upload/drew-beamer-679505-unsplash-1100x490.jpg alt width=1100 height=490 title=drew-beamer-679505-unsplash></a>
-                                            </div>
-                                            <div class=gdlr-core-blog-grid-content-wrap>
-                                                <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;"><a href=# >Domestic Violence in California &#8211; How a Lawyer Can Help</a></h3>
-                                                <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >•</span><span class=gdlr-core-head><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >•</span><span class=gdlr-core-head><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gdlr-core-item-list  gdlr-core-item-pdlr gdlr-core-column-30">
-                                        <div class="gdlr-core-blog-grid gdlr-core-style-3  gdlr-core-with-thumbnail">
-                                            <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                <a href=#><img src=upload/rawpixel-804738-unsplash-1100x490.jpg alt width=1100 height=490 title=rawpixel-804738-unsplash></a>
-                                            </div>
-                                            <div class=gdlr-core-blog-grid-content-wrap>
-                                                <h3 class="gdlr-core-blog-title gdlr-core-skin-title" style="font-size: 16px ;"><a href=# >Filing a Claim against a Cruise Ship Contractual Limitations</a></h3>
-                                                <div class="gdlr-core-blog-info-wrapper gdlr-core-skin-divider"><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-blog-info-sep >•</span><span class=gdlr-core-head><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-blog-info-sep >•</span><span class=gdlr-core-head><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
                     <div class=" attorna-sidebar-right attorna-column-20 attorna-line-height attorna-line-height">
                         <div class="attorna-sidebar-area attorna-item-pdlr">
                             <div id=gdlr-core-recent-post-widget-2 class="widget widget_gdlr-core-recent-post-widget attorna-widget">
-                                <h3 class="attorna-widget-title">Recent Articles</h3><span class=clear></span>
+                                <h3 class="attorna-widget-title">Publicados Recentemente</h3><span class=clear></span>
                                 <div class="gdlr-core-recent-post-widget-wrap gdlr-core-style-1">
-                                    @forelse($recent_articles as $article)
+                                    @foreach($recents as $recent)
                                         <div class="gdlr-core-recent-post-widget clearfix">
-                                        <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src=upload/drew-beamer-679505-unsplash-150x150.jpg alt width=150 height=150 title=drew-beamer-679505-unsplash></div>
-                                        <div class=gdlr-core-recent-post-widget-content>
-                                            <div class=gdlr-core-recent-post-widget-title><a href=#>Domestic Violence in California &#8211; How a Lawyer Can Help</a></div>
-                                            <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><a href=#>Feb 28, 2019</a></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Posts by James Smith" rel=author>James Smith</a></span>
+                                            <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image"><img src={{$recent->img}} alt width=150 height=150 title=drew-beamer-679505-unsplash></div>
+                                            <div class=gdlr-core-recent-post-widget-content>
+                                                <div class=gdlr-core-recent-post-widget-title><a href={{route('post_show', $recent->id)}}>{{$recent->titulo}}</a></div>
+                                                <div class=gdlr-core-recent-post-widget-info><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-date"><span class=gdlr-core-head ><i class=icon_clock_alt ></i></span><?php  echo $recent->created_at->format('M d, y'); ?></span><span class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-author"><span class=gdlr-core-head ><i class=icon_documents_alt ></i></span><a href=# title="Postado por {{$recent->autor}}" rel=author>{{$recent->autor}}</a></span>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    @empty
-                                        <span> Nao tem nenhum recente </span>
-                                    @endforelse
-                                </div>
-                            </div>
-
-                            <div id=tag_cloud-1 class="widget widget_tag_cloud attorna-widget">
-                                <h3 class="attorna-widget-title">Tag Cloud</h3>
-                                <span class=clear></span>
-                                <div class=tagcloud>
-                                    <a href=# class="tag-cloud-link tag-link-86 tag-link-position-1" style="font-size: 18.5pt;" aria-label="Antitrust (3 items)">Antitrust</a>
-                                    <a href=# class="tag-cloud-link tag-link-92 tag-link-position-2" style="font-size: 8pt;" aria-label="Bankruptcy (1 item)">Bankruptcy</a>
-                                    <a href=# class="tag-cloud-link tag-link-83 tag-link-position-3" style="font-size: 14.3pt;" aria-label="Employment (2 items)">Employment</a>
-                                    <a href=# class="tag-cloud-link tag-link-81 tag-link-position-4" style="font-size: 22pt;" aria-label="Family (4 items)">Family</a>
-                                    <a href=# class="tag-cloud-link tag-link-85 tag-link-position-5" style="font-size: 18.5pt;" aria-label="General Practice (3 items)">General Practice</a>
-                                    <a href=# class="tag-cloud-link tag-link-91 tag-link-position-6" style="font-size: 8pt;" aria-label="Immigration (1 item)">Immigration</a>
-                                    <a href=# class="tag-cloud-link tag-link-82 tag-link-position-7" style="font-size: 8pt;" aria-label="Law (1 item)">Law</a>
-                                    <a href=# class="tag-cloud-link tag-link-99 tag-link-position-8" style="font-size: 8pt;" aria-label="Nonprofit (1 item)">Nonprofit</a>
-                                    <a href=# class="tag-cloud-link tag-link-87 tag-link-position-9" style="font-size: 8pt;" aria-label="Personal Injury (1 item)">Personal Injury</a>
-                                    <a href=# class="tag-cloud-link tag-link-100 tag-link-position-10" style="font-size: 18.5pt;" aria-label="Property (3 items)">Property</a>
-                                </div>
-                            </div>
-                            <div id=text-4 class="widget widget_text attorna-widget">
-                                <h3 class="attorna-widget-title">Text Widget</h3><span class=clear></span>
-                                <div class=textwidget>Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Donec sed odio dui. Etiam porta sem malesuada.</div>
-                            </div>
-                            <div id=gdlr-core-custom-menu-widget-5 class="widget widget_gdlr-core-custom-menu-widget attorna-widget">
-                                <h3 class="attorna-widget-title">Practice Areas</h3><span class=clear></span>
-                                <div class=menu-practice-areas-container>
-                                    <ul id=menu-practice-areas class="gdlr-core-custom-menu-widget gdlr-core-menu-style-list">
-                                        <li class="menu-item"><a href=#>Coporate &#038; Securities</a></li>
-                                        <li class="menu-item"><a href=#>Real Estate Law</a></li>
-                                        <li class="menu-item"><a href=#>Health Care Law</a></li>
-                                        <li class="menu-item"><a href=#>Insurance Law</a></li>
-                                        <li class="menu-item"><a href=#>Construction &#038; Engineering</a></li>
-                                        <li class="menu-item"><a href=#>Ecommerce Law</a></li>
-                                        <li class="menu-item"><a href=#>Private Fund</a></li>
-                                        <li class="menu-item"><a href=#>Power &#038; Energy</a></li>
-                                        <li class="menu-item"><a href=#>Lending Law</a></li>
-                                    </ul>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

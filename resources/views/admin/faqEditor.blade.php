@@ -21,6 +21,7 @@
     <div id="form-container" class="container">
         <form method="post" action="{{ route('faqUpdate', $dados->id) }}">
             <br>
+            <h1 class="display-4">Editar Pergunta & Resposta<hr class="mb-4"></h1>
             <div class="form-group">
                 <label ><h5>Pergunta</h5></label>
                 <input type="text" name="pergunta" value="{{$dados->pergunta}}" class="form-control">

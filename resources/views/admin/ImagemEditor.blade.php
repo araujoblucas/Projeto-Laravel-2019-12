@@ -8,7 +8,11 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
+<style>
+    h5{
+        font-family: Roboto;
+    }
+</style>
 
 
 
@@ -21,6 +25,7 @@
     <div id="form-container" class="container">
         <form method="post" action="{{ route('ImagemUpdate', $dados->id) }}">
             <br>
+            <h1 class="display-4">Editar Imagem<hr class="mb-4"></h1>
             <div class="form-group">
                 <label ><h5>Titulo</h5></label>
                 <input type="text" name="nome" value="{{$dados->nome}}" placeholder="Tamanho Recomendado: 1500x1000" class="form-control">
@@ -36,7 +41,7 @@
                 <input type="text" name="descricao" value="{{$dados->descricao}}" class="form-control">
             </div>
             <br>
-            <button class="btn btn-primary bg-dark" type="submit" style="margin-right:135px;">Adicionar</button>
+            <button class="btn btn-primary bg-dark" type="submit" style="margin-right:135px;">Atualizar</button>
             <br><br>
         </form>
 

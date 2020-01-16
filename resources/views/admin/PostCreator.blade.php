@@ -9,7 +9,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-
+<style>
+    h5{
+        font-family: Roboto;
+    }
+</style>
 
 
 </head>
@@ -17,11 +21,13 @@
 @component('admin.adminHead')
 @endcomponent
 
-<div class="container" style="margin-top: 20px;">
+<div class="container bg-light" style="margin-top: 20px;">
     <div id="form-container" class="container">
+        <br>
+        <h1 class="display-4">Criar Post<hr class="mb-4"></h1>
         <form method="post" action="{{ route('PostCreator') }}">
                 <div class="form-group">
-                    <label for="exampleFormControlInput1"><h2>Titulo do Post</h2></label>
+                    <label for="exampleFormControlInput1"><h5>Titulo do Post</h5></label>
                     <input type="text" name="titulo" class="form-control">
                 </div>
             <div class="form-group">
@@ -32,14 +38,14 @@
                 <label for="exampleFormControlInput1"><h5>Insira o Autor do Post</h5></label>
                 <input type="text" name="autor" class="form-control">
             </div>
-    <textarea name="descricao" id="editor1">
+            <textarea name="descricao" id="editor1">
 
-                    </textarea>
+            </textarea>
 
 
             <br>
     <button class="btn btn-primary black" type="submit">Postar</button>
-
+    <br><br>
 
     </form>
 </div>

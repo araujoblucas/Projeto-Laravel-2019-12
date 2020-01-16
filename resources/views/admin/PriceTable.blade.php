@@ -9,63 +9,66 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-
+<style>
+    h4 {
+        font-family: Roboto;
+    }
+</style>
 
 
 </head>
-<?php
-use App\Price_table;
-$dados = Price_table::Find(1);
-?>
 <body>
 @component('admin.adminHead')
 @endcomponent
 
-<div class="container" style="margin-top: 20px;">
+<div class="container bg-light" style="margin-top: 20px;">
     <div id="form-container" class="container">
         <form method="post" action="{{ route('admin_price_table') }}">
+            <h1 class="display-4">Planos<hr class="mb-4"></h1>
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Titulo</h2></label>
+                <label for="exampleFormControlInput1"><h4>Titulo</h4></label>
                 <input type="text" name="titulo" class="form-control" value="{{$dados->titulo}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Subtiulo</h2></label>
+                <label for="exampleFormControlInput1"><h4>Subtiulo</h4></label>
                 <input type="text" name="subtitulo" class="form-control" value="{{$dados->subtitulo}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Titulo 2</h2></label>
+                <label for="exampleFormControlInput1"><h4>Titulo 2</h4></label>
                 <input type="text" name="titulo2" class="form-control" value="{{$dados->titulo2}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Subtitulo 2</h2></label>
+                <label for="exampleFormControlInput1"><h4>Subtitulo 2</h4></label>
                 <input type="text" name="subtitulo2" class="form-control" value="{{$dados->subtitulo2}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Descrição</h2></label>
+                <label for="exampleFormControlInput1"><h4>Descrição</h4></label>
                 <input type="text" name="descricao" class="form-control" value="{{$dados->descricao}}">
             </div>
 
+            <br><hr class="mb-4"><br> <!-- ESQUERDA -->
+
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Titulo do Plano da Esquerda</h2></label>
+                <label for="exampleFormControlInput1"><h4>Titulo do Plano da Esquerda</h4></label>
                 <input type="text" name="planoesquerdatitulo" class="form-control" value="{{$dados->planoesquerdatitulo}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Subtitulo do Plano da Esquerda</h2></label>
+                <label for="exampleFormControlInput1"><h4>Subtitulo do Plano da Esquerda</h4></label>
                 <input type="text" name="planoesquerdasubtitulo" class="form-control" value="{{$dados->planoesquerdasubtitulo}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Preço do Plano da Esquerda</h2></label>
+                <label for="exampleFormControlInput1"><h4>Preço do Plano da Esquerda</h4></label>
                 <input type="text" name="precoesquerda" class="form-control" value="{{$dados->precoesquerda}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Link da Esquerda</h2></label>
+                <label for="exampleFormControlInput1"><h4>Link da Esquerda</h4></label>
                 <input type="text" name="esquerdalink" class="form-control" value="{{$dados->esquerdalink}}">
             </div>
 
@@ -94,25 +97,25 @@ $dados = Price_table::Find(1);
             </div>
 
 
-            <br><br> <!-- CENTRO -->
+            <br><hr class="mb-4"><br> <!-- CENTRO -->
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Titulo do Plano da centro</h2></label>
+                <label for="exampleFormControlInput1"><h4>Titulo do Plano da centro</h4></label>
                 <input type="text" name="planocentrotitulo" class="form-control" value="{{$dados->planocentrotitulo}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Subtitulo do Plano da centro</h2></label>
+                <label for="exampleFormControlInput1"><h4>Subtitulo do Plano da centro</h4></label>
                 <input type="text" name="planocentrosubtitulo" class="form-control" value="{{$dados->planocentrosubtitulo}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Preço do Plano da centro</h2></label>
+                <label for="exampleFormControlInput1"><h4>Preço do Plano da centro</h4></label>
                 <input type="text" name="precocentro" class="form-control" value="{{$dados->precocentro}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Link da Centro</h2></label>
+                <label for="exampleFormControlInput1"><h4>Link da Centro</h4></label>
                 <input type="text" name="centrolink" class="form-control" value="{{$dados->centrolink}}">
             </div>
 
@@ -139,25 +142,25 @@ $dados = Price_table::Find(1);
                 </div>
             </div>
 
-            <br><br> <!-- Direito -->
+            <br><hr class="mb-4"><br> <!-- Direito -->
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Titulo do Plano da direita</h2></label>
+                <label for="exampleFormControlInput1"><h4>Titulo do Plano da direita</h4></label>
                 <input type="text" name="planodireitatitulo" class="form-control" value="{{$dados->planodireitatitulo}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Subtitulo do Plano da direita</h2></label>
+                <label for="exampleFormControlInput1"><h4>Subtitulo do Plano da direita</h4></label>
                 <input type="text" name="planodireitasubtitulo" class="form-control" value="{{$dados->planodireitasubtitulo}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Preço do Plano da direita</h2></label>
+                <label for="exampleFormControlInput1"><h4>Preço do Plano da direita</h4></label>
                 <input type="text" name="precodireita" class="form-control" value="{{$dados->precodireita}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Link da Direita</h2></label>
+                <label for="exampleFormControlInput1"><h4>Link da Direita</h4></label>
                 <input type="text" name="direitalink" class="form-control" value="{{$dados->direitalink}}">
             </div>
 
@@ -186,10 +189,8 @@ $dados = Price_table::Find(1);
 
             <br>
 
-            <br>
-            <button class="btn btn-primary black" type="submit">Postar</button>
-
-
+            <button class="btn btn-primary black" type="submit">Atualizar</button>
+            <br><br>
         </form>
     </div>
 

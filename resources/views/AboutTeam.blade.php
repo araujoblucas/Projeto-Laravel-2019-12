@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html lang=en-US class=no-js>
-<?php
-use App\AboutTeam;
-use App\Partner;
-$dados = AboutTeam::Find(1);
-//$partners = Partner::all();
-$partners = Partner::all();
-
-
-?>
 
 <head>
     <meta charset=UTF-8>
@@ -226,7 +217,7 @@ $partners = Partner::all();
     @endcomponent
 
 </div>
-</div>
+
 
 <script src='js/jquery/jquery.js'></script>
 <script src='js/jquery/jquery-migrate.min.js'></script>

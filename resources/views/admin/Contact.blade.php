@@ -10,22 +10,26 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
 
+    <style>
+        h4, h5 {
+            font-family: Roboto;
+        }
+    </style>
 
 
 </head>
-<?php
-use App\Contact;
-$dados = Contact::Find(1);
-?>
 <body>
 @component('admin.adminHead')
 @endcomponent
 
-<div class="container" style="margin-top: 20px;">
+
+<div class="container bg-light" style="margin-top: 20px;">
     <div id="form-container" class="container">
         <form method="post" action="{{ route('admin_contact') }}">
+            <br>
+            <h1 class="display-4">Contato<hr class="mb-4"></h1>
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Titulo</h2></label>
+                <label for="exampleFormControlInput1"><h4>Titulo</h4></label>
                 <input type="text" name="titulo" class="form-control" value="{{$dados->titulo}}">
             </div>
 
@@ -93,14 +97,14 @@ $dados = Contact::Find(1);
                     <input type="text" name="skype" class="form-control" value="{{$dados->skype}}">
                 </div>
                 <div class="col">
-                    <label for="exampleFormControlInput1"><h5>Twitter</h5></label>
+                    <label><h5>Twitter</h5></label>
                     <input type="text" name="twitter" class="form-control" value="{{$dados->twitter}}">
                 </div>
             </div>
             <br>
 
             <br>
-            <button class="btn btn-primary black" type="submit">Postar</button>
+            <button class="btn btn-primary black" type="submit">Atualizar</button>
 
 
         </form>

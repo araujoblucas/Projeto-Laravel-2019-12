@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AboutTeam;
 use App\AboutUs;
+use App\ConfigDefault;
 use App\faq;
 use App\Post;
 use App\Contact;
@@ -34,7 +35,10 @@ class AdminController extends Controller
 
 
     public function adminConfig() {
-        return view('admin.Config');
+        $dados = ConfigDefault::findorfail(1);
+        return view('admin.Config', [
+            'dados' => $dados,
+        ]);
     }
 
     protected function PostList() {
@@ -93,7 +97,10 @@ class AdminController extends Controller
         ]);
     }
     public function aboutTeam(){
-        return view('admin.AboutTeam');
+        $dados = AboutTeam::findorfail(1);
+        return view('admin.AboutTeam', [
+            'dados' => $dados
+        ]);
     }
 
     public function login() {
@@ -150,7 +157,10 @@ class AdminController extends Controller
     }
 
     public function contact(){
-        return view('admin.contact');
+        $dados = Contact::findorfail(1);
+        return view('admin.contact', [
+            'dados'=>$dados,
+        ]);
     }
     public function contactUpdate(Request $request){
         $dados = Contact::findorfail(1);
@@ -232,10 +242,14 @@ class AdminController extends Controller
 
     public function logout(){
     	Auth::logout();
+    	return redirect()->route('login');
     }
 
     public function price_table(){
-        return  view('admin.PriceTable');
+        $dados = Price_table::findorfail(1);
+        return  view('admin.PriceTable', [
+            'dados' => $dados,
+        ]);
     }
     public function price_tableUpdate(Request $request){
         $dados = Price_table::findorfail(1);
@@ -278,10 +292,10 @@ class AdminController extends Controller
     public function AdminPostShow($id){
         $post = Post::findorfail($id);
 
-        $recent_articles = Post::where('id', '<>', $post->id)->orderBy('id', 'desc')->take(5)->get();
+        $recents = Post::where('id', '<>', $post->id)->orderBy('id', 'desc')->take(5)->get();
 
         return view('admin.PostShow', [
-            'recent_articles' => $recent_articles,
+            'recents' => $recents,
             'post' => $post
         ]);
     }
@@ -362,7 +376,7 @@ class AdminController extends Controller
         $dados->container3descricao5 = $request->container3descricao5;
         $dados->container3icone6 = $request->container3icone6;
         $dados->container3titulo6 = $request->container3titulo6;
-        $dados->container3descricao6 = $request->container3descrcao6;
+        $dados->container3descricao6 = $request->container3descricao6;
         $dados->container4titulo = $request->container4titulo;
         $dados->container4link = $request->container4link;
         $dados->container4imagem = $request->container4imagem;

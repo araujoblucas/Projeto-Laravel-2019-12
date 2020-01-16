@@ -9,7 +9,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-
+<style>
+    h5 {
+        font-family: Roboto;
+    }
+</style>
 
 
 </head>
@@ -21,6 +25,7 @@
     <div id="form-container" class="container">
         <form method="post" action="{{ route('commentCreate') }}">
             <br>
+            <h1 class="display-4">Criar Comentário<hr class="mb-4"></h1>
             <div class="form-group">
                 <label ><h5>Nome</h5></label>
                 <input type="text" name="nome" class="form-control">

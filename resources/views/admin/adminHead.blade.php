@@ -48,4 +48,15 @@
             </li>
         </ul>
     </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-right">
+            <li class="nav-item">
+                <h1 class="nav-link h5" >{{auth()->user()->name}}</h1>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('logout') }}">Sair</a>
+            </li>
+
+        </ul>
+    </div>
 </nav>

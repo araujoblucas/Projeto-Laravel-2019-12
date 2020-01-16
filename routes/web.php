@@ -27,6 +27,7 @@ Route::get('login', 'AdminController@login')->name('login');
 Route::post('login', 'AdminController@postLogin')->name('post_login');
 Route::get('logout', 'AdminController@logout')->name('logout');
 
+
 Route::prefix('admin')->middleware('auth')->group(function () {
 
     Route::get('/', 'AdminController@adminConfig')->name('admin_config');

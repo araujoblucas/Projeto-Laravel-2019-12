@@ -10,22 +10,24 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
 
-
+<style>
+    h4 {
+        font-family: Roboto;
+    }
+</style>
 
 </head>
-    <?php
-        use App\AboutTeam;
-        $dados = AboutTeam::Find(1);
-    ?>
 <body>
 @component('admin.adminHead')
 @endcomponent
 
-<div class="container" style="margin-top: 20px;">
+<div class="container bg-light" style="margin-top: 20px; border-radius: 10px;">
     <div id="form-container" class="container">
         <form method="post" action="{{ route('admin_about_team') }}">
+            <br>
+            <h1 class="display-4">Sobre a Equipe<hr class="mb-4"></h1>
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Titulo</h2></label>
+                <label for="exampleFormControlInput1"><h4>Titulo</h4></label>
                 <input type="text" name="titulo" class="form-control" value="{{$dados->titulo}}">
             </div>
 
@@ -45,12 +47,12 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Descrição na imagem</h4></label>
+                <label for="exampleFormControlInput1"><h4>Descrição na imagem(lado esquerdo)</h4></label>
                 <input type="text" name="desc1" class="form-control" value="{{$dados->desc1}}">
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Descrição na imagem</h4></label>
+                <label for="exampleFormControlInput1"><h4>Descrição na imagem(lado direito)</h4></label>
                 <input type="text" name="desc2" class="form-control" value="{{$dados->desc2}}">
             </div>
 
@@ -100,72 +102,7 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 1ª pergunta</h4></label>
-                <input type="text" name="ask1" class="form-control" value="{{$dados->ask1}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 2ª resposta</h4></label>
-                <input type="text" name="answer1" class="form-control" value="{{$dados->answer1}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 2ª pergunta</h4></label>
-                <input type="text" name="ask2" class="form-control" value="{{$dados->ask2}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 2ª resposta</h4></label>
-                <input type="text" name="answer2" class="form-control" value="{{$dados->answer2}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 3ª pergunta</h4></label>
-                <input type="text" name="ask3" class="form-control" value="{{$dados->ask3}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 3ª resposta</h4></label>
-                <input type="text" name="answer3" class="form-control" value="{{$dados->answer3}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 4ª pergunta</h4></label>
-                <input type="text" name="ask4" class="form-control" value="{{$dados->ask4}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 4ª resposta</h4></label>
-                <input type="text" name="answer4" class="form-control" value="{{$dados->answer4}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 5ª pergunta</h4></label>
-                <input type="text" name="ask5" class="form-control" value="{{$dados->ask5}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a 5ª resposta</h4></label>
-                <input type="text" name="answer5" class="form-control" value="{{$dados->answer5}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira o link do video</h4></label>
-                <input type="text" name="video" class="form-control" value="{{$dados->video}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira a descrição do video</h4></label>
-                <input type="text" name="descVideo" class="form-control" value="{{$dados->descVideo}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira o titulo do video</h4></label>
-                <input type="text" name="tituloVideo" class="form-control" value="{{$dados->tituloVideo}}">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Insira o contato do video</h4></label>
+                <label for="exampleFormControlInput1"><h4>Insira o Titulo do contato</h4></label>
                 <input type="text" name="contatoTitulo" class="form-control" value="{{$dados->contatoTitulo}}">
             </div>
 
@@ -175,7 +112,7 @@
             </div>
 
             <br>
-            <button class="btn btn-primary black" type="submit">Postar</button>
+            <button class="btn btn-primary black" type="submit">Atualizar</button>
 
 
         </form>

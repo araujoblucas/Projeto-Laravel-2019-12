@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang=en-US class=no-js>
-<?php
-    use App\Contact;
-    $dados = Contact::find(1);
 
-?>
 
 <head>
     <meta charset=UTF-8>

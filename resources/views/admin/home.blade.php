@@ -9,7 +9,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-
+<style>
+    h5 {
+        font-family: Roboto;
+    }
+</style>
 
 
 </head>
@@ -21,7 +25,7 @@
     <div id="form-container" class="container">
         <form method="post" action="{{route('admin_home')}}">
 
-
+            <h1 class="display-3">Home<hr class="mb-4"></h1>
             <br>
             <h1 class="display-4">Container 1<hr class="mb-4"></h1>
             <div class="form-group">
@@ -107,10 +111,9 @@
                 @for($i = 1;$i < 7; $i++)
                     <tr>
                         <td>{{$i}}</td>
-                        <td><input type="text" name="container3icone{{$i}}" class="form-control" value="{{$dados->container3icone}}"></td>
-                        <td><input type="text" name="container3titulo{{$i}}" class="form-control" value="{{$dados->container3titulo}}"></td>
-                        <td><input type="text" name="container3descricao{{$i}}" class="form-control" value="{{$dados->container3descricao}}"></td>
-
+                        <td><input type="text" name="container3icone{{$i}}" class="form-control" value="<?php $x = 'container3icone'.$i ?>{{$dados->$x}}"></td>
+                        <td><input type="text" name="container3titulo{{$i}}" class="form-control" value="<?php $y = 'container3titulo'.$i ?>{{$dados->$y}}"></td>
+                        <td><input type="text" name="container3descricao{{$i}}" class="form-control" value="<?php $z = 'container3descricao'.$i ?>{{$dados->$z}}"></td>
                     </tr>
                 @endfor
             </table>
@@ -148,19 +151,19 @@
             <div class="row">
                 <div class="col">
                     <label><h5>Titulo do Quadro {{$i}}</h5></label>
-                    <input type="text" name="container5titulo{{$i}}" class="form-control" >
+                    <input type="text" name="container5titulo{{$i}}" class="form-control" value="<?php $x='container5titulo'.$i ?>{{$dados->$x}}">
                 </div>
                 <div class="col">
                     <label><h5>Descrição do Quadro {{$i}}</h5></label>
-                    <input type="text" name="container5descricao{{$i}}" class="form-control">
+                    <input type="text" name="container5descricao{{$i}}" class="form-control" value="<?php $y='container5descricao'.$i ?>{{$dados->$y}}">
                 </div>
                 <div class="col">
                     <label><h5>Icone do Quadro {{$i}}</h5></label>
-                    <input type="text" name="container5icone{{$i}}" class="form-control">
+                    <input type="text" name="container5icone{{$i}}" class="form-control" value="<?php $z='container5icone'.$i ?>{{$dados->$z}}">
                 </div>
                 <div class="col">
                     <label><h5>Imagem de Fundo {{$i}}</h5></label>
-                    <input type="text" name="container5background{{$i}}" placeholder="398x370" class="form-control">
+                    <input type="text" name="container5background{{$i}}" placeholder="398x370" class="form-control" value="<?php $w='container5background'.$i ?>{{$dados->$w}}">
                 </div>
             </div>
             <br>
@@ -178,8 +181,8 @@
 
 
 
-        <br><br>
-
+        <br>
+        <h1 class="display-4">Comentários<hr class="mb-4"></h1>
         <table class="table" style="width:100%;margin-top: 20px;">
 
             <thead class="thead-dark">

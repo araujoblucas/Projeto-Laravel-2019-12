@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang=en-US class=no-js>
-<?php
-    use App\Price_table;
-    $dados = Price_table::find(1);
-
-?>
 
 <head>
     <meta charset=UTF-8>

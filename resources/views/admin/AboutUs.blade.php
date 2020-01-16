@@ -9,6 +9,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
+    <style>
+        h4, h5 {
+            font-family: Roboto;
+        }
+    </style>
 
 
 
@@ -22,9 +27,9 @@
         <form method="post" action="{{ route('admin_about_us') }}">
 
             <br>
-
+            <h1 class="display-4">Sobre a Nós<hr class="mb-4"></h1>
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Titulo</h2></label>
+                <label for="exampleFormControlInput1"><h4>Titulo</h4></label>
                 <input type="text" name="titulo" class="form-control" value="{{$dados->titulo}}">
             </div>
 
@@ -34,7 +39,7 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h2>Segundo Titulo</h2></label>
+                <label for="exampleFormControlInput1"><h4>Segundo Titulo</h4></label>
                 <input type="text" name="titulo2" class="form-control" value="{{$dados->titulo2}}">
             </div>
 
@@ -212,7 +217,7 @@
                 </tr>
             @endforeach
         </table>
-        <a href="{{route('faqCreate')}}"><button class="btn btn-secondary bg-dark" type="submit" style="float:right;">Nova Imagem</button></a>
+        <a href="{{route('faqCreate')}}"><button class="btn btn-secondary bg-dark" type="submit" style="float:right;">Nova Pergunta</button></a>
         <br><br><br>
 
     </div>

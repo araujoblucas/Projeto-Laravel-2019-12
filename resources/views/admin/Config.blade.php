@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html>
-<?php
- use App\ConfigDefault;
- $dados = ConfigDefault::find(1);
-
-?>
 <head>
 
     <script src="https://cdn.ckeditor.com/4.13.1/standard-all/ckeditor.js"></script>
@@ -14,7 +9,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-
+<style>
+    h2, h5 {
+        font-family: Roboto;
+    }
+</style>
 
 
 </head>
@@ -75,16 +74,15 @@
 
             <h1 class="display-4">Configurações de Footer<hr class="mb-4"></h1>
             <div class="form-group">
-                <label for="exampleFormControlInput1"><h4>Atendimento</h4></label>
+                <label for="exampleFormControlInput1"><h2>Atendimento</h2></label>
                 <input type="text" name="atendimento" class="form-control" value="{{$dados->atendimento}}">
             </div>
-
             <br>
 
             <button class="btn btn-primary black" type="submit">Atualizar</button>
+            <br><br>
         </form>
     </div>
-
 </div>
 
     <!-- Popper.JS -->

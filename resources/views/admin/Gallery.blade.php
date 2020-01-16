@@ -9,7 +9,11 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
-
+<style>
+    h5{
+        font-family: Roboto;
+    }
+</style>
 
 
 </head>
@@ -20,15 +24,12 @@
 <div class="container bg-light" style="margin-top: 20px;border-radius: 10px">
     <div id="form-container" class="container">
         <form method="post" action="{{ route('admin_gallery') }}">
-
-
             <br>
+            <h1 class="display-4">Galeria<hr class="mb-4"></h1>
             <div class="form-group">
-                <label ><h2>Título da Página</h2></label>
+                <label ><h5>Título da Página</h5></label>
                 <input type="text" name="titulo" class="form-control" value="{{$dados->titulo}}">
             </div>
-
-            <br>
 
             <div class="form-group">
                 <label ><h5>Titulo</h5></label>
@@ -43,6 +44,7 @@
             <button class="btn btn-primary bg-dark" type="submit" style="margin-right:135px;">Atualizar</button>
             <br><br>
         </form>
+        <h1 class="display-4">Imagens<hr class="mb-4"></h1>
         <table class="table" style="width:100%;margin-top: 20px;">
 
             <thead class="thead-dark">

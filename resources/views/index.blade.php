@@ -88,7 +88,7 @@
                                             <div class=gdlr-core-pbf-element>
                                                 <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 15px ;">
                                                     <div class=gdlr-core-text-box-item-content style="text-transform: none ;">
-                                                        <p>{{$dados->container2descricao}}</p>
+                                                        <p><?php echo $dados->container2descricao; ?></p>
                                                     </div>
                                                 </div>
                                             </div>

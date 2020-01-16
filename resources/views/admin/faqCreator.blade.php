@@ -21,6 +21,7 @@
     <div id="form-container" class="container">
         <form method="post" action="{{ route('faqCreate') }}">
             <br>
+            <h1 class="display-4">Criar Pergunta & Resposta<hr class="mb-4"></h1>
             <div class="form-group">
                 <label ><h5>Pergunta</h5></label>
                 <input type="text" name="pergunta" class="form-control">

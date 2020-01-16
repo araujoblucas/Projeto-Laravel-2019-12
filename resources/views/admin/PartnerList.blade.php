@@ -15,8 +15,9 @@
 
 @component('admin.adminHead')
 @endcomponent
+
 <div class="row d-flex justify-content-center">
-    <table class="table" style="width:60%;margin-top: 20px;">
+    <table class="table" style="width:60%;margin-top: 40px;">
 
         <?php
         use App\Partner;
@@ -43,7 +44,6 @@
         @endforeach
     </table>
 </div>
-
 
 <!-- Popper.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
