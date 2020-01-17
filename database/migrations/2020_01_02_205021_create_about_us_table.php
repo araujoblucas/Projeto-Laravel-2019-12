@@ -19,8 +19,9 @@ class CreateAboutUsTable extends Migration
             $table->string('subtitulo');
             $table->string('titulo2');
             $table->string('subtitulo2');
-            $table->string('sobre', 1200);
+            $table->text('sobre', 1200);
             $table->string('video');
+            $table->string('imagem');
             $table->string('dado1');
             $table->string('descdado1');
             $table->string('dado2');

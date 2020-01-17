@@ -22,5 +22,8 @@ class DatabaseSeeder extends Seeder
         $this->call('ImagemTableSeeder');
         $this->call('FaqTableSeeder');
         $this->call('HomeTableSeeder');
+        $this->call('PostTableSeeder');
+        $this->call('PartnerTableSeeder');
+        $this->call('CommentTableSeeder');
     }
 }

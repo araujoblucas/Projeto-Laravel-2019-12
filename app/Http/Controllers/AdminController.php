@@ -134,19 +134,6 @@ class AdminController extends Controller
         $dados->descdado3 = $request->descdado3;
         $dados->dado4 = $request->dado4;
         $dados->descdado4 = $request->descdado4;
-        $dados->ask1 = $request->ask1;
-        $dados->answer1 = $request->answer1;
-        $dados->ask2 = $request->ask2;
-        $dados->answer2 = $request->answer2;
-        $dados->ask3 = $request->ask3;
-        $dados->answer3 = $request->answer3;
-        $dados->ask4 = $request->ask4;
-        $dados->answer4 = $request->answer4;
-        $dados->ask5 = $request->ask5;
-        $dados->answer5 = $request->answer5;
-        $dados->video = $request->video;
-        $dados->descVideo = $request->descVideo;
-        $dados->tituloVideo = $request->tituloVideo;
         $dados->contatoTitulo = $request->contatoTitulo;
         $dados->contatodesc = $request->contatodesc;
 
@@ -191,6 +178,7 @@ class AdminController extends Controller
         $dados->titulo2 = $request->titulo2;
         $dados->subtitulo2 = $request->subtitulo2;
         $dados->sobre = $request->sobre;
+        $dados->imagem = $request->imagem;
         $dados->video = $request->video;
         $dados->dado1 = $request->dado1;
         $dados->descdado1 = $request->descdado1;
