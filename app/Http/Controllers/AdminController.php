@@ -104,7 +104,7 @@ class AdminController extends Controller
     }
 
     public function login() {
-    	return view('login');
+    	return view('pages.login.login');
     }
 
     public function postLogin(PostLoginRequest $request)
