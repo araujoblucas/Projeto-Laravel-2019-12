@@ -14,6 +14,7 @@ class AboutTeamController extends Controller
         return view('AboutTeam', [
             'dados' => $dados,
             'partners' => $partners,
+
         ]);
     }
 }

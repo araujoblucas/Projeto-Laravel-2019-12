@@ -2,7 +2,6 @@
 <html lang=”pt-br”>
     <head>
         <title>Login</title>
-        <link href="styles.css" rel="stylesheet">
     </head>
     <style>
 
@@ -181,6 +180,8 @@
                     <div class="title">
                         Painel de <br>Administração
                     </div>
+
+
 
                     <div class="inputBox" >
                         <img src="icons/user.png" class="inputIMG" >

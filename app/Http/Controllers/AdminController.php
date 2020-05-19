@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\AboutTeam;
 use App\AboutUs;
 use App\ConfigDefault;
@@ -18,6 +19,8 @@ use App\Home;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostLoginRequest;
+use Illuminate\Support\Facades\Route;
+
 
 class AdminController extends Controller
 {
@@ -31,13 +34,10 @@ class AdminController extends Controller
         $this->post = $post;
     }
 
-
-
-
     public function adminConfig() {
         $dados = ConfigDefault::findorfail(1);
-        return view('admin.Config', [
-            'dados' => $dados,
+        return view('pages.default', [
+            'dados' => $dados
         ]);
     }
 
@@ -98,13 +98,15 @@ class AdminController extends Controller
     }
     public function aboutTeam(){
         $dados = AboutTeam::findorfail(1);
-        return view('admin.AboutTeam', [
-            'dados' => $dados
+        $route_name = Route::current()->getName() == "admin_about_team";
+        return view('pages.aboutTeam', [
+            'dados' => $dados,
+            'route_name' => $route_name
         ]);
     }
 
     public function login() {
-    	return view('pages.login.login');
+    	return view('pages.login');
     }
 
     public function postLogin(PostLoginRequest $request)
@@ -145,7 +147,7 @@ class AdminController extends Controller
 
     public function contact(){
         $dados = Contact::findorfail(1);
-        return view('admin.contact', [
+        return view('pages.contact', [
             'dados'=>$dados,
         ]);
     }
@@ -214,7 +216,7 @@ class AdminController extends Controller
     public function gallery(){
         $dados = Gallery::findorfail('1');
         $imagens = Imagem::all()->sortByDesc('created_at');
-        return view('admin.Gallery', [
+        return view('pages.gallery', [
             'imagens' => $imagens,
             'dados' => $dados
         ]);
