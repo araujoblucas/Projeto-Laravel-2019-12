@@ -91,7 +91,7 @@ class AdminController extends Controller
     public function aboutUs(){
         $faqs = faq::all();
         $dados = AboutUs::find(1);
-        return view('admin.aboutUs', [
+        return view('pages.aboutUs', [
             'faqs' => $faqs,
             'dados' => $dados,
         ]);
@@ -237,7 +237,7 @@ class AdminController extends Controller
 
     public function price_table(){
         $dados = Price_table::findorfail(1);
-        return  view('admin.PriceTable', [
+        return  view('pages.priceTable', [
             'dados' => $dados,
         ]);
     }
@@ -255,7 +255,6 @@ class AdminController extends Controller
         $dados->esquerdalista2 = $request->esquerdalista2;
         $dados->esquerdalista3 = $request->esquerdalista3;
         $dados->esquerdalista4 = $request->esquerdalista4;
-        $dados->esquerdalista5 = $request->esquerdalista5;
         $dados->esquerdalink = $request->esquerdalink;
         $dados->planocentrotitulo = $request->planocentrotitulo;
         $dados->planocentrosubtitulo = $request->planocentrosubtitulo;
@@ -264,7 +263,6 @@ class AdminController extends Controller
         $dados->centrolista2 = $request->centrolista2;
         $dados->centrolista3 = $request->centrolista3;
         $dados->centrolista4 = $request->centrolista4;
-        $dados->centrolista5 = $request->centrolista5;
         $dados->centrolink = $request->centrolink;
         $dados->planodireitatitulo = $request->planodireitatitulo;
         $dados->planodireitasubtitulo = $request->planodireitasubtitulo;
@@ -273,7 +271,6 @@ class AdminController extends Controller
         $dados->direitalista2 = $request->direitalista2;
         $dados->direitalista3 = $request->direitalista3;
         $dados->direitalista4 = $request->direitalista4;
-        $dados->direitalista5 = $request->direitalista5;
         $dados->direitalink = $request->direitalink;
         $dados->save();
         return redirect()->route('admin_price_table');

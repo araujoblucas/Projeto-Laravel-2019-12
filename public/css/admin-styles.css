@@ -43,6 +43,10 @@
 
 }
 
+body {
+    background-color: #C3BFBC;
+}
+
 @keyframes gradient {
     0% {background-position: 0%}
     100% {background-position: 100%}
@@ -50,7 +54,6 @@
 .container {
     display: flex;
     flex:1;
-
     background-color: #C3BFBC;
 }
 .sidebar {
@@ -148,6 +151,57 @@
     background-color: rgba(138,43,226, 0.1);
 }
 
+
+        /* Lista Suspensa */
+.dropdownBTN {
+    width: 16vw;
+    padding: 15px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+
+}
+ .buttonUL {
+    visibility: hidden;
+    display: flex;
+    display: inline-block;
+    text-decoration: none;
+    position: absolute;
+    background-color: #ccc;
+    padding: 10px;
+    margin-top: -35px;
+    border-radius: 8px;
+    z-index: 1;
+    background-color: rgba(88, 30, 60, 1);
+}
+.buttonUL:hover .buttonUL{
+    visibility: visible;
+
+}
+.buttonUL li {
+    color: #fff;
+    opacity: 0.3;
+    background-color:rgba(88, 30, 60, 1) ;
+    padding: 8px;
+}
+.buttonUL li:hover {
+    padding: 8px;
+    opacity: 1;
+}
+.buttonUL li a {
+    text-decoration: none;
+    color: #fff;
+}
+.dropdownBTN:hover .buttonUL {
+    visibility: visible;
+}
+
+
+
+
+
 .containerContentHeader {
     width: 100%;
     display: flex;
@@ -219,6 +273,14 @@
     height: 6vh;
     border-radius: 6px;
     text-align: center;
+}
+.boxTextarea {
+    width: 65vw;
+    height: 6vh;
+    border-radius: 6px;
+    text-align: center;
+    resize: vertical;
+    min-height: 15vh;
 }
 .miniBoxContainer {
     display: flex;
@@ -385,4 +447,89 @@
 
 .table tr:nth-child(even) {
     background-color: #dddddd;
+  }
+
+
+  .containerPlains {
+    display: flex;
+    align-self: center;
+    width: 80vw;
+    border-radius: 8px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .plainsSiderBox {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 25vw;
+    background-color: #6c3250;
+    border: solid 2px #fff;
+    color: #fff;
+    flex-direction: column;
+    border-radius: 6px;
+  }
+
+.plainsSiderBox p {
+    font-size: 1.5em;
+    color: #ccc;
+    text-align: center;
+}
+
+.plainsSiderBox input {
+  width: 15vw;
+  height: 4vh;
+  border-radius: 6px;
+  text-align: center;
+}
+
+  .plainsCenterBox {
+    display: flex;
+    align-self: center;
+    width: 30vw;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #fff;
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    flex-direction: column;
+    background-color: #6c3250;
+    border-radius: 6px;
+
+  }
+
+    .plainsCenterBox p {
+        font-size: 1.8em;
+        color: #ccc;
+        text-align: center;
+    }
+
+    .plainsCenterBox input {
+        width: 18vw;
+        height: 5vh;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+  .plainItem {
+      align-self: center;
+      align-items: center;
+      align-content: center;
+      border: solid 1px #fff;
+      width: 100%;
+      padding: 15px;
+
+  }
+
+  .plainsCenterBox .plainItem {
+
   }

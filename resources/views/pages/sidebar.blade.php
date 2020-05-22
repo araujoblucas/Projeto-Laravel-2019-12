@@ -34,7 +34,12 @@
    >
         Equipe
    </a>
-   <a href="#" class="button">Sobre Nós</a>
+   <a href="{{(Route::current()->getName() == 'admin_about_us') ? '#' : route('admin_about_us') }}"
+   class="button
+   {{ (Route::current()->getName() == 'admin_about_us') ? "active" : ''}}"
+   >
+       Sobre Nós
+    </a>
    <a href="{{(Route::current()->getName() == 'admin_gallery') ? '#' : route('admin_gallery') }}"
       class="button
       {{ (Route::current()->getName() == 'admin_gallery') ? "active" : ''}}"
@@ -42,14 +47,31 @@
     >
        Galeria
     </a>
-   <a href="#" class="button">Planos</a>
+   <a href="{{(Route::current()->getName() == 'admin_price_table') ? '#' : route('admin_price_table') }}"
+      class="button
+      {{ (Route::current()->getName() == 'admin_price_table') ? "active" : ''}}"
+   >
+        Planos
+    </a>
     <a href="{{(Route::current()->getName() == 'admin_contact') ? '#' : route('admin_contact') }}"
         class="button
         {{ (Route::current()->getName() == 'admin_contact') ? "active" : ''}}"
       >
        Contato
     </a>
-   <a href="#" class="button">Posts</a>
-   <a href="#" class="button">Parceiros</a>
+    <div class="dropdownBTN">
+        <a href="#" class="button">Posts</a>
+            <ul class="buttonUL">
+                <li><a href="#">Adicionar</a></li>
+                <li><a href="#">Listar</a></li>
+            </ul>
+    </div>
+    <div class="dropdownBTN">
+        <a href="#" class="button">Parceiros</a>
+            <ul class="buttonUL">
+                <li><a href="#">Adicionar</a></li>
+                <li><a href="#">Listar</a></li>
+            </ul>
+    </div>
 </div >
 
