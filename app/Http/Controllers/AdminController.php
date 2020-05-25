@@ -43,7 +43,7 @@ class AdminController extends Controller
 
     protected function PostList() {
         $posts = Post::all();
-        return view('admin.PostList',
+        return view('pages.PostList',
             [
                 'posts' => $posts
             ]
@@ -51,7 +51,7 @@ class AdminController extends Controller
     }
 
     public function PostCreator() {
-        return view('admin.PostCreator');
+        return view('pages.PostCreator');
     }
 
     public function postStore(Request $request) {
@@ -79,7 +79,7 @@ class AdminController extends Controller
 
     public function Editor($id) {
         $post = Post::find($id);
-        return view('admin.PostEditor')->withPost($post);
+        return view('pages.PostEditor')->withPost($post);
     }
 
     public function postDelete($id) {

@@ -24,7 +24,7 @@ class PartnerController extends Controller
      */
     public function create()
     {
-        return view('admin.PartnerCreator');
+        return view('pages.PartnerCreator');
     }
 
     /**
@@ -53,9 +53,11 @@ class PartnerController extends Controller
      * @param  \App\Partner  $partner
      * @return \Illuminate\Http\Response
      */
-    public function show(Partner $partner)
-    {
-        return view('admin.PartnerList');
+    public function show(Partner $partner) {
+        $partners = Partner::all();
+        return view('pages.PartnerList', [
+            'partners' => $partners
+        ]);
     }
 
     /**
@@ -67,7 +69,7 @@ class PartnerController extends Controller
     public function edit($id)
     {
         $partner = Partner::find($id);
-        return view('admin.PartnerEditor')->withPartner($partner);
+        return view('pages.PartnerEditor')->withPartner($partner);
     }
 
     /**

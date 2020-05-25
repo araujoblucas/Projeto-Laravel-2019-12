@@ -1,6 +1,6 @@
 <div class="sidebar">
    <div class="sidebarAdmin">
-		<img src="img/profile.jpg" class="sidebarImg" />
+		<img src="/storage/admin/img/profile.jpg" class="sidebarImg" />
 		<p>
 			Bem vindo,
 		</p>
@@ -60,17 +60,17 @@
        Contato
     </a>
     <div class="dropdownBTN">
-        <a href="#" class="button">Posts</a>
+        <a class="button">Posts</a>
             <ul class="buttonUL">
-                <li><a href="#">Adicionar</a></li>
-                <li><a href="#">Listar</a></li>
+                <li><a href="{{ route('PostCreator') }}">Adicionar</a></li>
+                <li><a href="{{ route('PostList') }}">Listar</a></li>
             </ul>
     </div>
     <div class="dropdownBTN">
-        <a href="#" class="button">Parceiros</a>
+        <a class="button">Parceiros</a>
             <ul class="buttonUL">
-                <li><a href="#">Adicionar</a></li>
-                <li><a href="#">Listar</a></li>
+                <li><a href="{{ route('partner_create') }}">Adicionar</a></li>
+                <li><a href="{{ route('partner_show') }}">Listar</a></li>
             </ul>
     </div>
 </div >
