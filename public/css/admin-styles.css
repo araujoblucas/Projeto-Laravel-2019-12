@@ -1,0 +1,570 @@
+@font-face {
+    font-family: 'Post No Bills Jaffna Medium Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Post No Bills Jaffna Medium Regular'), url('fonts/PostNoBillsJaffna-Medium.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius:10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #6c3250;
+}
+
+::placeholder {
+    text-align: center;
+    align-self: center;
+    color: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+}
+
+body {
+    background-color: #C3BFBC;
+}
+
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
+.container {
+    display: flex;
+    flex:1;
+    background-color: #C3BFBC;
+}
+.sidebar {
+    display: flex;
+    background: linear-gradient(156deg,#7d4361, #6b3250, #965b79, #4a1030);
+    background-size: 600% 100%;
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+    min-width: 16vw;
+    min-height: 100vh;
+
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.sidebarAdmin {
+    display: flex;
+    width: 16vw;
+    height: 35vh;
+    background-color: #6c3250;
+    border-bottom: solid #CCC 0.5px;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebarImg {
+    display: flex;
+    width: 6.5em;
+    height: 6.5em;
+    margin-top: 15px;
+    border-radius: 150px;
+    background-color: #C3C3C3;
+    border-bottom: solid #CCC 0.5px;
+    -webkit-box-shadow: 7px 10px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 23px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 10px 23px 0px rgba(0,0,0,0.75);
+    border: 1px solid #ddd;
+    filter: contrast(110%);
+}
+
+.sidebar p {
+    color: #fff;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.sidebar p + p {
+    font-size: 1.5em;
+    margin-top: 3px;
+    font-weight: bolder;
+}
+
+.sidebarLogout {
+    font-size: 0.7em;
+    margin-top: 1px;
+    color: #fff;
+    font-weight: bolder;
+    text-decoration: none;
+    opacity: 0.7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sidebarLogout:hover {
+    font-size: 0.7em;
+    margin-top: 1px;
+    color: #ddd;
+    font-weight: bolder;
+    text-decoration: none;
+    opacity: 1;
+
+}
+
+
+.button {
+    width: 16vw;
+    padding: 15px;
+    opacity: 0.3;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+.active {
+    background-color: rgba(88, 30, 60, 1) !important;
+    opacity: 1;
+}
+
+.button:hover {
+    opacity: 1;
+    color: #fff;
+    background-color: rgba(138,43,226, 0.1);
+}
+
+
+        /* Lista Suspensa */
+.dropdownBTN {
+    width: 16vw;
+    padding: 15px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+
+}
+ .buttonUL {
+    visibility: hidden;
+    display: flex;
+    display: inline-block;
+    text-decoration: none;
+    position: absolute;
+    background-color: #ccc;
+    padding: 10px;
+    margin-top: -35px;
+    border-radius: 8px;
+    z-index: 1;
+    background-color: rgba(88, 30, 60, 1);
+}
+.buttonUL:hover .buttonUL{
+    visibility: visible;
+
+}
+.buttonUL li {
+    color: #fff;
+    opacity: 0.3;
+    background-color:rgba(88, 30, 60, 1) ;
+    padding: 8px;
+}
+.buttonUL li:hover {
+    padding: 8px;
+    opacity: 1;
+}
+.buttonUL li a {
+    text-decoration: none;
+    color: #fff;
+}
+.dropdownBTN:hover .buttonUL {
+    visibility: visible;
+}
+
+
+
+
+
+.containerContentHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.titleBox{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.titleSection {
+    margin-top: 25px;
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    text-shadow: #6c3250 2px 2px;
+}
+
+.preview{
+    background-color: #6c3250;
+    border-radius: 6px;
+    padding: 10px;
+    transition: ease-in-out 0.5s;
+    display: flex;
+    width: 180px;
+    height: 40px;
+    margin-left: 2rem;
+    margin-top: 35px;
+    color: #fff;
+    justify-content: center;
+}
+.preview:hover{
+    background-color: #6c3250;
+    border-radius: 6px;
+    opacity: 0.8;
+    transition: ease-in-out 0.5s;
+    padding: 10px;
+    display: flex;
+    width: 180px;
+    height: 40px;
+    margin-left: 2em;
+    margin-top: 35px;
+    color: #fff;
+    justify-content: center;
+}
+.contentHead {
+    display: flex;
+    align-self: center;
+    width: 70vw;
+    border-radius: 8px;
+    margin-top: 40px;
+    background-color: #6c3250;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.box p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #ccc;
+    text-align: center;
+}
+
+.box input {
+    width: 30vw;
+    height: 6vh;
+    border-radius: 6px;
+    text-align: center;
+}
+.boxTextarea {
+    width: 65vw;
+    height: 6vh;
+    border-radius: 6px;
+    text-align: center;
+    resize: vertical;
+    min-height: 15vh;
+}
+.miniBoxContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 80%;
+
+}
+.miniBox p {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #ccc;
+    text-align: center;
+}
+
+.miniBox input {
+    width: 10vw;
+    height: 6vh;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 9px;
+    text-align: center;
+}
+
+.mini4BoxContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-wrap: 4;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 80%;
+
+}
+.mini4Box p {
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: #ccc;
+    text-align: center;
+}
+
+.mini4Box input {
+    width: 13vw;
+    height: 7vh;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.mini3BoxContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-wrap: 4;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 80%;
+
+}
+.mini3Box p {
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: #ccc;
+    text-align: center;
+}
+
+.mini3Box input {
+    width: 15vw;
+    height: 7vh;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+
+.modal {
+    width: 90vw;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left:1005vw;
+    border: solid 10px #ccc;
+    background-color: #ccc;
+    border-radius: 8px;
+}
+.toggleModal{
+    left: 5vw !important;
+}
+.modal img{
+    align-self: center;
+    width: 88vw;
+}
+.modal p {
+    background-color: #aaa;
+    margin-left:80vw;
+    cursor: pointer;
+    width: 8vw;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border: solid 2px #000;
+    -webkit-box-shadow: 3px 14px 20px 0px rgba(0,0,0,0.59);
+    -moz-box-shadow: 3px 14px 20px 0px rgba(0,0,0,0.59);
+    box-shadow: 3px  14px 20px 0px rgba(0,0,0,0.59);
+}
+.submitButton {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: #6c3250;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    width: 180px;
+    height: 40px;
+    margin-left: 2rem;
+    margin-top: 35px;
+    color: #fff;
+    justify-content: center;
+    align-self: center;
+    transition: 1s;
+}
+.submitButton:hover{
+    border-radius: 6px;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+
+
+
+
+
+            /*  TABLE STYLE */
+.table {
+    align-self: center;
+    width: 70vw;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: solid #4a1030 2px;
+    border-collapse: collapse;
+}
+
+.thead {
+    background-color: #4a1030;
+    padding: 25px;
+    border: none;
+    color: #fff;
+}
+.thead th {
+    padding: 15px;
+    border: none;
+}
+
+.table td {
+    padding: 10px;
+    border: solid rgba(88, 30, 60, 0.3) 2px;
+}
+
+.table tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+        /* Table 2 */
+
+.table1 {
+    align-self: center;
+    width: 70vw;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: solid #4a1030 2px;
+    border-collapse: collapse;
+
+}
+
+.thead {
+    background-color: #4a1030;
+    padding: 25px;
+    border: none;
+    color: #fff;
+}
+.thead th {
+    padding: 15px;
+    border: none;
+}
+
+.table1 td {
+    padding: 10px;
+    border: solid rgba(88, 30, 60, 0.3) 2px;
+}
+
+.table1 tr:nth-child(even) {
+    background-color: rgba(88, 30, 60, 0.8);
+}
+
+
+
+  .containerPlains {
+    display: flex;
+    align-self: center;
+    width: 80vw;
+    border-radius: 8px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .plainsSiderBox {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 25vw;
+    background-color: #6c3250;
+    border: solid 2px #fff;
+    color: #fff;
+    flex-direction: column;
+    border-radius: 6px;
+  }
+
+.plainsSiderBox p {
+    font-size: 1.5em;
+    color: #ccc;
+    text-align: center;
+}
+
+.plainsSiderBox input {
+  width: 15vw;
+  height: 4vh;
+  border-radius: 6px;
+  text-align: center;
+}
+
+  .plainsCenterBox {
+    display: flex;
+    align-self: center;
+    width: 30vw;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #fff;
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+    flex-direction: column;
+    background-color: #6c3250;
+    border-radius: 6px;
+
+  }
+
+    .plainsCenterBox p {
+        font-size: 1.8em;
+        color: #ccc;
+        text-align: center;
+    }
+
+    .plainsCenterBox input {
+        width: 18vw;
+        height: 5vh;
+        border-radius: 6px;
+        text-align: center;
+    }
+
+  .plainItem {
+      align-self: center;
+      align-items: center;
+      align-content: center;
+      border: solid 1px #fff;
+      width: 100%;
+      padding: 15px;
+
+  }
+
+  .plainsCenterBox .plainItem {
+
+  }

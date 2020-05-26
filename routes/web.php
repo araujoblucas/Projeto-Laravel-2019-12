@@ -29,8 +29,8 @@ Route::get('logout', 'AdminController@logout')->name('logout');
 
 
 Route::prefix('admin')->middleware('auth')->group(function () {
-
-    Route::get('/', 'AdminController@adminConfig')->name('admin_config');
+    Route::get('/default', 'AdminController@adminConfig')->name('admin_config');
+    Route::post('/default', 'AdminController@adminConfigStore')->name('admin_config');
     Route::get('/home', 'AdminController@Home')->name('admin_home');
     Route::post('/home', 'AdminController@HomeUpdate')->name('admin_home');
     Route::get('/post/{id}/Editor', 'AdminController@Editor')->name('PostEditor');
@@ -46,7 +46,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::post('/about_team', 'AdminController@aboutTeamStore')->name('admin_about_team');
     Route::get('/partnerCreate', 'PartnerController@create')->name('partner_create');
     Route::post('/partnerCreate', 'PartnerController@store')->name('partner_create');
-    Route::get('/{id}/partnerEditor', 'PartnerController@Edit')->name('PartnerEditor');
+    Route::get('/partnerEditor/{id}/', 'PartnerController@Edit')->name('PartnerEditor');
     Route::put('/{id}/PartnerUpdater', 'PartnerController@update')->name('PartnerUpdater');
     Route::get('/partnershow', 'PartnerController@show')->name('partner_show');
     Route::get('/{id}/PartnerDelete', 'PartnerController@destroy')->name('PartnerDelete');

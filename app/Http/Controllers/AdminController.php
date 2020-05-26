@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\AboutTeam;
 use App\AboutUs;
 use App\ConfigDefault;
@@ -18,6 +19,8 @@ use App\Home;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostLoginRequest;
+use Illuminate\Support\Facades\Route;
+
 
 class AdminController extends Controller
 {
@@ -31,19 +34,38 @@ class AdminController extends Controller
         $this->post = $post;
     }
 
-
-
-
     public function adminConfig() {
         $dados = ConfigDefault::findorfail(1);
-        return view('admin.Config', [
-            'dados' => $dados,
+        return view('pages.default', [
+            'dados' => $dados
         ]);
     }
 
+    public function adminConfigStore(Request $request) {
+        $dados = ConfigDefault::findorfail(1);
+        $dados->id = 1;
+        $dados->icone = $request->icone;
+        $dados->telefone = $request->telefone;
+        $dados->email = $request->email;
+        $dados->atendimento = $request->atendimento;
+        $dados->facebook = $request->facebook;
+        $dados->linkedin = $request->linkedin;
+        $dados->pinterest = $request->pinterest;
+        $dados->twitter = $request->twitter;
+        $dados->instagram = $request->instagram;
+        $dados->descricaofooter = $request->descricaofooter;
+        $dados->contatolinha1footer = $request->contatolinha1footer;
+        $dados->contatolinha2footer = $request->contatolinha2footer;
+        $dados->contatolinha3footer = $request->contatolinha3footer;
+        $dados->save();
+
+        return redirect()->route('admin_config');
+    }
+
+
     protected function PostList() {
         $posts = Post::all();
-        return view('admin.PostList',
+        return view('pages.PostList',
             [
                 'posts' => $posts
             ]
@@ -51,7 +73,7 @@ class AdminController extends Controller
     }
 
     public function PostCreator() {
-        return view('admin.PostCreator');
+        return view('pages.PostCreator');
     }
 
     public function postStore(Request $request) {
@@ -79,7 +101,7 @@ class AdminController extends Controller
 
     public function Editor($id) {
         $post = Post::find($id);
-        return view('admin.PostEditor')->withPost($post);
+        return view('pages.PostEditor')->withPost($post);
     }
 
     public function postDelete($id) {
@@ -91,20 +113,22 @@ class AdminController extends Controller
     public function aboutUs(){
         $faqs = faq::all();
         $dados = AboutUs::find(1);
-        return view('admin.aboutUs', [
+        return view('pages.aboutUs', [
             'faqs' => $faqs,
             'dados' => $dados,
         ]);
     }
     public function aboutTeam(){
         $dados = AboutTeam::findorfail(1);
-        return view('admin.AboutTeam', [
-            'dados' => $dados
+        $route_name = Route::current()->getName() == "admin_about_team";
+        return view('pages.aboutTeam', [
+            'dados' => $dados,
+            'route_name' => $route_name
         ]);
     }
 
     public function login() {
-    	return view('login');
+    	return view('pages.login');
     }
 
     public function postLogin(PostLoginRequest $request)
@@ -145,7 +169,7 @@ class AdminController extends Controller
 
     public function contact(){
         $dados = Contact::findorfail(1);
-        return view('admin.contact', [
+        return view('pages.contact', [
             'dados'=>$dados,
         ]);
     }
@@ -214,7 +238,7 @@ class AdminController extends Controller
     public function gallery(){
         $dados = Gallery::findorfail('1');
         $imagens = Imagem::all()->sortByDesc('created_at');
-        return view('admin.Gallery', [
+        return view('pages.gallery', [
             'imagens' => $imagens,
             'dados' => $dados
         ]);
@@ -235,7 +259,7 @@ class AdminController extends Controller
 
     public function price_table(){
         $dados = Price_table::findorfail(1);
-        return  view('admin.PriceTable', [
+        return  view('pages.priceTable', [
             'dados' => $dados,
         ]);
     }
@@ -253,7 +277,6 @@ class AdminController extends Controller
         $dados->esquerdalista2 = $request->esquerdalista2;
         $dados->esquerdalista3 = $request->esquerdalista3;
         $dados->esquerdalista4 = $request->esquerdalista4;
-        $dados->esquerdalista5 = $request->esquerdalista5;
         $dados->esquerdalink = $request->esquerdalink;
         $dados->planocentrotitulo = $request->planocentrotitulo;
         $dados->planocentrosubtitulo = $request->planocentrosubtitulo;
@@ -262,7 +285,6 @@ class AdminController extends Controller
         $dados->centrolista2 = $request->centrolista2;
         $dados->centrolista3 = $request->centrolista3;
         $dados->centrolista4 = $request->centrolista4;
-        $dados->centrolista5 = $request->centrolista5;
         $dados->centrolink = $request->centrolink;
         $dados->planodireitatitulo = $request->planodireitatitulo;
         $dados->planodireitasubtitulo = $request->planodireitasubtitulo;
@@ -271,7 +293,6 @@ class AdminController extends Controller
         $dados->direitalista2 = $request->direitalista2;
         $dados->direitalista3 = $request->direitalista3;
         $dados->direitalista4 = $request->direitalista4;
-        $dados->direitalista5 = $request->direitalista5;
         $dados->direitalink = $request->direitalink;
         $dados->save();
         return redirect()->route('admin_price_table');
@@ -324,7 +345,7 @@ class AdminController extends Controller
     public function Home(){
         $dados = Home::find(1);
         $comments = Comment::all()->sortByDesc('created_at');
-        return view('admin.home', [
+        return view('pages.home', [
             'dados' => $dados,
             'comments' => $comments,
         ]);
@@ -389,7 +410,7 @@ class AdminController extends Controller
     }
 
     public function faqCreate(){
-        return view('admin.faqCreator');
+        return view('pages.faqCreator');
     }
 
     public function faqStore(Request $request) {
@@ -402,7 +423,7 @@ class AdminController extends Controller
 
     public function faqEditor($id) {
         $dados = faq::findorfail($id);
-        return view('admin.faqEditor', [
+        return view('pages.faqEditor', [
             'dados' => $dados
         ]);
     }
@@ -425,7 +446,7 @@ class AdminController extends Controller
 
 
     public function commentCreate(){
-        return view('admin.CommentCreator');
+        return view('pages.CommentCreator');
     }
 
     public function commentStore(Request $request) {
@@ -440,7 +461,7 @@ class AdminController extends Controller
 
     public function commentEditor($id) {
         $dados = comment::findorfail($id);
-        return view('admin.commentEditor', [
+        return view('pages.commentEditor', [
             'dados' => $dados
         ]);
     }

@@ -43,7 +43,7 @@
 
             <div class="form-group">
                 <label ><h5>Ícone</h5></label>
-                <input type="text" name="icone" placeholder="71x71" value="{{$dados->icone}}" class="form-control">
+                <input type="text" name="icone"  value="{{$dados->icone}}" class="form-control">
             </div>
 
             <br>

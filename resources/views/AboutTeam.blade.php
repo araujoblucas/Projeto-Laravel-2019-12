@@ -52,7 +52,7 @@
                         <div class=gdlr-core-pbf-element>
                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 15px ;">
                                 <div class="gdlr-core-title-item-title-wrap ">
-                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 30px ;font-weight: 700 ;text-transform: none ;color: #2f2f2f ;">Partners at Attorna<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 30px ;font-weight: 700 ;text-transform: none ;color: #2f2f2f ;">Nossos Colaboradores<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                             </div>
                         </div>
                         <div class=gdlr-core-pbf-element>

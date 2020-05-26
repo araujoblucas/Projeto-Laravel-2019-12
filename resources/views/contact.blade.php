@@ -146,6 +146,18 @@
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr">
 
+                                    <div class=gdlr-core-pbf-element>
+                                        <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 60px ;">
+                                            <div class="gdlr-core-title-item-title-wrap ">
+                                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title" style="font-size: 39px ;letter-spacing: 0px ;text-transform: none ;">
+                                                    {{$dados->messagetitulo}}
+                                                </h3>
+                                            </div>
+                                                    <span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 19px ;font-style: normal ;">
+                                                        {{ $dados->messagedesc }}
+                                                    </span>
+                                                </div>
+                                    </div>
                                     <a href=mailto:{{$dados->email}} target=_blank class=gdlr-core-social-network-icon title=email style="font-size: 20px ;color: #1e1e1e ;"><i class="fa fa-envelope" ></i></a>
                                     <?php if($dados->facebook){ ?> <a href="{{$dados->facebook}}" target=_blank class=gdlr-core-social-network-icon title=facebook style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-facebook" ></i></a> <?php } ?>
                                     <?php if($dados->google){ ?> <a href="{{$dados->google}}" target=_blank class=gdlr-core-social-network-icon title=google-plus style="font-size: 20px ;color: #1e1e1e ;margin-left: 40px ;"><i class="fa fa-google-plus" ></i></a> <?php } ?>

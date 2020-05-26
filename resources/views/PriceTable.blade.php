@@ -76,8 +76,6 @@
                                                             <li><i class="fa fa-check"></i>{{$dados->esquerdalista2}}</li>
                                                             <li><i class="fa fa-check"></i>{{$dados->esquerdalista3}}</li>
                                                             <li><i class="fa fa-check"></i>{{$dados->esquerdalista4}}</li>
-                                                            <li><i class="fa fa-check"></i>{{$dados->esquerdalista5}}</li>
-
                                                         </ul>
                                                     </div>
                                                 </div><a class="gdlr-core-price-table-button gdlr-core-button" href="{{route('contact')}}" target=_self>Mais Informações</a></div>
@@ -99,7 +97,6 @@
                                                             <li><i class="fa fa-check"></i>{{$dados->centrolista2}}</li>
                                                             <li><i class="fa fa-check"></i>{{$dados->centrolista3}}</li>
                                                             <li><i class="fa fa-check"></i>{{$dados->centrolista4}}</li>
-                                                            <li><i class="fa fa-check"></i>{{$dados->centrolista5}}</li>
                                                         </ul>
                                                     </div>
                                                 </div><a class="gdlr-core-price-table-button gdlr-core-button" href="{{route('contact')}}" target=_self>Mais Informações</a></div>
@@ -121,7 +118,6 @@
                                                             <li><i class="fa fa-check"></i>{{$dados->direitalista2}}</li>
                                                             <li><i class="fa fa-check"></i>{{$dados->direitalista3}}</li>
                                                             <li><i class="fa fa-check"></i>{{$dados->direitalista4}}</li>
-                                                            <li><i class="fa fa-check"></i>{{$dados->direitalista5}}</li>
                                                         </ul>
                                                     </div>
                                                 </div><a class="gdlr-core-price-table-button gdlr-core-button" href="{{route('contact')}}" target=_self>Mais Informações</a></div>
