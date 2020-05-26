@@ -11,7 +11,7 @@
             @component('pages.sidebar')
             @endcomponent
 
-           <div class="containerContentHeader">
+            <form class="containerContentHeader" method="post" action="{{ route('admin_config') }}">
                 <div class="titleBox">
                     <p class="titleSection">Configurações do cabeçalho</p>
                     <div class="preview" onclick="mostrarModal('modalHeader')">Ver Componente</div>
@@ -75,11 +75,29 @@
                 </div>
                 <div class="contentHead">
 
-                    <div class="box" style="margin-bottom: 25px">
-                        <p>Logo:</p>
-                        <input type="text" />
+                    <div class="box" style="margin-bottom: 15px">
+                        <p>Descrição:</p>
+                    <input type="text" name="descricaofooter" value="{{$dados->descricaofooter}} "/>
                     </div>
-           </div>
+
+                    <div class="box" style="margin-bottom: 15px">
+                        <p>Descrição 1 linha:</p>
+                        <input type="text" name="contatolinha1footer" value="{{$dados->contatolinha1footer}}"  />
+                    </div>
+
+                    <div class="box" style="margin-bottom: 35px">
+                        <p>Descrição 2 linha:</p>
+                        <input type="text" name="contatolinha2footer" value="{{$dados->contatolinha2footer}}" />
+                    </div>
+
+                    <div class="box">
+                        <p>Descrição 3 linha:</p>
+                        <input type="text" name="contatolinha3footer" value="{{$dados->contatolinha3footer}}" />
+                    </div>
+                </div>
+                <button class="submitButton" type="submit">Enviar</button>
+            </form>
+
         </div>
 
         <div id="modalHeader" class="modal">
@@ -94,9 +112,7 @@
     <script>
 
         function mostrarModal(modal){
-            console.log(modal);
             let modelo = document.getElementById(modal);
-            console.log(modelo);
             modelo.classList.toggle("toggleModal");
 
 

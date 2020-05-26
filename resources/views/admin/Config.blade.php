@@ -75,7 +75,22 @@
             <h1 class="display-4">Configurações de Footer<hr class="mb-4"></h1>
             <div class="form-group">
                 <label for="exampleFormControlInput1"><h2>Atendimento</h2></label>
-                <input type="text" name="atendimento" class="form-control" value="{{$dados->atendimento}}">
+                <input type="text" name="descricaofooter" value="{{$dados->descricaofooter}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h2>Atendimento</h2></label>
+                <input type="text" name="contatolinha1footer" value="{{$dados->contatolinha1footer}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h2>Atendimento</h2></label>
+                <input type="text" name="contatolinha2footer" value="{{$dados->contatolinha2footer}}">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1"><h2>Atendimento</h2></label>
+                <input type="text" name="contatolinha3footer" value="{{$dados->contatolinha3footer}}">
             </div>
             <br>
 

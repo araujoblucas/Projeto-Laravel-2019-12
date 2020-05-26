@@ -447,7 +447,42 @@ body {
 
 .table tr:nth-child(even) {
     background-color: #dddddd;
-  }
+}
+
+
+        /* Table 2 */
+
+.table1 {
+    align-self: center;
+    width: 70vw;
+    border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: solid #4a1030 2px;
+    border-collapse: collapse;
+
+}
+
+.thead {
+    background-color: #4a1030;
+    padding: 25px;
+    border: none;
+    color: #fff;
+}
+.thead th {
+    padding: 15px;
+    border: none;
+}
+
+.table1 td {
+    padding: 10px;
+    border: solid rgba(88, 30, 60, 0.3) 2px;
+}
+
+.table1 tr:nth-child(even) {
+    background-color: rgba(88, 30, 60, 0.8);
+}
+
 
 
   .containerPlains {

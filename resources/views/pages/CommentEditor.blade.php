@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <head>
         <meta charset = "UTF-8">
-        <title>Admin - Adicionar Post</title>
+        <title>Admin - Editar Comentário</title>
         <link href="../../../css/admin-styles.css" rel="stylesheet">
         <script src="https://cdn.ckeditor.com/4.13.1/standard-all/ckeditor.js"></script>
     </head>
@@ -12,33 +12,33 @@
            @component('pages.sidebar')
            @endcomponent
 
-            <form class="containerContentHeader" method="post" action="{{ route('PostCreator') }}">
-
+            <form class="containerContentHeader" method="post" action="{{ route('commentUpdate', $dados->id) }}">
                 <div class="titleBox">
-                    <p class="titleSection">Adicionar Post</p>
-                    <a class="preview" style="text-decoration: none" href="{{ route('PostList') }}">Voltar para Lista</a>
+                    <p class="titleSection">Editar Comentário</p>
+                    <a class="preview" style="text-decoration: none" href="{{ route('admin_home') }}">Voltar para Home</a>
                 </div>
                 <div class="contentHead">
 
                     <div class="box">
-                        <p>Titulo do Post</p>
-                        <input type="text" name="titulo" />
+                        <p>Autor</p>
+                        <input type="text" name="nome" value="{{$dados->nome}}" />
                     </div>
 
                     <div class="box" style="margin-bottom: 10px;">
-                        <p>Insira o link da Imagem</p>
-                        <input type="text" name="img" />
+                        <p>Ocupação</p>
+                        <input type="text" name="ocupacao" value="{{$dados->ocupacao}}" />
                     </div>
 
 
                     <div class="box" style="margin-bottom: 20px;">
-                        <p>Insira o autor do Post</p>
-                        <input type="text" name="autor" />
+                        <p>Ícone</p>
+                        <input type="text" name="icone" placeholder="71x71" value="{{$dados->icone}}"/>
                     </div>
 
-                    <textarea name="descricao" id="editor1" >
-
+                    <textarea name="frase" id="editor1" >
+                        {{ $dados->frase }}
                     </textarea>
+
 
                 </div>
                         <button class="submitButton" type="submit">Enviar</button>
@@ -58,6 +58,18 @@
             }
         );
     </script>
+    <script>
+        CKEDITOR.stylesSet.add( 'editor1', [
+    // Block-level styles.
+        { name: 'Blue Title', element: 'h2', styles: { color: 'Blue' } },
+        { name: 'Red Title',  element: 'h3', styles: { color: 'Red' } },
+
+        // Inline styles.
+        { name: 'CSS Style', element: 'span', attributes: { 'class': 'my_style' } },
+        { name: 'Marker: Yellow', element: 'span', styles: { 'background-color': 'Yellow' } }
+        </script>
+
+
 
 
     <!-- Popper.JS -->

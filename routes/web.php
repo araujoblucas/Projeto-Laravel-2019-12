@@ -30,6 +30,7 @@ Route::get('logout', 'AdminController@logout')->name('logout');
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/default', 'AdminController@adminConfig')->name('admin_config');
+    Route::post('/default', 'AdminController@adminConfigStore')->name('admin_config');
     Route::get('/home', 'AdminController@Home')->name('admin_home');
     Route::post('/home', 'AdminController@HomeUpdate')->name('admin_home');
     Route::get('/post/{id}/Editor', 'AdminController@Editor')->name('PostEditor');

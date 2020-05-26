@@ -41,6 +41,28 @@ class AdminController extends Controller
         ]);
     }
 
+    public function adminConfigStore(Request $request) {
+        $dados = ConfigDefault::findorfail(1);
+        $dados->id = 1;
+        $dados->icone = $request->icone;
+        $dados->telefone = $request->telefone;
+        $dados->email = $request->email;
+        $dados->atendimento = $request->atendimento;
+        $dados->facebook = $request->facebook;
+        $dados->linkedin = $request->linkedin;
+        $dados->pinterest = $request->pinterest;
+        $dados->twitter = $request->twitter;
+        $dados->instagram = $request->instagram;
+        $dados->descricaofooter = $request->descricaofooter;
+        $dados->contatolinha1footer = $request->contatolinha1footer;
+        $dados->contatolinha2footer = $request->contatolinha2footer;
+        $dados->contatolinha3footer = $request->contatolinha3footer;
+        $dados->save();
+
+        return redirect()->route('admin_config');
+    }
+
+
     protected function PostList() {
         $posts = Post::all();
         return view('pages.PostList',
@@ -323,7 +345,7 @@ class AdminController extends Controller
     public function Home(){
         $dados = Home::find(1);
         $comments = Comment::all()->sortByDesc('created_at');
-        return view('admin.home', [
+        return view('pages.home', [
             'dados' => $dados,
             'comments' => $comments,
         ]);
@@ -388,7 +410,7 @@ class AdminController extends Controller
     }
 
     public function faqCreate(){
-        return view('admin.faqCreator');
+        return view('pages.faqCreator');
     }
 
     public function faqStore(Request $request) {
@@ -401,7 +423,7 @@ class AdminController extends Controller
 
     public function faqEditor($id) {
         $dados = faq::findorfail($id);
-        return view('admin.faqEditor', [
+        return view('pages.faqEditor', [
             'dados' => $dados
         ]);
     }
@@ -424,7 +446,7 @@ class AdminController extends Controller
 
 
     public function commentCreate(){
-        return view('admin.CommentCreator');
+        return view('pages.CommentCreator');
     }
 
     public function commentStore(Request $request) {
@@ -439,7 +461,7 @@ class AdminController extends Controller
 
     public function commentEditor($id) {
         $dados = comment::findorfail($id);
-        return view('admin.commentEditor', [
+        return view('pages.commentEditor', [
             'dados' => $dados
         ]);
     }
