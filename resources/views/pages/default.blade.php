@@ -95,6 +95,19 @@
                         <input type="text" name="contatolinha3footer" value="{{$dados->contatolinha3footer}}" />
                     </div>
                 </div>
+
+                <div class="titleBox" style="margin-top: 5vh;">
+                    <p class="titleSection">Configurações Geral das Páginas</p>
+                    <div class="preview" onclick="mostrarModal('modalFooter')">Ver Componente</div>
+                </div>
+                <div class="contentHead">
+
+                    <div class="box" style="margin-bottom: 15px">
+                        <p>Imagem de fundo dos títulos:</p>
+                    <input type="text" name="generalBackgroundTitle" placeholder="1800x600" value="{{$dados->generalBackgroundTitle}} "/>
+                    </div>
+
+                </div>
                 <button class="submitButton" type="submit">Enviar</button>
             </form>
 

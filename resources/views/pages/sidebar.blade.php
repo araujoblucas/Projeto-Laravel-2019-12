@@ -1,6 +1,6 @@
 <div class="sidebar">
    <div class="sidebarAdmin">
-		<img src="/storage/admin/img/profile.jpg" class="sidebarImg" />
+		<img src="{{auth()->user()->image}}" class="sidebarImg" />
 		<p>
 			Bem vindo,
 		</p>

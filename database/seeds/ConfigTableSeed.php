@@ -17,7 +17,7 @@ class ConfigTableSeed extends Seeder
         'icone'=> 'upload/logo.png',
         'telefone'=> '(53) 98732-2233',
         'email'=> 'contato@gmail.com',
-        'PagesTitleBackground' => '',
+        'generalBackgroundTitle' => 'https://github.com/araujoblucas/Projeto-Laravel-2019-12/blob/master/storage/app/public/img/defaults/page-title-background.jpg?raw=true',
         'atendimento'=> 'Seg - Sex 09:00 - 17:00',
         'facebook'=> 'https://www.facebook.com/ufpel',
         'linkedin'=> '',

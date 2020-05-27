@@ -57,6 +57,7 @@ class AdminController extends Controller
         $dados->contatolinha1footer = $request->contatolinha1footer;
         $dados->contatolinha2footer = $request->contatolinha2footer;
         $dados->contatolinha3footer = $request->contatolinha3footer;
+        $dados->generalBackgroundTitle = $request->generalBackgroundTitle;
         $dados->save();
 
         return redirect()->route('admin_config');
