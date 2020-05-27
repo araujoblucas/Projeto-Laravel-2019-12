@@ -16,7 +16,7 @@ class ContactTableSeeder extends Seeder
             'id' =>'1',
             'titulo' =>'Contato',
             'subtitulo' =>'Entre em Contato',
-            'imagem' => 'https://d4kkpd69xt9l7.cloudfront.net/sys-master/root/hb1/h77/8939926519838/nommo-gallery-1500x1000-1.jpg',
+            'imagem' => 'https://raw.githubusercontent.com/araujoblucas/Projeto-Laravel-2019-12/master/storage/app/public/img/defaults/1800x1000.jpg',
             'telefone' =>'(51) 99733-9384',
             'desctelefone' =>'A wonderful serenity has taken possession of my entire soul, like these.',
             'email' =>'contato@entremcontato.com',

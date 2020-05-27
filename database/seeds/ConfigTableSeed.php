@@ -17,6 +17,7 @@ class ConfigTableSeed extends Seeder
         'icone'=> 'upload/logo.png',
         'telefone'=> '(53) 98732-2233',
         'email'=> 'contato@gmail.com',
+        'PagesTitleBackground' => '',
         'atendimento'=> 'Seg - Sex 09:00 - 17:00',
         'facebook'=> 'https://www.facebook.com/ufpel',
         'linkedin'=> '',

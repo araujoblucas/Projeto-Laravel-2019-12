@@ -19,6 +19,7 @@ class CreateConfigDefaultsTable extends Migration
             $table->string('telefone');
             $table->string('email');
             $table->string('atendimento');
+            $table->string('PagesTitleBackground');
             $table->string('facebook')->nullable();
             $table->string('linkedin')->nullable();
             $table->string('pinterest')->nullable();
