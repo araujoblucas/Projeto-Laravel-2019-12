@@ -25,7 +25,7 @@
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Configurações de Titulo</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalTitulo')">Ver Componente</div>
                 </div>
                 <div class="contentHead">
 
@@ -72,7 +72,7 @@
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Configurações da Seção de Descrição</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalDescription')">Ver Componente</div>
                 </div>
 
                 <div class="contentHead">
@@ -82,25 +82,22 @@
                         <input type="text" name="container2titulo" value="{{$dados->container2titulo}}"/>
                     </div>
 
-                    <div class="box" style="margin-bottom: 35px;">
-                        <p>Subtítulo:</p>
-                        <input type="text" name="container1subtitulo" value="{{$dados->container1subtitulo}}"/>
-                    </div>
-
-                    <textarea name="container2descricao" id="editor1" >
-                        {{$dados->container2descricao}}
-                    </textarea>
-
-                    <div class="box" style="margin-bottom: 35px;">
+                    <div class="box" style="margin-bottom: 15px;">
                         <p>Plano de Fundo:</p>
                         <input type="text" name="container2imagem" value="{{$dados->container2imagem}}"/>
                     </div>
+
+                    <textarea name="container2descricao" id="editor1">
+                        {{$dados->container2descricao}}
+                    </textarea>
+
+
                 </div>
 
 
                 <div class="titleBox" style="margin-bottom: 15px;">
-                    <p class="titleSection">Seçãp dos Icones</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <p class="titleSection">Seção de Icones</p>
+                    <div class="preview" onclick="mostrarModal('modalIcons')">Ver Componente</div>
                 </div>
 
                 <div class="contentHead">
@@ -139,7 +136,7 @@
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Seção de Parceiros</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalPartners')">Ver Componente</div>
                 </div>
 
                 <div class="contentHead">
@@ -161,8 +158,8 @@
                 </div>
 
                 <div class="titleBox" style="margin-bottom: 15px;">
-                    <p class="titleSection">Seção de Parceiros</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <p class="titleSection">Seção de Caixas</p>
+                    <div class="preview" onclick="mostrarModal('modalBoxes')">Ver Componente</div>
                 </div>
 
                 <div class="contentHead">
@@ -207,7 +204,7 @@
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Configurações da Seção de Comentários</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalComments')">Ver Componente</div>
                 </div>
 
                 <div class="contentHead">
@@ -217,7 +214,7 @@
                     </div>
                 </div>
 
-                <button class="submitButton" type="submit">Enviar</button>
+                <button class="submitButton" type="submit">Atualizar</button>
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Comentários</p>
@@ -255,9 +252,31 @@
         </div>
 
 
-        <div id="modalTitle" class="modal">
-            <img src="../img/exmaples/aboutTeam/titleExample.png" alt="Header">
-            <p onclick="mostrarModal('modalTitle')">Fechar</p>
+        <div id="modalTitulo" class="modal">
+            <img src="img\examples\home\title.png" alt="Titulo">
+            <p onclick="mostrarModal('modalTitulo')">Fechar</p>
+        </div>
+
+        <div id="modalDescription" class="modal" style="margin-top: 20vh">
+            <img src="img\examples\home\description.png" alt="Descrição">
+            <p onclick="mostrarModal('modalDescription')">Fechar</p>
+        </div>
+
+        <div id="modalIcons" class="modal" style="margin-top: 70vh">
+            <img src="img\examples\home\icons.png" alt="Descrição">
+            <p onclick="mostrarModal('modalIcons')">Fechar</p>
+        </div>
+        <div id="modalPartners" class="modal" style="margin-top: 150vh">
+            <img src="img\examples\home\partners.png" alt="Parceiros">
+            <p onclick="mostrarModal('modalPartners')">Fechar</p>
+        </div>
+        <div id="modalBoxes" class="modal" style="margin-top: 230vh">
+            <img src="img\examples\home\boxes.png" alt="Boxes">
+            <p onclick="mostrarModal('modalBoxes')">Fechar</p>
+        </div>
+        <div id="modalComments" class="modal" style="margin-top: 280vh">
+            <img src="img\examples\home\comments.png" alt="Comentários">
+            <p onclick="mostrarModal('modalComments')">Fechar</p>
         </div>
 
 

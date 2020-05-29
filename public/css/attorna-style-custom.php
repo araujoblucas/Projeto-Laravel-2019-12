@@ -141,7 +141,7 @@ body.attorna-boxed .attorna-body-wrapper{ margin-top: 0px; margin-bottom: 0px; }
 .attorna-page-title-wrap .attorna-page-title-top-gradient{ height: 413px; }
 .attorna-page-title-wrap .attorna-page-title-bottom-gradient{ height: 413px; }
 .attorna-page-title-wrap .attorna-page-title-overlay{ opacity: 0; }
-.attorna-page-title-wrap{ background-image: url(../images/page-title-background.jpg); }
+
 .attorna-not-found-wrap .attorna-not-found-background{ opacity: 0.27; }
 .attorna-blog-title-wrap.attorna-style-custom .attorna-blog-title-content{ padding-top: 150px; }
 .attorna-blog-title-wrap.attorna-style-custom .attorna-blog-title-content{ padding-bottom: 80px; }

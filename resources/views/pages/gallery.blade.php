@@ -25,7 +25,7 @@
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Configurações de Titulo</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalTitle')">Ver Componente</div>
                 </div>
                 <div class="contentHead">
 
@@ -44,7 +44,7 @@
                         <input type="text" name="subtitulo" value="{{$dados->subtitulo}}"/>
                     </div>
                 </div>
-                <button class="submitButton" type="submit">Enviar</button>
+                <button class="submitButton" type="submit">Atualizar</button>
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Imagens da Galeria</p>
@@ -85,7 +85,7 @@
 
 
         <div id="modalTitle" class="modal">
-            <img src="../img/exmaples/aboutTeam/titleExample.png" alt="Header">
+            <img src="img/examples/gallery/title.png" style="width:80vw; height:40vh; align-self: center" alt="Header">
             <p onclick="mostrarModal('modalTitle')">Fechar</p>
         </div>
 

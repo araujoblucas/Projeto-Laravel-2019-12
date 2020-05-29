@@ -23,7 +23,7 @@
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Configurações de Titulo</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalTitle')">Ver Componente</div>
                 </div>
                 <div class="contentHead">
 
@@ -40,7 +40,7 @@
 
                 <div class="titleBox" style="margin-bottom: 10px;">
                     <p class="titleSection">Configurações de Descrição</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalDescription')">Ver Componente</div>
                 </div>
                 <div class="contentHead">
 
@@ -72,7 +72,7 @@
 
                 <div class="titleBox" style="margin-bottom: 10px;">
                     <p class="titleSection">Seção 1</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalSection1')">Ver Componente</div>
                 </div>
                 <div class="contentHead">
                     <div class="mini3BoxContainer">
@@ -114,7 +114,7 @@
 
                 <div class="titleBox" style="margin-bottom: 10px;">
                     <p class="titleSection">Seção 2</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalSection2')">Ver Componente</div>
                 </div>
                 <div class="contentHead">
 
@@ -215,7 +215,7 @@
                 </div>
                 <div class="titleBox" style="margin-bottom: 10px;">
                     <p class="titleSection">Perguntas Frequentes</p>
-                    <div class="preview" onclick="mostrarModal('modalContact')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalFAQ')">Ver Componente</div>
                 </div>
                 <div class="contentHead">
 
@@ -225,11 +225,11 @@
                     </div>
                 </div>
 
-                <button class="submitButton" type="submit">Enviar</button>
+                <button class="submitButton" type="submit">Atualizar</button>
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Perguntas</p>
-                    <a class="preview" style="text-decoration: none"href="{{route('faqCreate')}}">Nova Imagem</a>
+                    <a class="preview" style="text-decoration: none"href="{{route('faqCreate')}}">Nova Pergunta</a>
                 </div>
 
                 <table class="table">
@@ -262,8 +262,28 @@
 
 
         <div id="modalTitle" class="modal">
-            <img src="../img/exmaples/aboutTeam/titleExample.png" alt="Header">
+            <img src="img\examples\aboutUs\title.png" alt="Header">
             <p onclick="mostrarModal('modalTitle')">Fechar</p>
+        </div>
+        <div id="modalDescription" class="modal">
+            <img src="img\examples\aboutUs\description.png" alt="Descrição">
+            <p onclick="mostrarModal('modalDescription')">Fechar</p>
+        </div>
+        <div id="modalSection1" class="modal" style="margin-top: 90vh">
+            <img src="img\examples\aboutUs\section1.png" alt="Header">
+            <p onclick="mostrarModal('modalSection1')">Fechar</p>
+        </div>
+        <div id="modalSection2" class="modal" style="margin-top: 180vh" >
+            <img src="img\examples\aboutUs\section2.png" alt="Header">
+            <p onclick="mostrarModal('modalSection2')">Fechar</p>
+        </div>
+        <div id="modalContact" class="modal" style="margin-top: 210vh">
+            <img src="img\examples\aboutUs\contact.png" alt="Header">
+            <p onclick="mostrarModal('modalContact')">Fechar</p>
+        </div>
+        <div id="modalFAQ" class="modal" style="margin-top: 260vh">
+            <img src="img\examples\aboutUs\faq.png" alt="Header">
+            <p onclick="mostrarModal('modalFAQ')">Fechar</p>
         </div>
 
 

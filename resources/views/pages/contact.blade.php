@@ -115,7 +115,7 @@
                     </div>
                 </div>
 
-                        <button class="submitButton" type="submit">Enviar</button>
+                        <button class="submitButton" type="submit">Atualizar</button>
 
                 </form>
            </div>
@@ -124,15 +124,15 @@
 
 
         <div id="modalTitle" class="modal">
-            <img src="../img/exmaples/contact/titleExample.png" alt="Header">
+            <img src="img/examples/contact/title.png" alt="Header">
             <p onclick="mostrarModal('modalTitle')">Fechar</p>
         </div>
         <div id="modalWays" class="modal" style="margin-top: 50vh !important">
-            <img src="../img/exmaples/contact/waysExample.png" alt="Ways">
+            <img src="img/examples/contact/contactWays.png" alt="Ways">
             <p onclick="mostrarModal('modalWays')">Fechar</p>
         </div>
         <div id="modalSocial" class="modal" style="margin-top: 100vh !important">
-            <img src="../img/exmaples/contact/socialExample.png" alt="Social">
+            <img src="img/examples/contact/socialExample.png" alt="Social">
             <p onclick="mostrarModal('modalSocial')">Fechar</p>
         </div>
 

@@ -98,7 +98,7 @@
 
                 <div class="titleBox" style="margin-top: 5vh;">
                     <p class="titleSection">Configurações Geral das Páginas</p>
-                    <div class="preview" onclick="mostrarModal('modalFooter')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalBackground')">Ver Componente</div>
                 </div>
                 <div class="contentHead">
 
@@ -108,18 +108,22 @@
                     </div>
 
                 </div>
-                <button class="submitButton" type="submit">Enviar</button>
+                <button class="submitButton" type="submit">Atualizar</button>
             </form>
 
         </div>
 
         <div id="modalHeader" class="modal">
-            <img src="../img/headerExample.png" alt="Header">
+            <img src="img\examples\default\header.png" alt="Header">
             <p onclick="mostrarModal('modalHeader')">Fechar</p>
         </div>
         <div id="modalFooter" class="modal" style="margin-top: 50vh !important">
-            <img src="../img/footerExample.png"  alt="Footer">
+            <img src="img\examples\default\footer.png"  alt="Footer">
             <p onclick="mostrarModal('modalFooter')">Fechar</p>
+        </div>
+        <div id="modalBackground" class="modal" style="margin-top: 90vh !important">
+            <img src="img\examples\default\backgroundTitle.png"  alt="Imagem de Fundo">
+            <p onclick="mostrarModal('modalBackground')">Fechar</p>
         </div>
     </body>
     <script>

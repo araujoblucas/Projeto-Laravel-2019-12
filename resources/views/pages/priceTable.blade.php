@@ -34,7 +34,7 @@
 
                 <div class="titleBox">
                     <p class="titleSection">Configurações da Descrição</p>
-                    <div class="preview" onclick="mostrarModal('modalTitle')">Ver Componente</div>
+                    <div class="preview" onclick="mostrarModal('modalDescription')">Ver Componente</div>
                 </div>
                 <div class="contentHead">
 
@@ -186,25 +186,20 @@
                     </div>
                 </div>
 
-                    <button class="submitButton" type="submit">Enviar</button>
+                    <button class="submitButton" type="submit">Atualizar</button>
 
             </form>
         </div>
 
 
         <div id="modalTitle" class="modal">
-            <img src="../img/exmaples/aboutTeam/titleExample.png" alt="Header">
+            <img src="img/examples/priceTable/title.png" alt="Header">
             <p onclick="mostrarModal('modalTitle')">Fechar</p>
         </div>
-        <div id="modalSection1" class="modal" style="margin-top: 50vh !important">
-            <img src="../img/exmaples/aboutTeam/section1Example.png" >
-            <p onclick="mostrarModal('modalSection1')">Fechar</p>
+        <div id="modalDescription" class="modal" style="margin-top: 50vh !important">
+            <img src="img/examples/priceTable/description.png" >
+            <p onclick="mostrarModal('modalDescription')">Fechar</p>
         </div>
-        <div id="modalContact" class="modal" style="margin-top: 130vh !important">
-            <img src="../img/exmaples/aboutTeam/contactExample.png" >
-            <p onclick="mostrarModal('modalContact')">Fechar</p>
-        </div>
-
     </body>
     <script>
 

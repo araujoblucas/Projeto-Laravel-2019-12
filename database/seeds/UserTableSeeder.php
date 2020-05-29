@@ -12,6 +12,7 @@ class UserTableSeeder extends Seeder
                 'email' => 'usuario'.$i.'@gmail.com',
                 'password' => bcrypt('123456789'),
                 'image' => 'https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-512.png'
+
             ]);
         }
     }
