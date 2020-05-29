@@ -21,7 +21,7 @@
            @endcomponent
 
 
-            <form class="containerContentHeader" method="post" action="{{ route('admin_about_team') }}">
+            <form class="containerContentHeader" method="post" action="{{ route('admin_gallery') }}">
 
                 <div class="titleBox" style="margin-bottom: 15px;">
                     <p class="titleSection">Configurações de Titulo</p>

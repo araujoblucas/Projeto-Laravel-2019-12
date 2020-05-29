@@ -24,20 +24,20 @@ Synopsis: A cop in the rural town of Green Hills will help Sonic escape from the
         Imagem::create([
             'id' => '2',
             'link' => 'https://raw.githubusercontent.com/araujoblucas/Projeto-Laravel-2019-12/master/storage/app/public/img/defaults/1500x1000.jpg',
-            'nome' => 'Imagem de esquilo cheirando flor faz sucesso na internet',
-            'descricao' => 'Apesar de terem sido compartilhadas por ele em suas redes sociais em junho, as fotos chamaram a atenção de sites e jornais internacionais na semana passada. Segundo o New York Post, Duijn disse que foi para a Áustria especialmente para fotografar esquilos terrestres.',
+            'nome' => 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            'descricao' => 'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...',
         ]);
         Imagem::create([
             'id' => '3',
             'link' => 'https://raw.githubusercontent.com/araujoblucas/Projeto-Laravel-2019-12/master/storage/app/public/img/defaults/1500x1000.jpgs',
-            'nome' => 'Imagem de esquilo cheirando flor faz sucesso na internet',
-            'descricao' => 'Apesar de terem sido compartilhadas por ele em suas redes sociais em junho, as fotos chamaram a atenção de sites e jornais internacionais na semana passada. Segundo o New York Post, Duijn disse que foi para a Áustria especialmente para fotografar esquilos terrestres.',
+            'nome' => 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            'descricao' => 'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...',
         ]);
         Imagem::create([
             'id' => '4',
             'link' => 'https://raw.githubusercontent.com/araujoblucas/Projeto-Laravel-2019-12/master/storage/app/public/img/defaults/1500x1000.jpg',
-            'nome' => 'Imagem de esquilo cheirando flor faz sucesso na internet',
-            'descricao' => 'Apesar de terem sido compartilhadas por ele em suas redes sociais em junho, as fotos chamaram a atenção de sites e jornais internacionais na semana passada. Segundo o New York Post, Duijn disse que foi para a Áustria especialmente para fotografar esquilos terrestres.',
+            'nome' => 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...',
+            'descricao' => 'There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain...',
         ]);
     }
 
